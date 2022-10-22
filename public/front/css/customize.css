@@ -10,3 +10,16 @@
 {
     padding: 0;
 }
+.mainmenu-nav .mainmenu li.has-droupdown .submenu
+{
+    min-width: 175px !important;
+}
+/*======= Profile Page ====*/
+.height-550
+{
+    height: 550px;
+}
+.slider-perosonal-portfolio .inner
+{
+    margin-top: 125px;
+}

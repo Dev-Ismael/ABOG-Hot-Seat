@@ -307,6 +307,86 @@
     </div>
     <!-- End Pricing Area  -->
 
+    <!-- Strat Timeline Area -->
+    <div class="rwt-timeline-area rn-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                        <h4 class="subtitle "><span class="theme-gradient">Timeline</span></h4>
+                        <h2 class="title w-600 mb--20">Working Process.</h2>
+                        <p class="description b1">We help our clients succeed by creating brand identities, <br>
+                            digital experiences, and print materials.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 mt--50">
+                    <div class="timeline-style-two bg-color-blackest">
+                        <div class="row row--0">
+                            <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
+                                <div class="rn-timeline">
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Knowledge</h6>
+                                    <div class="progress-line">
+                                        <div class="line-inner"></div>
+                                    </div>
+                                    <div class="progress-dot">
+                                        <div class="dot-level">
+                                            <div class="dot-inner"></div>
+                                        </div>
+                                    </div>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Present all available features in Essentials.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
+                                <div class="rn-timeline">
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Working</h6>
+                                    <div class="progress-line">
+                                        <div class="line-inner"></div>
+                                    </div>
+                                    <div class="progress-dot">
+                                        <div class="dot-level">
+                                            <div class="dot-inner"></div>
+                                        </div>
+                                    </div>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">All Feature available features in Essentials.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
+                                <div class="rn-timeline">
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Solution</h6>
+                                    <div class="progress-line">
+                                        <div class="line-inner"></div>
+                                    </div>
+                                    <div class="progress-dot">
+                                        <div class="dot-level">
+                                            <div class="dot-inner"></div>
+                                        </div>
+                                    </div>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Popular Feature available features in Essentials.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
+                                <div class="rn-timeline">
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Process</h6>
+                                    <div class="progress-line">
+                                        <div class="line-inner"></div>
+                                    </div>
+                                    <div class="progress-dot">
+                                        <div class="dot-level">
+                                            <div class="dot-inner"></div>
+                                        </div>
+                                    </div>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Latest Feature available features in Essentials.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Timeline Area -->
 
     <!---Strat Contact Area --->
     <div class="rwt-contact-area rn-section-gap">

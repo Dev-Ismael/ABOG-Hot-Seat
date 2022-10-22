@@ -47,7 +47,7 @@
                     <div class="col-lg-9 col-md-6 col-4 position-static">
                         <div class="header-left d-flex">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img class="logo-light" src="assets/images/logo/logo.png" alt="Corporate Logo">
                                     <img class="logo-dark" src="assets/images/logo/logo-dark.png" alt="Corporate Logo">
                                 </a>
@@ -73,7 +73,22 @@
                                     <li><a href="contact.html">About</a></li>
                                     <li><a href="contact.html">Pricing</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="/login">Login</a></li>
+                                    @auth()
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#">{{ Auth::user()->name }}</a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ route('profile') }}"> Profile </a></li>
+                                                <li><a href="index-business-consulting-2.html"
+                                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                                    Logout </a></li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li><a href="/login">Login</a></li>
+                                    @endauth
                                 </ul>
                             </nav>
 
@@ -238,13 +253,8 @@
 
     <!--App Js -->
     <script defer src="{{ mix('js/app.js') }}"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-    {{-- <!--==================== JS ======================== -->
+    
+    <!--==================== JS ======================== -->
     <script src="{{ asset('front/js/vendor/modernizr.min.js') }}"></script>
     <script src="{{ asset('front/js/vendor/jquery.min.js') }}"></script>
     <script src="{{ asset('front/js/vendor/bootstrap.min.js') }}"></script>
@@ -262,7 +272,7 @@
     <script src="{{ asset('front/js/vendor/easypie.js') }}"></script>
     <script src="{{ asset('front/js/vendor/text-type.js') }}"></script>
     <script src="{{ asset('front/js/vendor/js.cookie.js') }}"></script>
-    <script src="{{ asset('front/js/vendor/jquery-one-page-nav.js') }}"></script> --}}
+    <script src="{{ asset('front/js/vendor/jquery-one-page-nav.js') }}"></script>
 
 
 

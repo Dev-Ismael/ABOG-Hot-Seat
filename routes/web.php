@@ -23,7 +23,8 @@ Auth::routes();
 /*===========================================================
 ====== Web Routes
 ============================================================*/
-Route::get('/',  [App\Http\Controllers\HomeController::class, 'home']);
+Route::get('/',  [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+Route::get('/profile',  [App\Http\Controllers\ProfileController::class, 'profile'])->middleware('auth') ->name('profile');
 
 
 /*===========================================================
