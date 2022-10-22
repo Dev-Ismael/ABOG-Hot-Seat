@@ -1,0 +1,12 @@
+.pricing span.subtitle{
+    font-size: 20px !important;
+    text-decoration: line-through !important;
+}
+.contact-form-1 .form-group
+{
+    text-align: left;
+}
+.form-check
+{
+    padding: 0;
+}

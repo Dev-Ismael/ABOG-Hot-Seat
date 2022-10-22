@@ -1,0 +1,100 @@
+
+/*========= navbar ========*/
+.navbar .navbar-brand-wrapper .navbar-brand img{
+    height: auto !important;
+}
+/*========= Global ========*/
+.w-100{
+    width: 100%;
+}
+/*========= Check Editor ========*/
+.ck-editor__editable {
+    min-height: 250px;
+}
+/*========= table ========*/
+.table td img, .jsgrid .jsgrid-table td img{
+    width: auto !important;
+    height: 80px !important;
+    border: 0px;
+    box-shadow: none !important;
+}
+.dataTables_wrapper .dataTable thead th{
+    text-align: center;
+    text-transform: uppercase;
+}
+.table td, .jsgrid .jsgrid-table td{
+    text-align: center;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: initial;
+}
+div.dataTables_wrapper div.dataTables_filter input{
+    margin-left: 0;
+}
+/*========= Modal ========*/
+.modal-body img{
+    box-shadow: 0px 0px 11px 0px #0000001a;
+    padding: 5px;
+}
+/*========= Form ========*/
+.form-group label{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+}
+.table td img, .jsgrid .jsgrid-table td img {
+    padding: 5px;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 11px 0px #0000001a;
+}
+.form-group label
+{
+    line-height: inherit !important;
+    margin-bottom: 0px !important
+}
+input.form-control , textarea.form-control{
+    margin-bottom: 0px !important;
+}
+textarea.form-control{
+    min-height: 5rem !important;
+}
+small.text-danger
+{
+    color: #ff3f30;
+    margin-left: 5px;
+    margin-left: 5px;
+}
+.form-group.multi-action button{
+    height: 100%;
+    padding: 0px 10px;
+}
+/*==== Customize Modal ======*/
+.swal2-container.swal2-top-end>.swal2-popup, .swal2-container.swal2-top-right>.swal2-popup
+{
+    padding: 0px !important;
+}
+.swal2-modal .swal2-icon, .swal2-modal .swal2-success-ring
+{
+    margin: 0px !important;
+}
+.swal2-modal{
+    min-height: 260px !important;
+}
+.swal2-popup
+{
+    width: 28em !important;
+}
+/*======== Pricing Page =====*/
+.plan-title{
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.plan-box
+{
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 5px;
+    padding: 25px;
+}

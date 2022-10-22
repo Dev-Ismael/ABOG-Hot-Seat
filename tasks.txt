@@ -1,0 +1,34 @@
+Primary  ==> Blue color: #2662ab ;
+secondry ==> Yellow Color: #ebb010
+
+
+
+Tasks:
+==============
+- add profile page
+- add image if not data in table
+- make preloader by vue.js
+- fix owl-carsoul-vue with API
+- 
+
+Haitham taskis :
+===================
+- Google schedule meeting btn
+-
+-
+-
+-
+-
+-
+
+
+Advanced feature in blueskyint project:
+==================================
+1- Add Vue router in admin panel
+2- Add sign in page SPA & link it with
+5- Logo in min-header in screen sizes
+6- use package formData
+7- Add multi actions
+8-
+
+
