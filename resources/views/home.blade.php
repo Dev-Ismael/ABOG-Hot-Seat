@@ -151,7 +151,7 @@
                                 Defense strategies for your difficult cases
                             </div>
                             <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="#">Purchase Now</a>
+                                <a class="btn-default btn-border" href="{{ route("register") }}">Purchase Now</a>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                                 Defense strategies for your difficult cases.
                             </div>
                             <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="#">Purchase Now</a>
+                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
                             </div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                                 Defense strategies for your difficult cases
                             </div>
                             <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="#">Purchase Now</a>
+                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
                             </div>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
                                 Defense strategies for your difficult cases.
                             </div>
                             <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="#">Purchase Now</a>
+                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +266,7 @@
                                 Confidence boost and living the full experience for exam date.
                             </div>
                             <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="#">Purchase Now</a>
+                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
                             </div>
                         </div>
                     </div>
@@ -293,8 +293,8 @@
                                 assessment.
                                 Defense strategies for your difficult cases
                             </div>
-                            <div class="pricing-footer"><a class="btn-default btn-border" href="#">Purchase
-                                    Now</a>
+                            <div class="pricing-footer"><a class="btn-default btn-border"  href="{{ route("register") }}">
+                                Purchase Now</a>
                             </div>
                         </div>
                     </div>

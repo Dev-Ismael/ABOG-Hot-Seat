@@ -74,7 +74,7 @@
                                     <li><a href="contact.html">Pricing</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     @auth()
-                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#">{{ Auth::user()->name }}</a>
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('profile') }}"> Profile </a></li>
                                                 <li><a href="index-business-consulting-2.html"
@@ -253,7 +253,7 @@
 
     <!--App Js -->
     <script defer src="{{ mix('js/app.js') }}"></script>
-    
+
     <!--==================== JS ======================== -->
     <script src="{{ asset('front/js/vendor/modernizr.min.js') }}"></script>
     <script src="{{ asset('front/js/vendor/jquery.min.js') }}"></script>

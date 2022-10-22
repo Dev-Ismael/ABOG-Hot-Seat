@@ -7,7 +7,7 @@
     <div class="rwt-contact-area rn-section-gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 mb--40">
+                <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
                         <h4 class="subtitle "><span class="theme-gradient">Login Form</span></h4>
                         <h2 class="title w-600 mb--20">Welcome Back.</h2>

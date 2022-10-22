@@ -9,7 +9,7 @@
             <div class="row row--30 align-items-center">
                 <div class="col-12">
                     <div class="inner text-center">
-                        <h1 class="title">Hey! <br> <span class="theme-gradient">{{ Auth::user()->name }}</span></h1>
+                        <h1 class="title">Hi! <br> <span class="theme-gradient">{{ Auth::user()->name }}</span></h1>
                         {{-- <div class="button-group mt--30"><a class="btn-default round btn-border btn-large" href="personal-portfolio.html">Contact Me</a></div> --}}
                     </div>
                 </div>
