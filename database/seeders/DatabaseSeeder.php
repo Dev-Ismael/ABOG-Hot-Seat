@@ -14,17 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\User::factory(1)->create();
+        
         \App\Models\Admin::factory(1)->create();
-
-        \App\Models\Service::factory(1)->create([
-            'title' => 'title',
-            'slug' => 'slug',
-            'seo' => '[seo]',
-            'content' => 'content',
-            'summary' => 'summary',
-            'icon' => 'icon',
-            'img' => 'img',
-        ]);
 
 
         \App\Models\Setting::factory(1)->create([
@@ -72,10 +63,6 @@ class DatabaseSeeder extends Seeder
             'contact' => '[contact]',
         ]);
 
-        \App\Models\Client::factory(1)->create([
-            'title' => 'title',
-            'img' => 'img',
-        ]);
 
 
     }

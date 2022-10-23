@@ -1,30 +1,40 @@
 
-
 /*=======  import vue router =======*/
 import { createRouter, createWebHistory } from 'vue-router'
 
 
 /*=======================================================*/
-/*=============== Import Front Pages  ==================*/
-/*======================================================*/
-import HomePage from '../web/Pages/Home.vue';
-import RegisterPage from '../web/Pages/Register.vue';
-import notFoundPage from '../web/Pages/notFoundPage.vue';
-
-
-/*=======================================================*/
 /*=============== Import Admin Pages  ==================*/
 /*======================================================*/
-// import HomePage from '../web/Pages/Home.vue';
 
 
+// Import Pages
+import DashboardPage from '../Admin/Pages/dashboard.vue';
+import MessegePage from '../Admin/Pages/messege.vue';
+import UserPage from '../Admin/Pages/user.vue';
+import SeoManagmentPage from '../Admin/Pages/seoManagment.vue';
+import PlanPage from '../Admin/Pages/plan.vue';
+import NewsletterPage from '../Admin/Pages/newsletter.vue';
+import SubscriberPage from '../Admin/Pages/subscriber.vue';
+import ProfilePage from '../Admin/Pages/profile.vue';
+import SettingsPage from '../Admin/Pages/settings.vue';
+import notFoundPage from '../Admin/Pages/notFoundPage.vue';
 
 // Routes
 const routes = [
-    { path: '/' , component: HomePage },
-    { path: '/register' , component: RegisterPage },
+    { path: '/admin/dashboard' , component: DashboardPage },
+    { path: '/admin/messege' , component: MessegePage },
+    { path: '/admin/user' , component: UserPage },
+    { path: '/admin/seo-managment' , component: SeoManagmentPage },
+    { path: '/admin/plan' , component: PlanPage },
+    { path: '/admin/newsletter' , component: NewsletterPage },
+    { path: '/admin/subscriber' , component: SubscriberPage },
+    { path: '/admin/profile' , component: ProfilePage },
+    { path: '/admin/settings' , component: SettingsPage },
     { path: "/:catchAll(.*)" , component: notFoundPage },
 ];
+
+
 
 const router = createRouter({
     history: createWebHistory(),

@@ -9,10 +9,11 @@
                 </router-link>
             </li>
             <li class="nav-item nav-category">Tables</li>
+
             <li class="nav-item">
-                <router-link to="/admin/service" class="nav-link" >
-                    <i class="mdi mdi-server-network menu-icon"></i>
-                    <span class="menu-title">Services</span>
+                <router-link to="/admin/user" class="nav-link" >
+                    <i class="icon-people menu-icon"></i>
+                    <span class="menu-title">Users</span>
                 </router-link>
             </li>
             <li class="nav-item">
@@ -21,12 +22,6 @@
                     <span class="menu-title">Messeges</span>
                 </router-link>
             </li>
-            <!-- <li class="nav-item">
-                <router-link to="/admin/client" class="nav-link" >
-                    <i class="menu-icon mdi mdi-human-greeting"></i>
-                    <span class="menu-title">Clients</span>
-                </router-link>
-            </li> -->
             <li class="nav-item nav-category">Mail</li>
             <li class="nav-item">
                 <router-link to="/admin/subscriber" class="nav-link" >

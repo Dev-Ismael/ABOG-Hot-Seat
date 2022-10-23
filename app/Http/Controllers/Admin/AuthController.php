@@ -31,7 +31,8 @@ class AuthController extends Controller
             return redirect()->intended('/admin');
         }
 
-        return back()->withInput($request->only('email', 'remember'));
+        return back()->withErrors(['email' => 'These credentials do not match our records.']) 
+            ->withInput($request->only('email', 'remember'));
 
     }
 

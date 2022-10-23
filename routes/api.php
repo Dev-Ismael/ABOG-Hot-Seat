@@ -49,20 +49,16 @@ Route::group([ 'prefix' => 'admin' ] , function(){     // URL ==> 'api/admin' ,
 
     Route::get('statistics',  [\App\Http\Controllers\Admin\AdminController::class, 'statistics']);
 
-    // Services
-    Route::resource('service', '\App\Http\Controllers\Admin\ServiceController');
-    Route::post('service/search' , [App\Http\Controllers\Admin\ServiceController::class, 'search'])->name("service.search");
-    Route::post('service/multiAction' , [App\Http\Controllers\Admin\ServiceController::class, 'multiAction'])->name("service.multiAction");
+    // Users
+    Route::resource('user', '\App\Http\Controllers\Admin\UserController');
+    Route::post('user/search' , [App\Http\Controllers\Admin\UserController::class, 'search'])->name("user.search");
+    Route::post('user/multiAction' , [App\Http\Controllers\Admin\UserController::class, 'multiAction'])->name("user.multiAction");
+
 
     // Messeges
     Route::resource('messege', '\App\Http\Controllers\Admin\MessegeController');
     Route::post('messege/search' , [App\Http\Controllers\Admin\MessegeController::class, 'search'])->name("messege.search");
     Route::post('messege/multiAction' , [App\Http\Controllers\Admin\MessegeController::class, 'multiAction'])->name("messege.multiAction");
-
-    // Clients
-    Route::resource('client', '\App\Http\Controllers\Admin\ClientController');
-    Route::post('client/search' , [App\Http\Controllers\Admin\ClientController::class, 'search'])->name("client.search");
-    Route::post('client/multiAction' , [App\Http\Controllers\Admin\ClientController::class, 'multiAction'])->name("client.multiAction");
 
     // Subscribers
     Route::resource('subscriber', '\App\Http\Controllers\Admin\SubscriberController');

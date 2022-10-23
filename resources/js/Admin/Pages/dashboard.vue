@@ -11,8 +11,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h3 class="card-title text-uppercase text-muted mb-0 pb-4">Services</h3>
-                                            <span class="h2 font-weight-bold mb-0">{{ statistics.services }}</span>
+                                            <h3 class="card-title text-uppercase text-muted mb-0 pb-4">Users</h3>
+                                            <span class="h2 font-weight-bold mb-0">{{ statistics.users }}</span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-danger shadow p-2">

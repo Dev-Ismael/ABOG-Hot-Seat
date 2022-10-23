@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Messege;
 use App\Models\Newsletter;
-use App\Models\Service;
+use App\Models\user;
 use App\Models\Subscriber;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Admin;
 
 class AdminController extends Controller
 {
@@ -21,22 +20,18 @@ class AdminController extends Controller
      */
     public function index()
     {
-
-        return view('admin');
-
-
+        return view('layouts.admin');
     }
 
     public function statistics()
     {
-        $services    = Service::count();
+        $users       = User::count();
         $messeges    = Messege::count();
         $subscribers = Subscriber::count();
         $newsletter  = Newsletter::count();
 
-
         return response()->json([
-            "services"    => $services ,
+            "users"       => $users ,
             "messeges"    => $messeges ,
             "subscribers" => $subscribers ,
             "newsletter"  => $newsletter ,
@@ -47,9 +42,9 @@ class AdminController extends Controller
     public function getAuthInfo()
     {
 
-        $user = User::get()->first();
+        $admin = Admin::get()->first();
         return response()->json([
-            "user" => $user,
+            "user" => $admin,
         ]);
 
     }
