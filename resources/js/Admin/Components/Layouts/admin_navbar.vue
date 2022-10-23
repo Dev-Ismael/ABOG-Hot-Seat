@@ -191,26 +191,7 @@ export default {
                     response => {  // if there success request
 
                         // console.log(response.data);
-
-                        // if response status
-                        if (response.data.status == "success") {
-
-                            window.location.href = '/';
-
-                        }
-                        // if Settings not Found
-                        else if (response.data.status == "error") {
-
-                            // Sweet Alert
-                            this.$swal({
-                                position: 'top-end',
-                                icon: response.data.status,
-                                text: response.data.msg,
-                                showConfirmButton: false,
-                                timer: 1500
-                            });
-
-                        }
+                        window.location.href = '/';
 
                     }
                 )

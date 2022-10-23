@@ -89,7 +89,7 @@
                                     @elseif(Auth::guard('admin')->check())
                                         <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
                                             <ul class="submenu">
-                                                <li><a href="{{ route('profile') }}"> Dashboard </a></li>
+                                                <li><a href="/admin/dashboard"> Dashboard </a></li>
                                                 <li><a href="index-business-consulting-2.html"
                                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

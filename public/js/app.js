@@ -19952,8 +19952,6 @@ __webpack_require__.r(__webpack_exports__);
     ====== Logout opration
     ======================================================*/
     logout: function logout() {
-      var _this2 = this;
-
       // Set Config var to send it with data request
       var config = {
         headers: {
@@ -19965,20 +19963,7 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default().post("/logout", config).then(function (response) {
         // if there success request
         // console.log(response.data);
-        // if response status
-        if (response.data.status == "success") {
-          window.location.href = '/';
-        } // if Settings not Found
-        else if (response.data.status == "error") {
-          // Sweet Alert
-          _this2.$swal({
-            position: 'top-end',
-            icon: response.data.status,
-            text: response.data.msg,
-            showConfirmButton: false,
-            timer: 1500
-          });
-        }
+        window.location.href = '/';
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -22085,7 +22070,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" partial:../../partials/_navbar.html "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Good Morning, "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.name), 1
   /* TEXT */
-  )]), _hoisted_8])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item dropdown\">\r\n                    <a class=\"nav-link count-indicator\" id=\"notificationDropdown\" href=\"#\" data-bs-toggle=\"dropdown\">\r\n                        <i class=\"icon-mail icon-lg\"></i>\r\n                    </a>\r\n                    <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0\"\r\n                        aria-labelledby=\"notificationDropdown\">\r\n                        <a class=\"dropdown-item py-3 border-bottom\">\r\n                            <p class=\"mb-0 font-weight-medium float-left\">You have 4 new notifications </p>\r\n                            <span class=\"badge badge-pill badge-primary float-right\">View all</span>\r\n                        </a>\r\n                        <a class=\"dropdown-item preview-item py-3\">\r\n                            <div class=\"preview-thumbnail\">\r\n                                <i class=\"mdi mdi-alert m-auto text-primary\"></i>\r\n                            </div>\r\n                            <div class=\"preview-item-content\">\r\n                                <h6 class=\"preview-subject fw-normal text-dark mb-1\">Application Error</h6>\r\n                                <p class=\"fw-light small-text mb-0\"> Just now </p>\r\n                            </div>\r\n                        </a>\r\n                        <a class=\"dropdown-item preview-item py-3\">\r\n                            <div class=\"preview-thumbnail\">\r\n                                <i class=\"mdi mdi-settings m-auto text-primary\"></i>\r\n                            </div>\r\n                            <div class=\"preview-item-content\">\r\n                                <h6 class=\"preview-subject fw-normal text-dark mb-1\">Settings</h6>\r\n                                <p class=\"fw-light small-text mb-0\"> Private message </p>\r\n                            </div>\r\n                        </a>\r\n                        <a class=\"dropdown-item preview-item py-3\">\r\n                            <div class=\"preview-thumbnail\">\r\n                                <i class=\"mdi mdi-airballoon m-auto text-primary\"></i>\r\n                            </div>\r\n                            <div class=\"preview-item-content\">\r\n                                <h6 class=\"preview-subject fw-normal text-dark mb-1\">New user registration</h6>\r\n                                <p class=\"fw-light small-text mb-0\"> 2 days ago </p>\r\n                            </div>\r\n                        </a>\r\n                    </div>\r\n                </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item dropdown\">\r\n                    <a class=\"nav-link count-indicator\" id=\"countDropdown\" href=\"#\" data-bs-toggle=\"dropdown\"\r\n                        aria-expanded=\"false\">\r\n                        <i class=\"icon-bell\"></i>\r\n                        <span class=\"count\"></span>\r\n                    </a>\r\n                    <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0\"\r\n                        aria-labelledby=\"countDropdown\">\r\n                        <a class=\"dropdown-item py-3\">\r\n                            <p class=\"mb-0 font-weight-medium float-left\">You have 7 unread mails </p>\r\n                            <span class=\"badge badge-pill badge-primary float-right\">View all</span>\r\n                        </a>\r\n                        <div class=\"dropdown-divider\"></div>\r\n                        <a class=\"dropdown-item preview-item\">\r\n                            <div class=\"preview-thumbnail\">\r\n                                <img src=\"/admin/images/faces/face10.jpg\" alt=\"image\" class=\"img-sm profile-pic\">\r\n                            </div>\r\n                            <div class=\"preview-item-content flex-grow py-2\">\r\n                                <p class=\"preview-subject ellipsis font-weight-medium text-dark\">Marian Garner </p>\r\n                                <p class=\"fw-light small-text mb-0\"> The meeting is cancelled </p>\r\n                            </div>\r\n                        </a>\r\n                        <a class=\"dropdown-item preview-item\">\r\n                            <div class=\"preview-thumbnail\">\r\n                                <img src=\"/admin/images/faces/face12.jpg\" alt=\"image\" class=\"img-sm profile-pic\">\r\n                            </div>\r\n                            <div class=\"preview-item-content flex-grow py-2\">\r\n                                <p class=\"preview-subject ellipsis font-weight-medium text-dark\">David Grey </p>\r\n                                <p class=\"fw-light small-text mb-0\"> The meeting is cancelled </p>\r\n                            </div>\r\n                        </a>\r\n                        <a class=\"dropdown-item preview-item\">\r\n                            <div class=\"preview-thumbnail\">\r\n                                <img src=\"/admin/images/faces/face1.jpg\" alt=\"image\" class=\"img-sm profile-pic\">\r\n                            </div>\r\n                            <div class=\"preview-item-content flex-grow py-2\">\r\n                                <p class=\"preview-subject ellipsis font-weight-medium text-dark\">Travis Jenkins </p>\r\n                                <p class=\"fw-light small-text mb-0\"> The meeting is cancelled </p>\r\n                            </div>\r\n                        </a>\r\n                    </div>\r\n                </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.name), 1
+  )]), _hoisted_8])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link count-indicator\" id=\"notificationDropdown\" href=\"#\" data-bs-toggle=\"dropdown\">\n                        <i class=\"icon-mail icon-lg\"></i>\n                    </a>\n                    <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0\"\n                        aria-labelledby=\"notificationDropdown\">\n                        <a class=\"dropdown-item py-3 border-bottom\">\n                            <p class=\"mb-0 font-weight-medium float-left\">You have 4 new notifications </p>\n                            <span class=\"badge badge-pill badge-primary float-right\">View all</span>\n                        </a>\n                        <a class=\"dropdown-item preview-item py-3\">\n                            <div class=\"preview-thumbnail\">\n                                <i class=\"mdi mdi-alert m-auto text-primary\"></i>\n                            </div>\n                            <div class=\"preview-item-content\">\n                                <h6 class=\"preview-subject fw-normal text-dark mb-1\">Application Error</h6>\n                                <p class=\"fw-light small-text mb-0\"> Just now </p>\n                            </div>\n                        </a>\n                        <a class=\"dropdown-item preview-item py-3\">\n                            <div class=\"preview-thumbnail\">\n                                <i class=\"mdi mdi-settings m-auto text-primary\"></i>\n                            </div>\n                            <div class=\"preview-item-content\">\n                                <h6 class=\"preview-subject fw-normal text-dark mb-1\">Settings</h6>\n                                <p class=\"fw-light small-text mb-0\"> Private message </p>\n                            </div>\n                        </a>\n                        <a class=\"dropdown-item preview-item py-3\">\n                            <div class=\"preview-thumbnail\">\n                                <i class=\"mdi mdi-airballoon m-auto text-primary\"></i>\n                            </div>\n                            <div class=\"preview-item-content\">\n                                <h6 class=\"preview-subject fw-normal text-dark mb-1\">New user registration</h6>\n                                <p class=\"fw-light small-text mb-0\"> 2 days ago </p>\n                            </div>\n                        </a>\n                    </div>\n                </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link count-indicator\" id=\"countDropdown\" href=\"#\" data-bs-toggle=\"dropdown\"\n                        aria-expanded=\"false\">\n                        <i class=\"icon-bell\"></i>\n                        <span class=\"count\"></span>\n                    </a>\n                    <div class=\"dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0\"\n                        aria-labelledby=\"countDropdown\">\n                        <a class=\"dropdown-item py-3\">\n                            <p class=\"mb-0 font-weight-medium float-left\">You have 7 unread mails </p>\n                            <span class=\"badge badge-pill badge-primary float-right\">View all</span>\n                        </a>\n                        <div class=\"dropdown-divider\"></div>\n                        <a class=\"dropdown-item preview-item\">\n                            <div class=\"preview-thumbnail\">\n                                <img src=\"/admin/images/faces/face10.jpg\" alt=\"image\" class=\"img-sm profile-pic\">\n                            </div>\n                            <div class=\"preview-item-content flex-grow py-2\">\n                                <p class=\"preview-subject ellipsis font-weight-medium text-dark\">Marian Garner </p>\n                                <p class=\"fw-light small-text mb-0\"> The meeting is cancelled </p>\n                            </div>\n                        </a>\n                        <a class=\"dropdown-item preview-item\">\n                            <div class=\"preview-thumbnail\">\n                                <img src=\"/admin/images/faces/face12.jpg\" alt=\"image\" class=\"img-sm profile-pic\">\n                            </div>\n                            <div class=\"preview-item-content flex-grow py-2\">\n                                <p class=\"preview-subject ellipsis font-weight-medium text-dark\">David Grey </p>\n                                <p class=\"fw-light small-text mb-0\"> The meeting is cancelled </p>\n                            </div>\n                        </a>\n                        <a class=\"dropdown-item preview-item\">\n                            <div class=\"preview-thumbnail\">\n                                <img src=\"/admin/images/faces/face1.jpg\" alt=\"image\" class=\"img-sm profile-pic\">\n                            </div>\n                            <div class=\"preview-item-content flex-grow py-2\">\n                                <p class=\"preview-subject ellipsis font-weight-medium text-dark\">Travis Jenkins </p>\n                                <p class=\"fw-light small-text mb-0\"> The meeting is cancelled </p>\n                            </div>\n                        </a>\n                    </div>\n                </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.name), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.user.email), 1
   /* TEXT */
@@ -22421,7 +22406,7 @@ var _hoisted_27 = {
 
 var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
   "class": "card-title text-uppercase text-muted mb-0 pb-4 mb-0"
-}, "Subscribers", -1
+}, "Plans", -1
 /* HOISTED */
 );
 
@@ -22439,52 +22424,14 @@ var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_31 = {
-  "class": "col-xl-3 col-lg-6"
-};
-var _hoisted_32 = {
-  "class": "card card-stats mb-4 mb-xl-0"
-};
-var _hoisted_33 = {
-  "class": "card-body"
-};
-var _hoisted_34 = {
-  "class": "row"
-};
-var _hoisted_35 = {
-  "class": "col"
-};
-
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
-  "class": "card-title text-uppercase text-muted mb-0 pb-4 mb-0"
-}, "Newsletter", -1
-/* HOISTED */
-);
-
-var _hoisted_37 = {
-  "class": "h2 font-weight-bold mb-0"
-};
-
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-auto"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "icon icon-shape bg-info shadow p-2"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fas fa-percent"
-})])], -1
-/* HOISTED */
-);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.statistics.users), 1
   /* TEXT */
   )]), _hoisted_14])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.statistics.messeges), 1
   /* TEXT */
-  )]), _hoisted_22])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.statistics.subscribers), 1
+  )]), _hoisted_22])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.statistics.plans), 1
   /* TEXT */
-  )]), _hoisted_30])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [_hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.statistics.newsletter), 1
-  /* TEXT */
-  )]), _hoisted_38])])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page content ")]);
+  )]), _hoisted_30])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-xl-3 col-lg-6\">\n                            <div class=\"card card-stats mb-4 mb-xl-0\">\n                                <div class=\"card-body\">\n                                    <div class=\"row\">\n                                        <div class=\"col\">\n                                            <h3 class=\"card-title text-uppercase text-muted mb-0 pb-4 mb-0\">Newsletter</h3>\n                                            <span class=\"h2 font-weight-bold mb-0\">{{ statistics.newsletter }}</span>\n                                        </div>\n                                        <div class=\"col-auto\">\n                                            <div class=\"icon icon-shape bg-info  shadow p-2\">\n                                                <i class=\"fas fa-percent\"></i>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div> ")])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page content ")]);
 }
 
 /***/ }),

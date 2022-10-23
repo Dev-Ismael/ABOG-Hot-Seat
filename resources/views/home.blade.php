@@ -21,8 +21,7 @@
             </div>
         </div>
 
-        <div
-            class="single-rn-slider height-950 slider-bg-image bg-overlay bg_image bg_image--14 height-950 d-flex align-items-center">
+        <div class="single-rn-slider height-950 slider-bg-image bg-overlay bg_image bg_image--14 height-950 d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
@@ -39,8 +38,7 @@
             </div>
         </div>
 
-        <div
-            class="single-rn-slider height-950 slider-bg-image bg-overlay bg_image bg_image--15 height-950 d-flex align-items-center">
+        <div class="single-rn-slider height-950 slider-bg-image bg-overlay bg_image bg_image--15 height-950 d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
