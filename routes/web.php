@@ -30,6 +30,10 @@ Route::get('/profile',  [App\Http\Controllers\ProfileController::class, 'profile
 /*===========================================================
 ====== Admin Routes
 ============================================================*/
+Route::get('/admin/login',  [App\Http\Controllers\Admin\AuthController::class, 'view'])->name('admin.login');
+Route::post('/admin/login',  [App\Http\Controllers\Admin\AuthController::class, 'authProcess']);
+
+
 Route::get('admin/{any}', [App\Http\Controllers\Admin\AdminController::class, 'index'])
-->middleware('auth') -> where([ "any" => ".*" ]);
+->middleware('auth:admin') -> where([ "any" => ".*" ]);
 

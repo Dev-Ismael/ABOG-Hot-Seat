@@ -21,6 +21,29 @@
                         @csrf
 
                         <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" placeholder="Type Your First Name..." required autocomplete="nope" autofocus>
+                                    @error('first_name')
+                                        <small class="text-danger" role="alert">
+                                            {{ $message }}
+                                        </small>
+                                    @enderror
+                                </div>
+                                <div class="col-6">
+                                    <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" placeholder="Type Your Last Name..." required autocomplete="nope" autofocus>
+                                    @error('last_name')
+                                        <small class="text-danger" role="alert">
+                                            {{ $message }}
+                                        </small>
+                                    @enderror
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Type Your Username..." required autocomplete="nope" autofocus>
                             @error('name')
                                 <small class="text-danger" role="alert">

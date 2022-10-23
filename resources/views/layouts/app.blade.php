@@ -73,8 +73,8 @@
                                     <li><a href="contact.html">About</a></li>
                                     <li><a href="contact.html">Pricing</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    @auth()
-                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::user()->name ) }} </a>
+                                    @if(Auth::guard('web')->check())
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('profile') }}"> Profile </a></li>
                                                 <li><a href="index-business-consulting-2.html"
@@ -86,9 +86,22 @@
                                                 </form>
                                             </ul>
                                         </li>
+                                    @elseif(Auth::guard('admin')->check())
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ route('profile') }}"> Dashboard </a></li>
+                                                <li><a href="index-business-consulting-2.html"
+                                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                                    Logout </a></li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </ul>
+                                        </li>
                                     @else
                                         <li><a href="/login">Login</a></li>
-                                    @endauth
+                                    @endif
                                 </ul>
                             </nav>
 
