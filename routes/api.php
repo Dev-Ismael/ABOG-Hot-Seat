@@ -60,6 +60,11 @@ Route::group([ 'prefix' => 'admin' ] , function(){     // URL ==> 'api/admin' ,
     Route::post('messege/search' , [App\Http\Controllers\Admin\MessegeController::class, 'search'])->name("messege.search");
     Route::post('messege/multiAction' , [App\Http\Controllers\Admin\MessegeController::class, 'multiAction'])->name("messege.multiAction");
 
+    // Plans
+    Route::resource('plan', '\App\Http\Controllers\Admin\PlanController');
+    Route::post('plan/search' , [App\Http\Controllers\Admin\PlanController::class, 'search'])->name("plan.search");
+    Route::post('plan/multiAction' , [App\Http\Controllers\Admin\PlanController::class, 'multiAction'])->name("plan.multiAction");
+
     // Subscribers
     Route::resource('subscriber', '\App\Http\Controllers\Admin\SubscriberController');
     Route::post('subscriber/search' , [App\Http\Controllers\Admin\SubscriberController::class, 'search'])->name("subscriber.search");
@@ -70,9 +75,6 @@ Route::group([ 'prefix' => 'admin' ] , function(){     // URL ==> 'api/admin' ,
     Route::post('newsletter/search' , [App\Http\Controllers\Admin\NewsletterController::class, 'search'])->name("newsletter.search");
     Route::post('newsletter/multiAction' , [App\Http\Controllers\Admin\NewsletterController::class, 'multiAction'])->name("newsletter.multiAction");
 
-    // plans
-    Route::get('plan' , [App\Http\Controllers\Admin\PlanController::class, 'show'])->name("plan.show");
-    Route::post('plan' , [App\Http\Controllers\Admin\PlanController::class, 'update'])->name("plan.update");
 
 
     // Seo Managment

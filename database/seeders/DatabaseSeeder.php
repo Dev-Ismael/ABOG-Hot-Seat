@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \App\Models\User::factory(1)->create();
-        
+
         \App\Models\Admin::factory(1)->create();
 
 
@@ -51,9 +51,12 @@ class DatabaseSeeder extends Seeder
 
 
         \App\Models\Plan::factory(1)->create([
-            'standard' => '[standard]',
-            'premium' => '[premium]',
-            'unlimited' => '[unlimited]',
+            'title'       => 'title',
+            'slug'        => 'slug',
+            'old_price'   => 235,
+            'price'       => 125,
+            'recommended' => '0',
+            'content'     => 'content',
         ]);
 
 

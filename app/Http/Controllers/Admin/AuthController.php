@@ -28,10 +28,10 @@ class AuthController extends Controller
         ]);
 
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-            return redirect()->intended('/admin');
+            // return redirect()->intended('/admin/users');
         }
 
-        return back()->withErrors(['email' => 'These credentials do not match our records.']) 
+        return back()->withErrors(['email' => 'These credentials do not match our records.'])
             ->withInput($request->only('email', 'remember'));
 
     }

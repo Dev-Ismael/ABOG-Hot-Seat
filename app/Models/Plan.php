@@ -10,15 +10,14 @@ class Plan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'standard',
-        'premium',
-        'unlimited',
+        'title',
+        'slug',
+        'old_price',
+        'price',
+        'recommended',
+        'content',
     ];
-    
-    protected $casts = [
-        'standard' => 'array',
-        'premium' => 'array',
-        'unlimited' => 'array',
-    ];
+
+
 
 }

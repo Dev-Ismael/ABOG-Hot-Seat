@@ -17,12 +17,18 @@
                 </router-link>
             </li>
             <li class="nav-item">
+                <router-link to="/admin/plan" class="nav-link" >
+                    <i class="mdi mdi-cash-usd menu-icon"></i>
+                    <span class="menu-title"> Pricing </span>
+                </router-link>
+            </li>
+            <li class="nav-item">
                 <router-link to="/admin/messege" class="nav-link" >
                     <i class="mdi mdi-message-text-outline menu-icon"></i>
                     <span class="menu-title">Messeges</span>
                 </router-link>
             </li>
-            <li class="nav-item nav-category">Mail</li>
+            <!-- <li class="nav-item nav-category">Mail</li>
             <li class="nav-item">
                 <router-link to="/admin/subscriber" class="nav-link" >
                     <i class="menu-icon mdi mdi-account-circle-outline"></i>
@@ -34,20 +40,15 @@
                     <i class="menu-icon mdi mdi-email-outline"></i>
                     <span class="menu-title"> Newsletters </span>
                 </router-link>
-            </li>
+            </li> -->
             <li class="nav-item nav-category">Help</li>
-            <li class="nav-item">
-                <router-link to="/admin/plan" class="nav-link" >
-                    <i class="mdi mdi-cash-usd menu-icon"></i>
-                    <span class="menu-title"> Pricing </span>
-                </router-link>
-            </li>
-            <li class="nav-item">
+
+            <!-- <li class="nav-item">
                 <router-link to="/admin/seo-managment" class="nav-link" >
                     <i class="mdi mdi-file-find menu-icon"></i>
                     <span class="menu-title"> SEO Management </span>
                 </router-link>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <router-link to="/admin/settings" class="nav-link" >
                     <i class="mdi mdi-settings menu-icon"></i>
