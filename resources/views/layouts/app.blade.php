@@ -12,7 +12,7 @@
     {!! SEOMeta::generate() !!}
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/images/logo/favicon.png') }}">
 
     <!------- FontAwesome  ------->
     <script src="https://kit.fontawesome.com/bc98e6aa51.js" crossorigin="anonymous"></script>
@@ -36,10 +36,6 @@
 <body class="active-light-mode">
 
     <main class="page-wrapper">
-
-
-
-
 
         <header class="rn-header header-default header-left-align header-transparent header-sticky">
             <div class="container position-relative">
@@ -70,19 +66,18 @@
                             <nav class="mainmenu-nav d-none d-lg-block">
                                 <ul class="mainmenu">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="contact.html">About</a></li>
-                                    <li><a href="contact.html">Pricing</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="/#about">About</a></li>
+                                    <li><a href="/#pricing">Pricing</a></li>
+                                    <li><a href="/#contact">Contact</a></li>
                                     @if(Auth::guard('web')->check())
                                         <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('profile') }}"> Profile </a></li>
-                                                <li><a href="index-business-consulting-2.html"
-                                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                                    Logout </a></li>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
+                                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    Logout
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
                                                 </form>
                                             </ul>
                                         </li>
@@ -90,12 +85,11 @@
                                         <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="/admin/dashboard"> Dashboard </a></li>
-                                                <li><a href="index-business-consulting-2.html"
-                                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                                    Logout </a></li>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
+                                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    Logout
+                                                </a></li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
                                                 </form>
                                             </ul>
                                         </li>
@@ -110,7 +104,6 @@
                 </div>
             </div>
         </header>
-
 
         <div class="popup-mobile-menu">
             <div class="inner">
@@ -137,12 +130,7 @@
             </div>
         </div>
 
-
-
         @yield('FrontContent')
-
-
-
 
         <footer class="rn-footer footer-style-default no-border">
             <div class="footer-top">
@@ -246,7 +234,6 @@
                 </div>
             </div>
         </footer>
-
 
     </main>
 

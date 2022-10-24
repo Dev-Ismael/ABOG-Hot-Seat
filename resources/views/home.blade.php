@@ -9,13 +9,10 @@
         <div class="single-rn-slider slider-bg-image bg-overlay bg_image bg_image--6 height-950 d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
-                    <div class="order-2 order-lg-1 col-lg-7">
+                    <div class="order-2 order-lg-1 col-lg-9">
                         <div class="inner text-left">
-                            <h1 class="title">Digital Agency.</h1>
-                            <p class="description">We help our clients succeed by creating brand identities, digital
-                                experiences, and print materials.</p>
-                            <div class="button-group mt--30"><a class="btn-default" target="_blank" href="#">PURCHASE
-                                    NOW</a></div>
+                            <h1 class="title">Simulate <br> the Experience, Excel on the Big Day. </h1>
+                            <p class="description">Preparing for a marathon should not be by only studying how to run. You gotta hit the track over and over again! Receive real-time knowledge and performance feedback from our top-notch experts and leaders in the field.</p>
                         </div>
                     </div>
                 </div>
@@ -27,12 +24,8 @@
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
                         <div class="inner text-left">
-                            <h1 class="title">Creative Agency.</h1>
-                            <p class="description">We help our clients succeed by creating brand identities,
-                                digital
-                                experiences, and print materials.</p>
-                            <div class="button-group mt--30"><a class="btn-default" target="_blank" href="#">PURCHASE
-                                    NOW</a></div>
+                            <h1 class="title">Live <br> The Experience.</h1>
+                            <p class="description"> Almost all of the repeat exam takers say that most of the questions they missed were things they have read and studied during their exam prep. The Majority of candidates who have passed say that the most challenging aspect was articulating things they already know and do in their practices under immense pressure.</p>
                         </div>
                     </div>
                 </div>
@@ -44,11 +37,9 @@
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
                         <div class="inner text-left">
-                            <h1 class="title">Startup Agency.</h1>
-                            <p class="description">We help our clients succeed by creating brand identities,
-                                digital
-                                experiences, and print materials.</p>
-                            <div class="button-group mt--30"><a class="btn-default" target="_blank" href="#">PURCHASE
+                            <h1 class="title">Book <br> Your Seat Now.</h1>
+                            <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again. Feel ready for the big day!</p>
+                            <div class="button-group mt--30"><a class="btn-default" href="/#pricing">PURCHASE
                                     NOW</a></div>
                         </div>
                     </div>
@@ -60,41 +51,35 @@
 
 
     <!-- Start About Area  -->
-    <div class="rwt-about-area rn-section-gap">
+    <div id="about" class="rwt-about-area rn-section-gap">
         <div class="container">
             <div class="row row--30 align-items-center">
                 <div class="col-lg-5">
                     <div class="thumbnail" data-sal="slide-right" data-sal-duration="800">
-                        <img class="w-100" src="assets/images/about/about-1.png" alt="About Images">
+                        <img class="w-100" src="{{ asset("front/images/about/about-1.jpg") }}" alt="About Images">
                     </div>
                 </div>
                 <div class="col-lg-7 mt_md--40 mt_sm--40">
                     <div class="content" data-sal="slide-left" data-sal-duration="800">
                         <div class="section-title">
-                            <h2 class="title">Unique Business <br>
+                            <h2 class="title"> About Us <br>
                                 <span class="header-caption">
                                     <span class="cd-headline clip is-full-width">
                                         <span class="cd-words-wrapper">
-                                            <b class="is-visible theme-gradient">Finance.</b>
-                                            <b class="is-hidden theme-gradient">Consulting.</b>
-                                            <b class="is-hidden theme-gradient">Agency.</b>
+                                            <b class="is-visible theme-gradient">Live the experience.</b>
+                                            <b class="is-hidden theme-gradient">Receive real time knowledge.</b>
+                                            <b class="is-hidden theme-gradient">Prepare for you OB/GYN Oral Boards.</b>
                                         </span>
                                     </span>
                                 </span>
                             </h2>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-                                at the coast of the Semantics, a large language ocean. They live in Bookmarksgrove
-                                right at the coast of the Semantics, a large language ocean.</p>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences. A
-                                small river named Duden flows by their place and supplies it with the necessary
-                                regelialia. It is a paradisematic country, in which roasted parts of sentences </p>
-                            <div class="read-more-btn mt--40">
-                                <a class="btn-default" href="#">
-                                    <span>More About Us</span>
-                                </a>
-                            </div>
+                            <p>
+                                The ABOG Oral Board exam is undeniably the most important exam for a physician's career. It is the last step of a long journey and many years full of efforts and sacrifices. We are a group of Clinical Assistant and Associate professors as well as leaders in the field of OB/GYN who witnessed many excellent physicians struggle with passing the oral boards and decided to help. After interviewing diplomats who passed their boards as well as repeat exam takers, it was crystal clear that this exam needs a different strategy for preparation. Most candidates still followed the same old way of exam preparation similar to any other written test in the past. Majority of interviewed candidates stated that the most challenging aspect of this test was NOT that they felt they did not know the answer BUT was articulating things they already know and do in their practices under immense pressure.
+                            </p>
+                            <p>
+                                From there, we started examining the best strategies to assist candidates pass this test and came to ABOG Hot-Seat Simulation.
+                                We provide the candidate with simulation of the exam experience as well as recommended preparation plans tailored based on a candidate's current level of Knowledge and Oral Performance.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -105,7 +90,7 @@
 
 
     <!-- Start Pricing Area  -->
-    <div class="rwt-pricing-area rn-section-gap">
+    <div id="pricing" class="rwt-pricing-area rn-section-gap">
         <div class="wrapper plr--100 plr_md--15 plr_sm--15">
             <div class="row mb_sm--0">
                 <div class="col-lg-12">
@@ -149,8 +134,6 @@
         </div>
     </div>
     <!-- End Pricing Area  -->
-
-
 
 
     <!-- Strat Timeline Area -->
@@ -244,11 +227,8 @@
     <!-- End Timeline Area -->
 
 
-
-
-
     <!---Strat Contact Area --->
-    <div class="rwt-contact-area rn-section-gap">
+    <div id="contact" class="rwt-contact-area rn-section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 mb--40">

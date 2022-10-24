@@ -13782,7 +13782,7 @@ iframe {
             Template
 ***************************************/
 /*------------------------
-    Banner Styles  
+    Banner Styles
 -------------------------*/
 .slider-dot.rn-slick-dot .slick-dots {
   bottom: 60px;
@@ -13972,7 +13972,7 @@ iframe {
 }
 
 /*-----------------------
-    Slider Style One  
+    Slider Style One
 -------------------------*/
 .slider-style-1 .inner .subtitle {
   font-family: var(--font-primary);
@@ -14309,7 +14309,7 @@ iframe {
   font-family: var(--font-primary);
   margin-bottom: 25px;
   display: block;
-  font-size: 130px;
+  font-size: 80px;
   line-height: 1.1;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   color: var(--color-white);
