@@ -13,7 +13,7 @@ class MessegeController extends Controller
 
 
     CONST RECIVER_MAIL   = 'sales@bluskyint.com' ;
-    CONST MAIL_SUBJECT   = 'A new contact submition at bluskyint.com' ;
+    CONST MAIL_TITLE   = 'A new contact submition at ahsmocks.com' ;
 
 
     /**
@@ -34,27 +34,17 @@ class MessegeController extends Controller
 
             // if not save in DB
             if(!$messege){
-                return response()->json([
-                    'status' => 'error',
-                    'msg'    => 'Error at store opration'
-                ]);
+                return abort(500, 'Whatever you were looking for, look somewhere else');
             }
 
-            $requestData += ['subject' => static::MAIL_SUBJECT ];
-            Mail::to(static::RECIVER_MAIL)->            // Our Email 'reciever'
+            $requestData += [ 'title' => static::MAIL_TITLE ];
+            Mail::to(static::RECIVER_MAIL)->                 // Our Email 'reciever'
             send( new ContactMail( $requestData ) );
 
-            // If Found Success
-            return response()->json([
-                'status' => 'success',
-                "msg"    => "messege sent successfully",
-            ]);
+            return view('submission');
 
         } catch (\Exception $e) {
-            return response()->json([
-                'status' => 'error',
-                'msg'    => 'server error'
-            ]);
+            return abort(500, 'Whatever you were looking for, look somewhere else');
         }
     }
 

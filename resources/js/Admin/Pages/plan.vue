@@ -398,15 +398,10 @@ export default {
             this.edit = false, // set var edit equale 'false' to know that this modal for update
             this.plan = {
                 title: '',
-                summary: '',
+                old_price: '',
+                price: '',
+                recommended: '',
                 content: '',
-                seo: {
-                    title: '',
-                    keywords: '',
-                    description: '',
-                },
-                icon: '',
-                img: '',
             }
         },
         storePlan() {
@@ -494,10 +489,6 @@ export default {
 
                             // save response data in var
                             this.plan = response.data.data
-
-                            // empty img , icon to send empty if it was
-                            this.plan.img = ''
-                            this.plan.icon = ''
 
                         } else if (response.data.status == "error") {
                             /*=== Sweet Alert ===*/

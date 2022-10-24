@@ -48,8 +48,8 @@
                         <div class="header-left d-flex">
                             <div class="logo">
                                 <a href="{{ route('home') }}">
-                                    <img class="logo-light" src="assets/images/logo/logo.png" alt="Corporate Logo">
-                                    <img class="logo-dark" src="assets/images/logo/logo-dark.png" alt="Corporate Logo">
+                                    <img class="logo-light" src="{{ asset("front/images/logo/ahs-logo.png") }}" alt="AHS-Mocks">
+                                    <img class="logo-dark" src="{{ asset("front/images/logo/ahs-logo.png") }}" alt="AHS-Mocks">
                                 </a>
                             </div>
 
@@ -137,13 +137,6 @@
             </div>
         </div>
 
-
-        <!-- Start Theme Style  -->
-        <div>
-            <div class="rn-gradient-circle"></div>
-            <div class="rn-gradient-circle theme-pink"></div>
-        </div>
-        <!-- End Theme Style  -->
 
 
         @yield('FrontContent')
@@ -246,7 +239,7 @@
                             <div class="copyright-right text-center text-lg-end">
                                 Powered by
                                     <img src="https://cpapai.com/doob_template_assets/images/BluSky-logo.png" alt="BluSky-logo" width="35">
-                                    <a href="http://bluskyint.com">BlueSkyInt.Com</a>
+                                    <a href="http://bluskyint.com">BluSkyInt.Com</a>
                             </div>
                         </div>
                     </div>
@@ -257,15 +250,11 @@
 
     </main>
 
-    <!-- All Scripts  -->
     <!-- Start Top To Bottom Area  -->
     <div class="rn-back-top">
         <i class="feather-arrow-up"></i>
     </div>
     <!-- End Top To Bottom Area  -->
-
-    <!--App Js -->
-    <script defer src="{{ mix('js/app.js') }}"></script>
 
     <!--==================== JS ======================== -->
     <script src="{{ asset('front/js/vendor/modernizr.min.js') }}"></script>
@@ -286,8 +275,6 @@
     <script src="{{ asset('front/js/vendor/text-type.js') }}"></script>
     <script src="{{ asset('front/js/vendor/js.cookie.js') }}"></script>
     <script src="{{ asset('front/js/vendor/jquery-one-page-nav.js') }}"></script>
-
-
 
     <!-- Main JS -->
     <script src="{{ asset('front/js/main.js') }}"></script>

@@ -26,6 +26,8 @@ Auth::routes();
 Route::get('/',  [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 Route::get('/profile',  [App\Http\Controllers\ProfileController::class, 'profile'])->middleware('auth') ->name('profile');
 
+Route::post('/contact',  [App\Http\Controllers\MessegeController::class, 'store'])->name('send-messege');
+
 
 /*===========================================================
 ====== Admin Routes

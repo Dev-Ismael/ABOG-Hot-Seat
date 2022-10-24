@@ -2052,7 +2052,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*=========================
-    Section Separation 
+    Section Separation
 ==========================*/
 .mt_dec--30 {
   margin-top: -30px;
@@ -2063,16 +2063,16 @@ textarea:-ms-input-placeholder {
 }
 
 .rn-section-gap {
-  padding: 120px 0 !important;
+  padding: 80px 0 !important;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rn-section-gap {
-    padding: 80px 0 !important;
+    padding: 60px 0 !important;
   }
 }
 @media only screen and (max-width: 767px) {
   .rn-section-gap {
-    padding: 60px 0 !important;
+    padding: 50px 0 !important;
   }
 }
 
@@ -8844,7 +8844,7 @@ xclip
     Header Styles
 ***************************************/
 /*--------------------------
-    Header Styles  
+    Header Styles
  --------------------------*/
 .logo-dark {
   display: none;
@@ -8866,7 +8866,7 @@ xclip
   align-items: center;
 }
 .header-default .logo a img {
-  max-height: 45px;
+  max-height: 75px;
 }
 .header-default .header-right {
   display: flex;
@@ -15304,4 +15304,5 @@ body.active-light-mode .slider-area.bg-transparent .inner a.btn-default.btn-bord
 body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn-border:hover {
   color: var(--color-white);
 }
-/*# sourceMappingURL=../maps/style.css.map */
+
+/*# sourceMappingURL=style.css.map */

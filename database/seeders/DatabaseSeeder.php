@@ -34,19 +34,10 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Messege::factory(1)->create([
             'name' => 'name',
+            'phone' => 'phone',
             'email' => 'email',
+            'subject' => 'subject',
             'body' => 'messege',
-        ]);
-
-
-        \App\Models\Subscriber::factory()->create([
-            'email'      => 'a.ismael@bluskyint.com',
-        ]);
-
-
-        \App\Models\Newsletter::factory(1)->create([
-            'subject'      => 'subject',
-            'content'      => 'content',
         ]);
 
 
@@ -58,14 +49,6 @@ class DatabaseSeeder extends Seeder
             'recommended' => '0',
             'content'     => 'content',
         ]);
-
-
-        \App\Models\SeoManagement::factory(1)->create([
-            'home' => '[home]',
-            'about' => '[about]',
-            'contact' => '[contact]',
-        ]);
-
 
 
     }

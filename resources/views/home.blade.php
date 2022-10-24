@@ -3,6 +3,7 @@
 @section('FrontContent')
 
 
+
     <!-- Start Slider Area  -->
     <div class="rwt-testimonial-area  slider-style-4  slider-activation slider-dot rn-slick-dot rn-slick-arrow">
         <div class="single-rn-slider slider-bg-image bg-overlay bg_image bg_image--6 height-950 d-flex align-items-center">
@@ -103,19 +104,10 @@
     <!-- End About Area  -->
 
 
-    <!-- Start Seperator Area  -->
-    <div class="rbt-separator-mid">
-        <div class="container">
-            <hr class="rbt-separator m-0">
-        </div>
-    </div>
-    <!-- End Seperator Area  -->
-
-
     <!-- Start Pricing Area  -->
     <div class="rwt-pricing-area rn-section-gap">
         <div class="wrapper plr--100 plr_md--15 plr_sm--15">
-            <div class="row mb--40 mb_sm--0">
+            <div class="row mb_sm--0">
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="400"
                         data-sal-delay="150">
@@ -124,193 +116,50 @@
                     </div>
                 </div>
             </div>
-            <div class="row row--0">
-
-                <!-------- Package (A) --------->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="rn-pricing style-4">
-                        <div class="pricing-table-inner">
-                            <div class="pricing-header">
-                                <h4 class="title">4 Mock Packag</h4>
-                                <div class="pricing">
-                                    <div class="price-wrapper"><span class="currency">$</span><span
-                                            class="price">999</span></div>
-                                    <span class="subtitle">$1,200</span>
+            <div class="row row--15">
+                @foreach ( $plans as $plan )
+                    <div class="col-lg-4 col-md-6 col-12 mt--80">
+                        <div class="rn-pricing style-2
+                            @if( $plan->recommended === '1' )
+                                active
+                            @endif
+                        ">
+                            <div class="pricing-table-inner">
+                                <div class="pricing-header">
+                                    <h4 class="title"> {{ $plan->title }} </h4>
+                                    <div class="pricing">
+                                        <div class="price-wrapper">
+                                            <span class="currency">$</span>
+                                            <span class="price"> {{ $plan->price }} </span>
+                                        </div>
+                                        <span class="subtitle"> ${{ $plan->old_price }} </span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="pricing-body">
-                                Four one-to-one 55-minute mock sessions with clinical assistant and associate
-                                professors of
-                                Ob/Gyn from top institutions
-                                Real-time Knowledge Feedback from our experts
-                                Real-time Oral Performance Feedback from our experts
-                                Recommended prep plans tailored based on candidate Knowledge and Performance
-                                assessment
-                                Defense strategies for your difficult cases
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="{{ route("register") }}">Purchase Now</a>
+                                <div class="pricing-body">
+                                    {!! $plan->content !!}
+                                </div>
+                                <div class="pricing-footer">
+                                    <a class="btn-default btn-border" href="{{ route("register") }}">Purchase Now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-------- Package (B) --------->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="rn-pricing style-4">
-                        <div class="pricing-table-inner">
-                            <div class="pricing-header">
-                                <h4 class="title"> 8 Mock Package </h4>
-                                <div class="pricing">
-                                    <div class="price-wrapper"><span class="currency">$</span><span
-                                            class="price">1,899</span></div>
-                                    <span class="subtitle"> $2,200 </span>
-                                </div>
-                            </div>
-                            <div class="pricing-body">
-                                Eight one-to-one 55-minute mock sessions with clinical assistant and associate
-                                professors of
-                                Ob/Gyn from top institutions
-                                Real-time Knowledge Feedback from our experts
-                                Real-time Oral Performance Feedback from our experts
-                                Recommended prep plans tailored based on candidate Knowledge and Performance
-                                assessment
-                                Defense strategies for your difficult cases.
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-------- Package (C) --------->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="rn-pricing style-4 active">
-                        <div class="pricing-table-inner">
-                            <div class="pricing-header">
-                                <h4 class="title"> 8 Mock Package </h4>
-                                <div class="pricing">
-                                    <div class="price-wrapper"><span class="currency">$</span><span
-                                            class="price">2,699</span></div>
-                                    <span class="subtitle"> $3,200 </span>
-                                </div>
-                            </div>
-                            <div class="pricing-body">
-                                Twelve one-to-one 55-minute mock sessions with clinical assistant and associate
-                                professors
-                                of Ob/Gyn from top institutions
-                                Real-time Knowledge Feedback from our experts
-                                Real-time Oral Performance Feedback from our experts
-                                Recommended prep plans tailored based on candidate Knowledge and Performance
-                                assessment
-                                Defense strategies for your difficult cases
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-------- Package (D) --------->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="rn-pricing style-4">
-                        <div class="pricing-table-inner">
-                            <div class="pricing-header">
-                                <h4 class="title"> Additional Mock Session </h4>
-                                <div class="pricing">
-                                    <div class="price-wrapper"><span class="currency">$</span><span
-                                            class="price">275</span></div>
-                                    <span class="subtitle"> $350 </span>
-                                </div>
-                            </div>
-                            <div class="pricing-body">
-                                Single one-to-one 55-minute mock sessions with clinical assistant and associate
-                                professors
-                                of Ob/Gyn from top institutions
-                                Real-time Knowledge Feedback from our experts
-                                Real-time Oral Performance Feedback from our experts
-                                Recommended prep plans tailored based on candidate Knowledge and Performance
-                                assessment
-                                Defense strategies for your difficult cases.
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-------- Package (E) --------->
-                <div class="col-lg-3 col-md-6 offset-3 col-12">
-                    <div class="rn-pricing style-4">
-                        <div class="pricing-table-inner">
-                            <div class="pricing-header">
-                                <h4 class="title"> Full Dress-Up Exam Simulation </h4>
-                                <div class="pricing">
-                                    <div class="price-wrapper"><span class="currency">$</span><span class="price">2,000
-                                        </span></div>
-                                    <span class="subtitle"> $1,499 </span>
-                                </div>
-                            </div>
-                            <div class="pricing-body">
-                                Full one-to-one Exam with clinical assistant and associate professors of Ob/Gyn from
-                                top
-                                institutions
-                                Real-time Knowledge Feedback from our experts
-                                Real-time Oral Performance Feedback from our experts
-                                Final tips and tricks before your big day
-                                Confidence boost and living the full experience for exam date.
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="btn-default btn-border"  href="{{ route("register") }}">Purchase Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-------- Package (F) --------->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="rn-pricing style-4">
-                        <div class="pricing-table-inner m-2">
-                            <div class="pricing-header">
-                                <h4 class="title">Prep Buddies Mock Session</h4>
-                                <div class="pricing">
-                                    <div class="price-wrapper"><span class="currency">$</span><span
-                                            class="price">225</span></div>
-                                    <span class="subtitle"> $300 </span>
-                                </div>
-                            </div>
-                            <div class="pricing-body">
-                                Single 55-minute mock sessions (Group of 2-3 candidates) with clinical assistant and
-                                associate professors of Ob/Gyn from top institutions
-                                Real-time Knowledge Feedback from our experts
-                                Real-time Oral Performance Feedback from our experts
-                                Recommended prep plans tailored based on candidate Knowledge and Performance
-                                assessment.
-                                Defense strategies for your difficult cases
-                            </div>
-                            <div class="pricing-footer"><a class="btn-default btn-border"  href="{{ route("register") }}">
-                                Purchase Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
+                @endforeach
             </div>
         </div>
     </div>
     <!-- End Pricing Area  -->
+
+
+
 
     <!-- Strat Timeline Area -->
     <div class="rwt-timeline-area rn-section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                    <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
+                        data-sal-delay="100">
                         <h4 class="subtitle "><span class="theme-gradient">Timeline</span></h4>
                         <h2 class="title w-600 mb--20">Working Process.</h2>
                         <p class="description b1">We help our clients succeed by creating brand identities, <br>
@@ -324,7 +173,8 @@
                         <div class="row row--0">
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
-                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Knowledge</h6>
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="200">Knowledge</h6>
                                     <div class="progress-line">
                                         <div class="line-inner"></div>
                                     </div>
@@ -333,12 +183,14 @@
                                             <div class="dot-inner"></div>
                                         </div>
                                     </div>
-                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Present all available features in Essentials.</p>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="300">Present all available features in Essentials.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
-                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Working</h6>
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="200">Working</h6>
                                     <div class="progress-line">
                                         <div class="line-inner"></div>
                                     </div>
@@ -347,12 +199,14 @@
                                             <div class="dot-inner"></div>
                                         </div>
                                     </div>
-                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">All Feature available features in Essentials.</p>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="300">All Feature available features in Essentials.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
-                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Solution</h6>
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="200">Solution</h6>
                                     <div class="progress-line">
                                         <div class="line-inner"></div>
                                     </div>
@@ -361,12 +215,14 @@
                                             <div class="dot-inner"></div>
                                         </div>
                                     </div>
-                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Popular Feature available features in Essentials.</p>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="300">Popular Feature available features in Essentials.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
-                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Process</h6>
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="200">Process</h6>
                                     <div class="progress-line">
                                         <div class="line-inner"></div>
                                     </div>
@@ -375,7 +231,8 @@
                                             <div class="dot-inner"></div>
                                         </div>
                                     </div>
-                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Latest Feature available features in Essentials.</p>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="300">Latest Feature available features in Essentials.</p>
                                 </div>
                             </div>
                         </div>
@@ -385,6 +242,10 @@
         </div>
     </div>
     <!-- End Timeline Area -->
+
+
+
+
 
     <!---Strat Contact Area --->
     <div class="rwt-contact-area rn-section-gap">
@@ -401,30 +262,57 @@
 
             <div class="row mt--40 row--15">
                 <div class="col-lg-7">
-                    <form class="contact-form-1 rwt-dynamic-form" id="contact-form" method="POST" action="mail.php">
+                    <form class="contact-form-1 rwt-dynamic-form" id="contact-form" action="{{ route("send-messege") }}" method="POST" >
+
+                        @csrf
+
+                        <!------ name ------>
                         <div class="form-group">
-                            <input type="text" name="contact-name" id="contact-name" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="contact-phone" id="contact-phone" placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="contact-email" name="contact-email" placeholder="Your Email">
+                            <input type="text" name="name" id="name" placeholder="Your Name..." value="{{ old("name") }}" minlength="8" maxlength="100" required/>
+                            @error('name')
+                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                            @enderror
                         </div>
 
+                        <!------ phone ------>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Your Subject">
+                            <input type="text" name="phone" id="phone" placeholder="Your Phone Number..." value="{{ old("phone") }}"  minlength="8" maxlength="100" required/>
+                            @error('phone')
+                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                            @enderror
                         </div>
 
+                        <!------ email ------>
                         <div class="form-group">
-                            <textarea name="contact-message" id="contact-message" placeholder="Your Message"></textarea>
+                            <input type="email" name="email" id="email" placeholder="Your Email Address..." value="{{ old("email") }}"  minlength="8" maxlength="100" required/>
+                            @error('email')
+                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                            @enderror
                         </div>
 
+                        <!------ subject ------>
                         <div class="form-group">
-                            <button name="submit" type="submit" id="submit" class="btn-default btn-large rn-btn">
+                            <input type="text" name="subject" id="subject" placeholder="Your Subject..." value="{{ old("subject") }}"  minlength="8" maxlength="100" required/>
+                            @error('subject')
+                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                            @enderror
+                        </div>
+
+                        <!------ body ------>
+                        <div class="form-group">
+                            <textarea name="body" id="body" placeholder="Your Message..." required>{{ old("body") }}</textarea>
+                            @error('body')
+                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                            @enderror
+                        </div>
+
+                        <!------ Submit Btn ------>
+                        <div class="form-group">
+                            <button type="submit" id="submit" class="btn-default btn-large rn-btn">
                                 <span>Submit Now</span>
                             </button>
                         </div>
+
                     </form>
                 </div>
                 <div class="col-lg-5 mt_md--30 mt_sm--30">
@@ -438,6 +326,9 @@
         </div>
     </div>
     <!---End Contact Area --->
+
+
+
 
 
 @endsection

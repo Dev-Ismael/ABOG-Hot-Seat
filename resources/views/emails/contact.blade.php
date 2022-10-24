@@ -11,7 +11,9 @@
 # {{ $requestData['subject'] }}
 
 <strong>Name :</strong>  {{ $requestData['name'] }} <br>
+<strong>Phone :</strong>  {{ $requestData['phone'] }} <br>
 <strong>Email :</strong>  {{ $requestData['email'] }} <br>
+<strong>Subject :</strong>  {{ $requestData['subject'] }} <br>
 <strong>Messege :</strong>  {{ $requestData['body'] }} <br>
 
 Thanks,<br>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Stevebauman\Location\Facades\Location;
 use App\Traits\SEOTrait;
 use App\Models\SeoManagement;
+use App\Models\Plan;
 class HomeController extends Controller
 {
     use SEOTrait;
@@ -27,8 +28,9 @@ class HomeController extends Controller
      */
     public function home(Request $request)
     {
-
-        return view('home');
+        $plans = Plan::get();
+        // return $plans;
+        return view('home' , compact('plans'));
 
     }
 

@@ -29,7 +29,7 @@ class ContactMail extends Mailable
     public function build()
     {
         return $this->markdown('emails.contact')                               // Mail blade
-        ->Subject($this->requestData['subject'])                               // Subject mail
+        ->Subject($this->requestData['title'])                                 // Subject mail
         ->from( $this->requestData['email'] , $this->requestData['name'] )     // From 2 prame ( mail sender , name sender )
         ->with('requestData' , $this->requestData);                            // Send Data to mail blade
     }

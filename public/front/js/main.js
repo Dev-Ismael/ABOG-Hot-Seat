@@ -30,7 +30,7 @@
             doobJs.lightBoxJs();
             doobJs.slickSliderActivation();
             doobJs.radialProgress();
-            doobJs.contactForm();
+            // doobJs.contactForm();
             doobJs.menuCurrentLink();
             doobJs.onePageNav();
         },

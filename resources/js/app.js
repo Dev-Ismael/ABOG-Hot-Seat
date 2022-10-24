@@ -26,7 +26,6 @@ app.use( CKEditor );
 // Layouts
 import admin_navbar from './Admin/Components/Layouts/admin_navbar.vue';
 import admin_sidebar from './Admin/Components/Layouts/admin_sidebar.vue';
-
 app.component('admin_navbar', admin_navbar);
 app.component('admin_sidebar', admin_sidebar);
 

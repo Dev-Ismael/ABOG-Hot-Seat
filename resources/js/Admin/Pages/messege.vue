@@ -138,14 +138,26 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="mdi mdi-file-document"></i> Name : </span>
+                                        <span class="h4 fw-bold"> <i class="icon-user"></i> Name : </span>
                                         <span class="h6"> {{ messege.name }} </span>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-cellphone-android"></i> Phone :
+                                        </span>
+                                        <span class="h6"> {{ messege.phone }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
                                         <span class="h4 fw-bold"> <i class="mdi mdi-email"></i> Email :
                                         </span>
-                                        <span class="h6"> {{ messege.body }} </span>
+                                        <span class="h6"> {{ messege.email }} </span>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <span class="h4 fw-bold"> <i class="icon-menu"></i> Subject :
+                                        </span>
+                                        <span class="h6"> {{ messege.subject }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">

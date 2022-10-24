@@ -124,8 +124,8 @@ class PlanController extends Controller
         $requestData = $request->all();
 
 
-        // add slug in $requestData Array
-        $requestData += [ 'slug' => Str::slug( $request->title , '-') ];
+        // Edit slug in $requestData Array
+        $requestData['slug']  = Str::slug( $request->title , '-' ) ;
 
 
         // return response()->json([
