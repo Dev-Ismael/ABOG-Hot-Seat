@@ -7,6 +7,8 @@ use Stevebauman\Location\Facades\Location;
 use App\Traits\SEOTrait;
 use App\Models\SeoManagement;
 use App\Models\Plan;
+use App\Models\Setting;
+
 class HomeController extends Controller
 {
     use SEOTrait;
@@ -28,9 +30,11 @@ class HomeController extends Controller
      */
     public function home(Request $request)
     {
+        // Find Record In Db Column
+        $settings = Setting::where('id', 1 )->first();
         $plans = Plan::get();
         // return $plans;
-        return view('home' , compact('plans'));
+        return view('home' , compact('plans','settings'));
 
     }
 

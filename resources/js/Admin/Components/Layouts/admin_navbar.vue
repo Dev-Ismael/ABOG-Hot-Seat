@@ -12,10 +12,10 @@
             </div>
             <div>
                 <a class="navbar-brand brand-logo" href="/">
-                    <img src="/images/BlueSky-Logo.png" alt="logo" />
+                    <img src="/front/images/logo/ahs-logo.png" alt="logo" width="60" />
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="/">
-                    <img src="/images/favicon.png" alt="logo" />
+                    <img src="/front/images/logo/favicon.png" alt="logo" />
                 </a>
             </div>
         </div>
@@ -186,16 +186,17 @@ export default {
             }
 
             // Send request with axios
-            axios.post("/logout" , config )
-                .then(
-                    response => {  // if there success request
-
-                        // console.log(response.data);
-                        window.location.href = '/';
-
-                    }
-                )
-                .catch(error => console.log(error));
+            axios.post("/admin/logout" , config )
+            .then(
+                response => {  // if there success request
+                    // console.log(response.data);
+                    // if (response.data.status == "success") {
+                    //     window.location.href = '/';
+                    // } else if (response.data.status == "error") {
+                    // }
+                }
+            )
+            .catch(error => console.log(error));
         }
 
     }

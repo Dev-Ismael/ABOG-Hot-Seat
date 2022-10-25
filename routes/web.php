@@ -29,11 +29,13 @@ Route::get('/profile',  [App\Http\Controllers\ProfileController::class, 'profile
 Route::post('/contact',  [App\Http\Controllers\MessegeController::class, 'store'])->name('send-messege');
 
 
+
 /*===========================================================
 ====== Admin Routes
 ============================================================*/
 Route::get('/admin/login',  [App\Http\Controllers\Admin\AuthController::class, 'view'])->name('admin.login');
 Route::post('/admin/login',  [App\Http\Controllers\Admin\AuthController::class, 'authProcess']);
+Route::post('/admin/logout',  [App\Http\Controllers\Admin\AuthController::class, 'adminLogout'])->name('admin.logout');
 
 
 Route::get('admin/{any}', [App\Http\Controllers\Admin\AdminController::class, 'index'])

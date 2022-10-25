@@ -3,7 +3,7 @@
         <div class="col-md-12 col-xl-6 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">BlueSky Settings</h4>
+                    <h4 class="card-title">ABOG Hot-Seat Settings</h4>
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="genral-tab" data-bs-toggle="tab" href="#genral-setting"
@@ -40,7 +40,7 @@
                                     <small class="text-danger" v-if="errors.phone_formatted"> {{errors.phone_formatted[0] }}
                                     </small>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="address">Address</label>
                                     <input type="text" v-model="settings.address" class="form-control" name="address"
                                         id="address" placeholder="Type Address...." :class=" errors.address ? 'border-danger' : ''  " >
@@ -53,7 +53,7 @@
                                         id="location" placeholder="Type Location...." :class=" errors.location ? 'border-danger' : ''  " >
                                     <small class="text-danger" v-if="errors.location"> {{errors.location[0] }}
                                     </small>
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label for="footer_content">Footer Content</label>
                                     <textarea v-model="settings.footer_content" class="form-control"

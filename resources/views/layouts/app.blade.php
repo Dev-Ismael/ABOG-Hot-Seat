@@ -21,7 +21,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans:400,600&amp;display=swap"
         rel="stylesheet">
 
-    <!-- CSS ============================================ -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- ================== CSS ========================== -->
     <link rel="stylesheet" href="{{ asset('front/css/vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/plugins/animation.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/plugins/feature.css') }}">
@@ -73,9 +76,9 @@
                                         <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('profile') }}"> Profile </a></li>
-                                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                     Logout
-                                                </a>
+                                                </a></li>
                                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                     {{ csrf_field() }}
                                                 </form>
@@ -85,10 +88,10 @@
                                         <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="/admin/dashboard"> Dashboard </a></li>
-                                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                <li><a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
                                                     Logout
                                                 </a></li>
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                <form id="admin-logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                                                     {{ csrf_field() }}
                                                 </form>
                                             </ul>
@@ -110,9 +113,9 @@
                 <div class="header-top">
                     <div class="logo">
                         <a href="index.html">
-                            <img class="logo-light" src="assets/images/logo/logo.png" alt="Corporate Logo">
-                            <img class="logo-dark" src="assets/images/logo/logo-dark.png" alt="Corporate Logo">
-                        </a>
+                            <img class="logo-light" src="{{ asset("front/images/logo/ahs-logo.png") }}" alt="AHS-Mocks">
+                            <img class="logo-dark" src="{{ asset("front/images/logo/ahs-logo.png") }}" alt="AHS-Mocks">
+                </a>
                     </div>
                     <div class="close-menu">
                         <button class="close-button">
@@ -122,10 +125,36 @@
                 </div>
                 <ul class="mainmenu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="contact.html">About</a></li>
-                    <li><a href="contact.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="/register">Register</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    @if(Auth::guard('web')->check())
+                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
+                            <ul class="submenu">
+                                <li><a href="{{ route('profile') }}"> Profile </a></li>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </ul>
+                        </li>
+                    @elseif(Auth::guard('admin')->check())
+                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
+                            <ul class="submenu">
+                                <li><a href="/admin/dashboard"> Dashboard </a></li>
+                                <li><a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
+                                    Logout
+                                </a></li>
+                                <form id="admin-logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </ul>
+                        </li>
+                    @else
+                        <li><a href="/login">Login</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -136,61 +165,27 @@
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+
+                        <div class="col-xl-4 col-md-4 col-sm-12 col-12 footer-box">
+                            <div class="logo">
+                                <a class="" href="{{ route('home') }}">
+                                    <img class="logo-light" src="{{ asset('front/images/logo/ahs-logo.png') }}" alt="ABOG-Hot-Seat">
+                                    <img class="logo-dark" src="{{ asset('front/images/logo/ahs-logo.png') }}" alt="ABOG-Hot-Seat">
+                                </a>
+                                <p> Simulate the Experience, Excel on the Big Day! </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5 col-md-5 col-sm-12 col-12 footer-box">
                             <div class="rn-footer-widget">
-                                <h4 class="title">Services</h4>
+                                <h4 class="title">Our Goal.</h4>
                                 <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="portfolio.html">Portfolio</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="service.html">Service</a></li>
-                                    </ul>
+                                    <h5 class="subtitle"> {{ $settings->footer_content }} </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rn-footer-widget">
-                                <div class="widget-menu-top">
-                                    <h4 class="title">Solutions</h4>
-                                    <div class="inner">
-                                        <ul class="footer-link link-hover">
-                                            <li><a href="brand.html">Brand</a></li>
-                                            <li><a href="call-to-action.html">call To Action</a></li>
-                                            <li><a href="counter.html">Counter</a></li>
-                                            <li><a href="service.html">Service</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rn-footer-widget">
-                                <h4 class="title">Company</h4>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="pricing.html">Pricing</a></li>
-                                        <li><a href="tab.html">Tab Styles</a></li>
-                                        <li><a href="service.html">Service</a></li>
-                                        <li><a href="social-share.html">Social</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                            <div class="rn-footer-widget">
-                                <h4 class="title">Resources</h4>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="testimonial.html">Testimonial</a></li>
-                                        <li><a href="service.html">Service</a></li>
-                                        <li><a href="timeline.html">Timeline</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+                        <div class="col-xl-3 col-md-3 col-sm-12 col-12 footer-box">
                             <div class="rn-footer-widget">
                                 <h4 class="title">Stay With Us.</h4>
                                 <div class="inner">
@@ -216,6 +211,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

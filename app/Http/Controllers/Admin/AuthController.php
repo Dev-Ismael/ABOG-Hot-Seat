@@ -9,13 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('guest:admin')->except('logout');
-    }
 
     public function view()
     {
+            $this->middleware('guest:admin')->except('logout');
         return view('auth.adminLogin');
     }
 
@@ -28,11 +25,32 @@ class AuthController extends Controller
         ]);
 
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-            // return redirect()->intended('/admin/users');
+            return redirect('/admin/dashboard');
         }
 
         return back()->withErrors(['email' => 'These credentials do not match our records.'])
             ->withInput($request->only('email', 'remember'));
+
+    }
+
+    public function adminLogout(Request $request)
+    {
+
+        Auth::guard('admin')->logout();
+        // return redirect('/');
+
+        // try{
+        //     Auth::guard('admin')->logout();
+        //     return response([
+        //         'status' => 'success',
+        //         'msg'    => 'logout successfully!'
+        //     ]);
+        // } catch (\Exception $e) {
+        //     return response([
+        //         'status' => 'error',
+        //         'msg'    => 'logout failed!'
+        //     ]);
+        // }
 
     }
 
