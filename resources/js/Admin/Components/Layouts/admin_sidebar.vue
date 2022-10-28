@@ -28,6 +28,12 @@
                     <span class="menu-title">Messeges</span>
                 </router-link>
             </li>
+            <li class="nav-item">
+                <router-link to="/admin/order" class="nav-link" >
+                    <i class="mdi mdi-message-text-outline menu-icon"></i>
+                    <span class="menu-title">Orders</span>
+                </router-link>
+            </li>
             <!-- <li class="nav-item nav-category">Mail</li>
             <li class="nav-item">
                 <router-link to="/admin/subscriber" class="nav-link" >

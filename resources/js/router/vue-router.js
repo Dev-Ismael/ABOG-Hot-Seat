@@ -11,6 +11,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 // Import Pages
 import DashboardPage from '../Admin/Pages/dashboard.vue';
 import MessegePage from '../Admin/Pages/messege.vue';
+import OrderPage from '../Admin/Pages/order.vue';
 import UserPage from '../Admin/Pages/user.vue';
 import SeoManagmentPage from '../Admin/Pages/seoManagment.vue';
 import PlanPage from '../Admin/Pages/plan.vue';
@@ -24,6 +25,7 @@ import notFoundPage from '../Admin/Pages/notFoundPage.vue';
 const routes = [
     { path: '/admin/dashboard' , component: DashboardPage },
     { path: '/admin/messege' , component: MessegePage },
+    { path: '/admin/order' , component: OrderPage },
     { path: '/admin/user' , component: UserPage },
     { path: '/admin/seo-managment' , component: SeoManagmentPage },
     { path: '/admin/plan' , component: PlanPage },

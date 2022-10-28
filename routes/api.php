@@ -42,6 +42,11 @@ Route::group([ 'prefix' => 'admin' ] , function(){     // URL ==> 'api/admin' ,
     Route::post('messege/search' , [App\Http\Controllers\Admin\MessegeController::class, 'search'])->name("messege.search");
     Route::post('messege/multiAction' , [App\Http\Controllers\Admin\MessegeController::class, 'multiAction'])->name("messege.multiAction");
 
+    // Orders
+    Route::resource('order', '\App\Http\Controllers\Admin\OrderController');
+    Route::post('order/search' , [App\Http\Controllers\Admin\OrderController::class, 'search'])->name("order.search");
+    Route::post('order/multiAction' , [App\Http\Controllers\Admin\OrderController::class, 'multiAction'])->name("order.multiAction");
+
     // Plans
     Route::resource('plan', '\App\Http\Controllers\Admin\PlanController');
     Route::post('plan/search' , [App\Http\Controllers\Admin\PlanController::class, 'search'])->name("plan.search");
