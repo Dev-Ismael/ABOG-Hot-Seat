@@ -68,10 +68,10 @@
                                 aria-labelledby="social-media-tab">
 
                                 <div class="form-group">
-                                    <label for="linkedin">Linkedin</label>
-                                    <input type="text" v-model="settings.linkedin" class="form-control" name="linkedin"
-                                        id="linkedin" placeholder="Type Linkedin...." :class=" errors.linkedin ? 'border-danger' : ''  " >
-                                    <small class="text-danger" v-if="errors.linkedin"> {{errors.linkedin[0] }}
+                                    <label for="instagram">Instagram</label>
+                                    <input type="text" v-model="settings.instagram" class="form-control" name="instagram"
+                                        id="instagram" placeholder="Type instagram...." :class=" errors.instagram ? 'border-danger' : ''  " >
+                                    <small class="text-danger" v-if="errors.instagram"> {{errors.instagram[0] }}
                                     </small>
                                 </div>
                                 <div class="form-group">
@@ -117,7 +117,7 @@ export default {
                 email: '',
                 phone: '',
                 phone_formatted: '',
-                linkedin: '',
+                instagram: '',
                 facebook: '',
                 twitter: '',
                 youtube: '',
@@ -181,7 +181,7 @@ export default {
 
 
             // Array of inputs
-            const inputs = ['address', 'location', 'footer_content', 'email', 'phone', 'phone_formatted', 'linkedin', 'facebook', 'twitter', 'youtube'];
+            const inputs = ['address', 'location', 'footer_content', 'email', 'phone', 'phone_formatted', 'instagram', 'facebook', 'twitter', 'youtube'];
 
 
             // For Loop To append every item in inputs array

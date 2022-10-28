@@ -9,6 +9,7 @@ use App\Models\Newsletter;
 use App\Models\user;
 use App\Models\Subscriber;
 use App\Models\Admin;
+use App\Models\Order;
 use App\Models\Plan;
 
 class AdminController extends Controller
@@ -29,11 +30,13 @@ class AdminController extends Controller
         $users       = User::count();
         $messeges    = Messege::count();
         $plans       = Plan::count();
+        $orders       = Order::count();
 
         return response()->json([
             "users"       => $users ,
             "messeges"    => $messeges ,
             "plans" => $plans ,
+            "orders" => $orders ,
         ]);
 
     }

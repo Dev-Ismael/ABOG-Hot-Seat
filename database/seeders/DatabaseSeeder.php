@@ -25,10 +25,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'email@gmail.com',
             'phone' => 'phone',
             'phone_formatted' => 'phone_formatted',
-            'linkedin' => 'linkedin',
-            'facebook' => 'facebook',
-            'twitter' => 'twitter',
-            'youtube' => 'youtube',
+            'instagram' => 'instagram',
+            'facebook'  => 'facebook',
+            'twitter'   => 'twitter',
+            'youtube'   => 'youtube',
         ]);
 
 

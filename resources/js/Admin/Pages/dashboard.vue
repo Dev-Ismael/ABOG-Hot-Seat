@@ -57,13 +57,13 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-xl-3 col-lg-6">
+                        <div class="col-xl-3 col-lg-6">
                             <div class="card card-stats mb-4 mb-xl-0">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h3 class="card-title text-uppercase text-muted mb-0 pb-4 mb-0">Newsletter</h3>
-                                            <span class="h2 font-weight-bold mb-0">{{ statistics.newsletter }}</span>
+                                            <h3 class="card-title text-uppercase text-muted mb-0 pb-4 mb-0">Orders</h3>
+                                            <span class="h2 font-weight-bold mb-0">{{ statistics.orders }}</span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="icon icon-shape bg-info  shadow p-2">
@@ -73,7 +73,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>

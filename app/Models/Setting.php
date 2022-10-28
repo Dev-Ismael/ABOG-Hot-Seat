@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Setting extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'address',
         'location',
@@ -16,7 +16,7 @@ class Setting extends Model
         'email',
         'phone',
         'phone_formatted',
-        'linkedin',
+        'instagram',
         'facebook',
         'twitter',
         'youtube',

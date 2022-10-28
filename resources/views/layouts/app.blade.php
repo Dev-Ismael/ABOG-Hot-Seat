@@ -171,9 +171,9 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-xl-4 col-md-4 col-sm-12 col-12 footer-box">
+                        <div class="col-xl-4 col-md-4 col-sm-12 col-12 footer-box text-center">
                             <div class="logo">
-                                <a class="" href="{{ route('home') }}">
+                                <a class="d-inline-block" href="{{ route('home') }}">
                                     <img class="logo-light" src="{{ asset('front/images/logo/ahs-logo.png') }}" alt="ABOG-Hot-Seat">
                                     <img class="logo-dark" src="{{ asset('front/images/logo/ahs-logo.png') }}" alt="ABOG-Hot-Seat">
                                 </a>
@@ -196,20 +196,20 @@
                                 <div class="inner">
                                     <h6 class="subtitle">2000+ Our clients are subscribe Around the World</h6>
                                     <ul class="social-icon social-default justify-content-start">
-                                        <li><a href="https://www.facebook.com/">
+                                        <li><a href="{{ $settings->facebook }}">
                                                 <i class="feather-facebook"></i>
                                             </a>
                                         </li>
-                                        <li><a href="https://www.twitter.com">
+                                        <li><a href="{{ $settings->twitter }}">
                                                 <i class="feather-twitter"></i>
                                             </a>
                                         </li>
-                                        <li><a href="https://www.instagram.com/">
+                                        <li><a href="{{ $settings->instagram }}">
                                                 <i class="feather-instagram"></i>
                                             </a>
                                         </li>
-                                        <li><a href="https://www.linkdin.com/">
-                                                <i class="feather-linkedin"></i>
+                                        <li><a href="{{ $settings->youtube }}">
+                                                <i class="feather-youtube"></i>
                                             </a>
                                         </li>
                                     </ul>

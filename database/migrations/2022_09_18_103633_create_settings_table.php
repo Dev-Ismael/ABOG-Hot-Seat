@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('phone_formatted')->nullable();
-            $table->string('linkedin')->nullable();
+            $table->string('instagram')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('youtube')->nullable();
