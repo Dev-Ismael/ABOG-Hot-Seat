@@ -28,6 +28,7 @@ Route::group([ 'prefix' => 'admin' ] , function(){     // URL ==> 'api/admin' ,
 
 
     Route::get('info',  [\App\Http\Controllers\Admin\AdminController::class, 'getAuthInfo']);
+    Route::post('update-info',  [\App\Http\Controllers\Admin\AdminController::class, 'updateAdminInfo']);
 
     Route::get('statistics',  [\App\Http\Controllers\Admin\AdminController::class, 'statistics']);
 

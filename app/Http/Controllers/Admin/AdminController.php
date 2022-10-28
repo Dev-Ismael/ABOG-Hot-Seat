@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Messege;
-use App\Models\Newsletter;
 use App\Models\user;
-use App\Models\Subscriber;
-use App\Models\Admin;
 use App\Models\Order;
 use App\Models\Plan;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\UpdateAdminInfoRequest;
 
 class AdminController extends Controller
 {
@@ -46,8 +46,56 @@ class AdminController extends Controller
 
         $admin = Admin::get()->first();
         return response()->json([
-            "user" => $admin,
+            "admin" => $admin,
         ]);
 
     }
+
+
+
+
+
+    public function updateAdminInfo( UpdateAdminInfoRequest $request)
+    {
+
+
+        $admin = Admin::get()->first();
+
+        // save all request in one variable
+        $requestData = $request->all();
+
+        // Hash Password
+        if( !isset( $requestData['password'] ) || $requestData['password'] == '' ){
+                $requestData['password'] = $admin->password;
+        }else{
+            $requestData['password'] = Hash::make($request->password);
+        }
+
+        // Update in DB
+        try {
+            // store row in table
+            $update = $admin-> update( $requestData );
+
+            // if not save in DB
+            if(!$update){
+                return response()->json([
+                    'status' => 'error',
+                    'msg'    => 'Error at update opration'
+                ]);
+            }
+
+            // If update Success
+            return response()->json([
+                'status' => 'success',
+                "msg"    => "Info update successfully",
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'msg'    => 'server error'
+            ]);
+        }
+    }
+
 }
