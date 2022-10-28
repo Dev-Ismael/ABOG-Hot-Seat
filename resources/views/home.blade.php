@@ -123,7 +123,7 @@
                 @foreach ($plans as $plan)
                     <div class="col-lg-4 col-md-6 col-12 mt--80">
                         <div
-                            class="rn-pricing style-2
+                            class="rn-pricing 
                             @if ($plan->recommended === '1') active @endif
                         ">
                             <div class="pricing-table-inner">
@@ -141,7 +141,8 @@
                                     {!! $plan->content !!}
                                 </div>
                                 <div class="pricing-footer">
-                                    <a class="btn-default btn-border" href="{{ route('register') }}">Purchase Now</a>
+                                    <a class="btn-default btn-border"
+                                        href="{{ route('order.index', $plan->slug) }}">Purchase Now</a>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +327,8 @@
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div class="text pl-3">
-                                <p><span>Phone:</span> <a href="tel:{{ $settings->phone_formatted }}">{{ $settings->phone }}</a></p>
+                                <p><span>Phone:</span> <a
+                                        href="tel:{{ $settings->phone_formatted }}">{{ $settings->phone }}</a></p>
                             </div>
                         </div>
                         <div class="dbox w-100 d-flex align-items-center">
@@ -342,7 +344,8 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="text pl-3">
-                                <p><span>Email:</span> <a href="mailto:{{ $settings->email }}">{{ $settings->email }}</a></p>
+                                <p><span>Email:</span> <a href="mailto:{{ $settings->email }}">{{ $settings->email }}</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -351,7 +354,6 @@
         </div>
     </div>
     <!---End Contact Area --->
-
 
 
 @endsection

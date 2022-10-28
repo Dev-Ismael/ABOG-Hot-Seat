@@ -9,17 +9,26 @@
 =========  Genral Propertires
 ================================================================*/
 /*======= Btn ====*/
-a.btn-default, button.btn-default, div.btn-default{
+a.btn-default,
+button.btn-default,
+div.btn-default {
     background: #f15e55 !important;
 }
+
 /*==== Footer ===*/
-.footer-style-default .footer-top{
+.footer-style-default .footer-top {
     padding: 30px 0px;
     border-bottom: 1px solid #959595;
 }
-.copyright-style-one{
+
+.copyright-style-one {
     padding: 10px 0px;
 }
+
+.height-350 {
+    height: 350px;
+}
+
 
 
 /*===============================================================
@@ -27,39 +36,43 @@ a.btn-default, button.btn-default, div.btn-default{
 ================================================================*/
 
 /*===== Navbar =====*/
-.mainmenu-nav .mainmenu li.has-droupdown .submenu
-{
+.mainmenu-nav .mainmenu li.has-droupdown .submenu {
     min-width: 175px !important;
 }
+
 body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
     color: #202d62 !important;
 }
-.mainmenu-nav .mainmenu > li > a:hover, .mainmenu-nav .mainmenu > li > a.active {
+
+.mainmenu-nav .mainmenu>li>a:hover,
+.mainmenu-nav .mainmenu>li>a.active {
     color: #f15e55 !important;
 }
 
 /*===== Slider =====*/
-.bg-overlay::before{
+.bg-overlay::before {
     background-color: #ffffff78;
     background-image: none;
 }
-.slider-style-4 .inner .title{
+
+.slider-style-4 .inner .title {
     color: #202d62;
     font-size: 60px;
 }
-.slider-style-4 .inner .description{
+
+.slider-style-4 .inner .description {
     color: #202d62f1;
 }
 
 /*======== About us =========*/
-@media only screen and (min-width: 1170px){
-    .cd-headline{
-        font-size:30px
+@media only screen and (min-width: 1170px) {
+    .cd-headline {
+        font-size: 30px
     }
 }
 
 /*=== Pricing ===*/
-.pricing span.subtitle{
+.pricing span.subtitle {
     font-size: 20px !important;
     text-decoration: line-through !important;
 }
@@ -70,17 +83,17 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 25px;
 }
-.contact-form-1 .form-group
-{
+
+.contact-form-1 .form-group {
     text-align: left;
 }
-.form-check
-{
+
+.form-check {
     padding: 0;
 }
 
 /*==== To Top Btn ======*/
-.rn-back-top{
+.rn-back-top {
     box-shadow: 0px 0px 10px 0px #724b4ba8;
 }
 
@@ -91,12 +104,11 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 
 
 /*======== Header ========*/
-.height-550
-{
+.height-550 {
     height: 550px;
 }
-.slider-perosonal-portfolio .inner
-{
+
+.slider-perosonal-portfolio .inner {
     margin-top: 125px;
 }
 
@@ -106,6 +118,7 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 25px;
 }
+
 .info-wrap .dbox .icon {
     width: 40px;
     height: 40px;
@@ -113,13 +126,154 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
     border: 2px solid rgb(0 0 0 / 44%);
     margin-right: 10px;
 }
+
 .info-wrap .dbox .icon i {
     font-size: 20px;
     color: rgb(145, 145, 145);
 }
+
 .info-wrap .dbox .text {
     width: calc(100% - 50px);
 }
+
 .info-wrap .dbox .text p {
     margin: 0;
+}
+
+
+/*===============================================================
+=========  Order Page
+================================================================*/
+.payment-form .content{
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+	background-color: white;
+}
+
+.payment-form .block-heading{
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.payment-form .block-heading p{
+	text-align: center;
+	max-width: 420px;
+	margin: auto;
+	opacity:0.7;
+}
+
+.payment-form.dark .block-heading p{
+	opacity:0.8;
+}
+
+.payment-form .block-heading h1,
+.payment-form .block-heading h2,
+.payment-form .block-heading h3 {
+	margin-bottom:1.2rem;
+	color: #3b99e0;
+}
+
+.payment-form form{
+	border-top: 2px solid #5ea4f3;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+	background-color: #ffffff;
+	padding: 0;
+	max-width: 600px;
+	margin: auto;
+}
+
+.payment-form .title{
+	font-size: 1em;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	margin-bottom: 0.8em;
+	font-weight: 600;
+	padding-bottom: 8px;
+}
+
+.payment-form .products{
+	background-color: #f7fbff;
+    padding: 25px;
+}
+
+.payment-form .products .item{
+	margin-bottom:1em;
+}
+
+.payment-form .products .item-name{
+	font-weight:600;
+	font-size: 0.9em;
+}
+
+.payment-form .products .item-description{
+	font-size:0.8em;
+	opacity:0.6;
+}
+
+.payment-form .products .item p{
+	margin-bottom:0.2em;
+}
+
+.payment-form .products .price{
+	float: right;
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+.payment-form .products .total{
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	margin-top: 10px;
+	padding-top: 19px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.payment-form .card-details{
+	padding: 25px 25px 15px;
+}
+
+.payment-form .card-details label{
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 15px;
+	color: #79818a;
+	text-transform: uppercase;
+}
+
+.payment-form .card-details button{
+	margin-top: 0.6em;
+	padding:12px 0;
+	font-weight: 600;
+}
+
+.payment-form .date-separator{
+    font-size: 24px;
+ 	margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-top: 5px !important;
+}
+
+@media (min-width: 576px) {
+	.payment-form .title {
+		font-size: 1.2em;
+	}
+
+	.payment-form .products {
+		padding: 40px;
+  	}
+
+	.payment-form .products .item-name {
+		font-size: 1em;
+	}
+
+	.payment-form .products .price {
+    	font-size: 1em;
+	}
+
+  	.payment-form .card-details {
+    	padding: 40px 40px 30px;
+    }
+
+  	.payment-form .card-details button {
+    	margin-top: 2em;
+    }
 }

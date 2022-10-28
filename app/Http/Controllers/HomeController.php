@@ -30,6 +30,7 @@ class HomeController extends Controller
      */
     public function home(Request $request)
     {
+        
         // Find Record In Db Column
         $settings = Setting::where('id', 1 )->first();
         $plans = Plan::get();

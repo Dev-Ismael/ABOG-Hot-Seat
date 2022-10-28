@@ -28,6 +28,9 @@ Route::get('/profile',  [App\Http\Controllers\ProfileController::class, 'profile
 
 Route::post('/contact',  [App\Http\Controllers\MessegeController::class, 'store'])->name('send-messege');
 
+// Order
+Route::get('/order/{slug}',  [App\Http\Controllers\OrderController::class, 'index'])->name('order.index');
+
 
 
 /*===========================================================

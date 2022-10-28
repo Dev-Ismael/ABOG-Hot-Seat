@@ -161,6 +161,11 @@
 
         @yield('FrontContent')
 
+        @php
+            // Find Record In Db Column
+            $settings = App\Models\Setting::where('id', 1 )->first();
+        @endphp
+
         <footer class="rn-footer footer-style-default no-border">
             <div class="footer-top">
                 <div class="container">
