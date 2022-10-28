@@ -41,7 +41,10 @@ class MessegeController extends Controller
             Mail::to(static::RECIVER_MAIL)->                 // Our Email 'reciever'
             send( new ContactMail( $requestData ) );
 
-            return view('submission');
+            return view('submission', [
+                'messege' => 'Thanks, Your submission sent successfully!',
+                'link' => 'home'
+            ]);
 
         } catch (\Exception $e) {
             return abort(500, 'Whatever you were looking for, look somewhere else');

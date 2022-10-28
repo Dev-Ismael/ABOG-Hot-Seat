@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+
+    protected $fillable = [
+        'user_id',
+        'plan_id',
+    ];
+
+
+    ############################## Relations ################################
+    public function user(){
+        return  $this->belongsTo("App\Models\User") ;
+    }
+
+    public function plan(){
+        return $this->belongsTo("App\Models\Order");
+    }
+
 }

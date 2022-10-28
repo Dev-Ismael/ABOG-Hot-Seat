@@ -2,6 +2,8 @@
 
 @section('FrontContent')
 
+
+
 <div class="main-content">
 
     <div class="rwt-contact-area rn-section-gap">
@@ -9,6 +11,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+
+                        @if(Session::has('purchase_session'))
+                            <div class="alert alert-danger">
+                                Before purchase you must login first.
+                            </div>
+                        @endif
+
                         <h4 class="subtitle "><span class="theme-gradient">Login Form</span></h4>
                         <h2 class="title w-600 mb--20">Welcome Back.</h2>
                     </div>
@@ -39,7 +48,7 @@
 
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-6 text-strart">
+                                <div class="col-6 text-start">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="form-check-label" for="remember">
@@ -56,11 +65,15 @@
                                 </div>
                             </div>
                         </div>
-
                         <button name="submit" type="submit" id="submit" class="btn-default btn-large rn-btn">
                             <span>Login Now</span>
                         </button>
                     </form>
+                    <p class="text-start pt-5">
+                        Don't Have an account?
+                        <a class="btn btn-link p-0" href="{{ route("register") }}"> Create an account</a>
+                        it takes less than minute
+                    </p>
                 </div>
             </div>
         </div>

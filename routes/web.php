@@ -30,6 +30,7 @@ Route::post('/contact',  [App\Http\Controllers\MessegeController::class, 'store'
 
 // Order
 Route::get('/order/{slug}',  [App\Http\Controllers\OrderController::class, 'index'])->name('order.index');
+Route::post('/order/{slug}',  [App\Http\Controllers\OrderController::class, 'proceed'])->name('order.proceed');
 
 
 

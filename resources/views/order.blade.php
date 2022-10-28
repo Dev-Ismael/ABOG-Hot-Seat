@@ -26,7 +26,10 @@
 
                         <section class="payment-form dark">
                             <div class="container">
-                                <form>
+                                <form method="POST" action="{{ route("order.proceed", $plan->slug ) }}" class="contact-form-1 rwt-dynamic-form" id="contact-form" >
+
+                                    @csrf
+
                                     <div class="card-details">
                                         <h3 class="title">Credit Card Details</h3>
                                         <div class="row">
@@ -59,10 +62,10 @@
                                                     aria-describedby="basic-addon1">
                                             </div>
                                             <div class="form-group col-sm-12">
-                                                <div class="pricing-footer">
-                                                    <a class="btn-default btn-border"
-                                                        href="{{ route('order.index', $plan->slug) }}">Proceed</a>
-                                                </div>
+                                                <button type="submit" id="submit" class="btn-default btn-large rn-btn w-100">
+                                                    <i class="fa-solid fa-money-bill"></i>
+                                                    Proceed
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
