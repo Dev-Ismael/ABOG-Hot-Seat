@@ -13,16 +13,16 @@ class Order extends Model
     protected $fillable = [
         'user_id',
         'plan_id',
+        'open',
     ];
 
 
     ############################## Relations ################################
     public function user(){
-        return  $this->belongsTo("App\Models\User") ;
+        return  $this -> belongsTo("App\Models\User") ;
     }
-
     public function plan(){
-        return $this->belongsTo("App\Models\Order");
+        return  $this -> belongsTo("App\Models\Plan") ;
     }
 
 }

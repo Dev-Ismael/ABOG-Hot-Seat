@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
+
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('plan_id');
+            $table->string('open' , 1 )->default('1');
             $table->timestamps();
         });
+
     }
 
     /**

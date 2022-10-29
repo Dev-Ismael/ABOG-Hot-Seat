@@ -142,6 +142,13 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 
 
 /*===============================================================
+=========  Profile Page
+================================================================*/
+.clltoaction-style-default.style-7 .content .subtitle{
+    max-width: inherit !important;
+}
+
+/*===============================================================
 =========  Order Page
 ================================================================*/
 .payment-form .content{

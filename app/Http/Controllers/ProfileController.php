@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Stevebauman\Location\Facades\Location;
 use App\Traits\SEOTrait;
-use App\Models\SeoManagement;
+use App\Models\Order;
+use Illuminate\Support\Facades\Auth;
+
 class ProfileController extends Controller
 {
     use SEOTrait;
@@ -27,7 +29,8 @@ class ProfileController extends Controller
      */
     public function profile()
     {
-        return view('profile');
+        $orders = Order::where('user_id', Auth::user()->id )->get();
+        return view('profile' , compact("orders"));
     }
 
 

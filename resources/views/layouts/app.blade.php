@@ -73,7 +73,7 @@
                                     <li><a href="/#pricing">Pricing</a></li>
                                     <li><a href="/#contact">Contact</a></li>
                                     @if(Auth::guard('web')->check())
-                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a class="nav-link dropdown-toggle" href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('profile') }}"> Profile </a></li>
                                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -85,7 +85,7 @@
                                             </ul>
                                         </li>
                                     @elseif(Auth::guard('admin')->check())
-                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a class="nav-link dropdown-toggle" href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
                                             <ul class="submenu">
                                                 <li><a href="/admin/dashboard"> Dashboard </a></li>
                                                 <li><a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">

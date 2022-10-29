@@ -13,21 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        ################ Orders ###################
-        Schema::table('orders', function (Blueprint $table) {
-            $table->foreign("user_id")
-            ->references('id')
-            ->on("users")
-            ->onDelete("cascade")
-            ->onUpdate("cascade");
-        });
-        Schema::table('orders', function (Blueprint $table) {
-            $table->foreign("plan_id")
-            ->references('id')
-            ->on("plans")
-            ->onDelete("cascade")
-            ->onUpdate("cascade");
-        });
+        // ################ Orders ###################
+        // Schema::table('orders', function (Blueprint $table) {
+        //     $table->foreign("user_id")
+        //     ->references('id')
+        //     ->on("users")
+        //     ->onDelete("cascade")
+        //     ->onUpdate("cascade");
+        // });
+        // Schema::table('orders', function (Blueprint $table) {
+        //     $table->foreign("plan_id")
+        //     ->references('id')
+        //     ->on("plans")
+        //     ->onDelete("cascade")
+        //     ->onUpdate("cascade");
+        // });
     }
 
     /**
