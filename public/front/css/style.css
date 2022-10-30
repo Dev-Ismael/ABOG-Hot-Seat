@@ -80,19 +80,19 @@
     Default Styles
 ***************************************/
 /*-- Variables --*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
 :root {
-  --color-primary: #059DFF;
-  --color-primary-rgba: rgb(5, 157, 255);
-  --color-primary-alt: #059DFF;
-  --color-primary-light: #059DFF;
-  --color-primary-lightest: #059DFF;
-  --color-secondary: #FB5343;
+  --color-primary: #202d62;
+  --color-primary-rgba: #202d6244;
+  --color-primary-alt: #202d62;
+  --color-primary-light: #202d62;
+  --color-primary-lightest: #202d62;
+  --color-secondary: #f15e55;
   --color-tertiary: #6549D5;
   --color-tertiary-alt: #6549D5;
   --color-pink: #E33FA1;
   --color-light-green: #36C6F0;
-  --color-primary-darker: #011827;
+  --color-primary-darker: #19234b;
   --color-tertiary-darker: #150b40;
   --color-secondary-darker: #190301;
   --color-light-green-darker: #001f27;
@@ -147,8 +147,8 @@
   --shadow-lighter: 4px 4px 20px 20px rgba(0,0,0,0.01);
   --transition: 0.3s;
   --transition-transform: transform .65s cubic-bezier(.23,1,.32,1);
-  --font-primary: "Inter", sans-serif;
-  --secondary-font: "Inter", sans-serif;
+  --font-primary: "Tajawal", sans-serif;
+  --secondary-font: "Tajawal", sans-serif;
   --font-awesome: "Font Awesome 5 Pro";
   --font-size-b1: 18px;
   --font-size-b2: 16px;
@@ -817,7 +817,7 @@ var {
 }
 
 /*---------------------------
-	List Style 
+	List Style
 ---------------------------*/
 ul,
 ol {
@@ -7576,16 +7576,13 @@ textarea:-ms-input-placeholder {
   padding-right: 100px !important;
 }
 
-/*======================== 
+/*========================
     Common Style Css
 ==========================*/
 /* Theme Gradient */
 .theme-gradient, .counter-style-1 .count-number {
-  background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98%/200% 100%;
+  color: var(--color-primary);
   text-transform: capitalize;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .bg-theme-gradient {
@@ -14303,36 +14300,35 @@ iframe {
   font-family: var(--font-primary);
   margin-bottom: 25px;
   display: block;
-  font-size: 80px;
+  font-size: 35px;
   line-height: 1.1;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-style-4 .inner .title {
-    font-size: 100px;
+    font-size: 35px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-style-4 .inner .title {
-    font-size: 100px;
+    font-size: 35px;
   }
 }
 @media only screen and (max-width: 767px) {
   .slider-style-4 .inner .title {
-    font-size: 60px;
+    font-size: 30px;
   }
 }
 @media only screen and (max-width: 575px) {
   .slider-style-4 .inner .title {
-    font-size: 55px;
+    font-size: 35px;
   }
 }
 .slider-style-4 .inner .description {
-  font-size: 22px;
-  line-height: 43px;
+  font-size: 16px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: var(--color-body);
+  color: #3a3a3a;
 }
 @media only screen and (max-width: 767px) {
   .slider-style-4 .inner .description {
@@ -14549,17 +14545,17 @@ iframe {
   }
 }
 .slider-perosonal-portfolio .inner .title {
-  font-size: 100px;
+  font-size: 80px;
   color: var(--color-white);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-perosonal-portfolio .inner .title {
-    font-size: 58px;
+    font-size: 55px;
   }
 }
 @media only screen and (max-width: 767px) {
   .slider-perosonal-portfolio .inner .title {
-    font-size: 46px;
+    font-size: 40px;
   }
 }
 .slider-perosonal-portfolio .inner a.btn-default.btn-border,
@@ -14815,7 +14811,7 @@ iframe {
 }
 
 /*-------------------------
-    Darkmode Styles  
+    Darkmode Styles
 ---------------------------*/
 .rn-back-top i {
   transition: 0.3s;
@@ -15118,7 +15114,7 @@ body.active-light-mode .rn-back-top,
 body.active-light-mode .popup-mobile-menu .inner,
 body.active-light-mode .rn-call-to-action.style-8,
 body.active-light-mode .bg-overlay-solid::before {
-  background: #f5f8fa;
+  background: #e6e7e9;
 }
 
 body.active-light-mode .rn-header.sticky {

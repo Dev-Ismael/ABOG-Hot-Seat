@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('FrontContent')
+
+
+
     <!---- Header ----->
     <div class="slider-perosonal-portfolio height-350 bg-overlay slider-bg-image bg_image--15" data-black-overlay="1">
         <div class="container">

@@ -26,7 +26,7 @@
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
                         <div class="inner text-left">
-                            <h1 class="title">Live <br> The Experience.</h1>
+                            <h1 class="title">Live The Experience.</h1>
                             <p class="description"> Almost all of the repeat exam takers say that most of the questions they
                                 missed were things they have read and studied during their exam prep. The Majority of
                                 candidates who have passed say that the most challenging aspect was articulating things they
@@ -43,11 +43,11 @@
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
                         <div class="inner text-left">
-                            <h1 class="title">Book <br> Your Seat Now.</h1>
+                            <h1 class="title">Book <br> Your Package Now.</h1>
                             <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again.
                                 Feel ready for the big day!</p>
                             <div class="button-group mt--30">
-                                <a class="btn-default" href="#pricing">PURCHASE NOW</a>
+                                <a class="btn-default" href="#pricing"><i class="fa-solid fa-money-bill"></i> See Pricing </a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
                         <h4 class="subtitle "><span class="theme-gradient">Timeline</span></h4>
-                        <h2 class="title w-600 ">Working Process.</h2>
+                        <h2 class="title w-600 ">Step by Step Guide.</h2>
                         <p class="description b1">We help our clients succeed by creating brand identities, <br>
                             digital experiences, and print materials.</p>
                     </div>
@@ -175,6 +175,23 @@
                 <div class="col-lg-10 offset-lg-1 mt--50">
                     <div class="timeline-style-two bg-color-blackest">
                         <div class="row row--0">
+                            <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
+
+                                <div class="rn-timeline">
+                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="200">Signup</h6>
+                                    <div class="progress-line">
+                                        <div class="line-inner"></div>
+                                    </div>
+                                    <div class="progress-dot">
+                                        <div class="dot-level">
+                                            <div class="dot-inner"></div>
+                                        </div>
+                                    </div>
+                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                        data-sal-delay="300">Create your personal account at ABOG Hot-Seat.</p>
+                                </div>
+                            </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
                                     <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
@@ -188,13 +205,13 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Choose best package for you .</p>
+                                        data-sal-delay="300">Choose best package for you.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
                                     <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="200">Sigup</h6>
+                                        data-sal-delay="200">Zelle Pay</h6>
                                     <div class="progress-line">
                                         <div class="line-inner"></div>
                                     </div>
@@ -204,13 +221,13 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Create Your own account to add packages in it.</p>
+                                        data-sal-delay="300">Pay with Zelle to our account and conttine setps.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
                                 <div class="rn-timeline">
                                     <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="200">Pay</h6>
+                                        data-sal-delay="200">Schedule</h6>
                                     <div class="progress-line">
                                         <div class="line-inner"></div>
                                     </div>
@@ -220,23 +237,7 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">pay with your master card or visa.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
-                                <div class="rn-timeline">
-                                    <h6 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="200">Booking</h6>
-                                    <div class="progress-line">
-                                        <div class="line-inner"></div>
-                                    </div>
-                                    <div class="progress-dot">
-                                        <div class="dot-level">
-                                            <div class="dot-inner"></div>
-                                        </div>
-                                    </div>
-                                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Choose best time to book your 55-minute mock session.</p>
+                                        data-sal-delay="300">Reverse your sessions from available dates/times.</p>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +257,7 @@
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
                         <h4 class="subtitle "><span class="theme-gradient">Contact Form</span></h4>
-                        <h2 class="title w-600 ">Our Contact Address Here.</h2>
+                        <h2 class="title w-600 ">Contact Us</h2>
                     </div>
                 </div>
             </div>
@@ -323,7 +324,7 @@
                 </div>
                 <div class="col-lg-5 mt_md--30 mt_sm--30">
                     <div class="info-wrap w-100 p-4 pt-0">
-                        <h3>Let's get in touch</h3>
+                        <h3>We'er Here To Help!</h3>
                         <p class="mb-4">We're open for any suggestion or just to have a chat</p>
                         <div class="dbox w-100 d-flex align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center">

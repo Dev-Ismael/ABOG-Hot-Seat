@@ -1,14 +1,11 @@
-/*======================== 
+/*========================
     Common Style Css
 ==========================*/
 
 /* Theme Gradient */
 .theme-gradient {
-    background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 98% / 200% 100%;
+    color: var(--color-primary);
     text-transform: capitalize;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .bg-theme-gradient {

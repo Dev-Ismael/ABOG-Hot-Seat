@@ -152,11 +152,13 @@
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
             });
             $('.slider-activation').not('.slick-initialized').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                arrows: true,
+                arrows: false,
                 adaptiveHeight: true,
                 cssEase: 'linear',
                 prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',

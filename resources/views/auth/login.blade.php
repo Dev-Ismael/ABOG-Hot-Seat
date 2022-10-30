@@ -18,8 +18,8 @@
                             </div>
                         @endif
 
-                        <h4 class="subtitle "><span class="theme-gradient">Login Form</span></h4>
-                        <h2 class="title w-600 mb--20">Welcome Back.</h2>
+                        {{-- <h4 class="subtitle "><span class="theme-gradient">Login Form</span></h4> --}}
+                        <h2 class="title w-600 mb--20">Welcome Back</h2>
                     </div>
                 </div>
             </div>
