@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('FrontContent')
+
+
     <!-- Start Slider Area  -->
     <div class="rwt-testimonial-area  slider-style-4  slider-activation slider-dot rn-slick-dot rn-slick-arrow">
         <div class="single-rn-slider slider-bg-image bg-overlay bg_image bg_image--6 height-950 d-flex align-items-center">
@@ -60,12 +62,7 @@
     <div id="about" class="rwt-about-area rn-section-gap">
         <div class="container">
             <div class="row row--30 align-items-center">
-                <div class="col-lg-5">
-                    <div class="thumbnail" data-sal="slide-right" data-sal-duration="800">
-                        <img class="w-100" src="{{ asset('front/images/about/about-1.jpg') }}" alt="About Images">
-                    </div>
-                </div>
-                <div class="col-lg-7 mt_md--40 mt_sm--40">
+                <div class="col-lg-12 mt_md--40 mt_sm--40">
                     <div class="content" data-sal="slide-left" data-sal-duration="800">
                         <div class="section-title">
                             <h2 class="title"> About Us <br>
@@ -110,31 +107,37 @@
     <!-- Start Pricing Area  -->
     <div id="pricing" class="rwt-pricing-area rn-section-gap">
         <div class="container">
-            <div class="row mb--40 mb_sm--0">
+            <div class="row  mb_sm--0">
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="400"
                         data-sal-delay="150">
                         <h4 class="subtitle "><span class="theme-gradient">Pricing</span></h4>
-                        <h2 class="title w-600 mb--20"> Packages Pricing.</h2>
+                        <h2 class="title w-600 "> Packages Pricing.</h2>
                     </div>
                 </div>
             </div>
             <div class="row row--15">
                 @foreach ($plans as $plan)
                     <div class="col-lg-4 col-md-6 col-12 mt--80">
-                        <div
-                            class="rn-pricing 
-                            @if ($plan->recommended === '1') active @endif
-                        ">
+                        <div class="rn-pricing @if ($plan->recommended === '1') active @endif ">
+
+                            @if ($plan->recommended === '1')
+                                <div class="flag">
+                                    <strong>Recommended</strong>
+                                </div>
+                            @endif
                             <div class="pricing-table-inner">
                                 <div class="pricing-header">
                                     <h4 class="title"> {{ $plan->title }} </h4>
                                     <div class="pricing">
-                                        <div class="price-wrapper">
+                                        <div class="price-wrapper old-price">
+                                            <span class="currency">$</span>
+                                            <span class="price"> {{ $plan->old_price }} </span>
+                                        </div>
+                                        <div class="price-wrapper discounted-price">
                                             <span class="currency">$</span>
                                             <span class="price"> {{ $plan->price }} </span>
                                         </div>
-                                        <span class="subtitle"> ${{ $plan->old_price }} </span>
                                     </div>
                                 </div>
                                 <div class="pricing-body">
@@ -142,7 +145,7 @@
                                 </div>
                                 <div class="pricing-footer">
                                     <a class="btn-default btn-border"
-                                        href="{{ route('order.index', $plan->slug) }}">Purchase Now</a>
+                                        href="{{ route('order.index', $plan->slug) }}"> <i class="fa-solid fa-money-bill"></i> Purchase </a>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +165,7 @@
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
                         <h4 class="subtitle "><span class="theme-gradient">Timeline</span></h4>
-                        <h2 class="title w-600 mb--20">Working Process.</h2>
+                        <h2 class="title w-600 ">Working Process.</h2>
                         <p class="description b1">We help our clients succeed by creating brand identities, <br>
                             digital experiences, and print materials.</p>
                     </div>
@@ -249,11 +252,11 @@
     <div id="contact" class="rwt-contact-area rn-section-gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 mb--40">
+                <div class="col-lg-12 ">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
                         <h4 class="subtitle "><span class="theme-gradient">Contact Form</span></h4>
-                        <h2 class="title w-600 mb--20">Our Contact Address Here.</h2>
+                        <h2 class="title w-600 ">Our Contact Address Here.</h2>
                     </div>
                 </div>
             </div>

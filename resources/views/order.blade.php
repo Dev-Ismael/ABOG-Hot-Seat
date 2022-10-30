@@ -69,6 +69,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </form>
                             </div>
                         </section>
@@ -76,23 +77,33 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div
-                        class="rn-pricing
-                        @if ($plan->recommended === '1') active @endif
-                    ">
+                    <div class="rn-pricing @if ($plan->recommended === '1') active @endif ">
+
+                        @if ($plan->recommended === '1')
+                            <div class="flag">
+                                <strong>Recommended</strong>
+                            </div>
+                        @endif
                         <div class="pricing-table-inner">
                             <div class="pricing-header">
                                 <h4 class="title"> {{ $plan->title }} </h4>
                                 <div class="pricing">
-                                    <div class="price-wrapper">
+                                    <div class="price-wrapper old-price">
+                                        <span class="currency">$</span>
+                                        <span class="price"> {{ $plan->old_price }} </span>
+                                    </div>
+                                    <div class="price-wrapper discounted-price">
                                         <span class="currency">$</span>
                                         <span class="price"> {{ $plan->price }} </span>
                                     </div>
-                                    <span class="subtitle"> ${{ $plan->old_price }} </span>
                                 </div>
                             </div>
                             <div class="pricing-body">
                                 {!! $plan->content !!}
+                            </div>
+                            <div class="pricing-footer">
+                                <a class="btn-default btn-border"
+                                    href="{{ route('order.index', $plan->slug) }}"> <i class="fa-solid fa-money-bill"></i> Purchase </a>
                             </div>
                         </div>
                     </div>
