@@ -53,13 +53,7 @@ body.active-light-mode button.btn-default.btn-border {
 }
 
 /*======= slick ==========*/
-.slick-track {
-    display: flex !important;
-}
 
-.slick-slide {
-    height: inherit !important;
-}
 
 /*===============================================================
 =========  Home Page
@@ -80,11 +74,12 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 }
 
 /*===== Slider =====*/
-.bg-overlay::before {
-    background-color: #ffffff78;
-    background-image: none;
-}
 
+.height-100vh {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
 /*======== About us =========*/
 @media only screen and (min-width: 1170px) {
     .cd-headline {

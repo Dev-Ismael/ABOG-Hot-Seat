@@ -8680,17 +8680,17 @@ body.sal-disabled [data-sal|=flip] {
 }
 @media only screen and (min-width: 1170px) {
   .cd-headline {
-    font-size: 48px;
+    font-size: 50px;
   }
 }
 @media only screen and (max-width: 768px) {
   .cd-headline {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 @media only screen and (max-width: 479px) {
   .cd-headline {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 .cd-words-wrapper {
@@ -8719,9 +8719,9 @@ body.sal-disabled [data-sal|=flip] {
   opacity: 1;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xclip 
+xclip
 
 -------------------------------- */
 .cd-headline.clip span {
@@ -13905,7 +13905,7 @@ iframe {
   top: 0;
   left: 0;
   background-color: transparent;
-  background-image: linear-gradient(90deg, #060606 0%, rgba(6, 6, 6, 0) 90%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.753), rgba(255, 255, 255, 0.205));
   content: "";
 }
 
