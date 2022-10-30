@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Pay with Zelle to our account and conttine setps.</p>
+                                        data-sal-delay="300">Pay with Zelle to our account to continue setps.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
