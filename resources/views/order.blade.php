@@ -152,7 +152,7 @@
 
                                         <div class="col-12">
                                             <label class="plan zelle-payment" for="zelle">
-                                                <input checked type="radio" name="payment_method" id="zelle" />
+                                                <input checked type="radio" name="payment_method" id="zelle" value="zelle" />
                                                 <div class="plan-content">
                                                     <h3 class="title d-flex align-items-center">
                                                         <div>
@@ -221,6 +221,7 @@
                                                 </div>
                                             </label>
                                         </div>
+
                                         <div class="form-group col-12 text-start mt--10">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="checkbox"

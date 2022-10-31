@@ -124,7 +124,7 @@
                                     </a>
                                 </div>
                                 <p class="subtitle sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
-                                    @if ( $order->open === '1' )
+                                    @if ( $order->status === '1' )
                                         Here your <strong>{{ $order->plan->title }}</strong>  you have purchased, you can book your session for here
                                     @else
                                         Your {{ $order->plan->title }} has reached for limits of sessions

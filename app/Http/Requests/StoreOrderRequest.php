@@ -24,7 +24,7 @@ class StoreOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'bank_email' => [ 'required', 'email', 'max:100' ],
+            'gander'=> ['required|in:zelle,venmo' ],
             'checkbox'   => [ 'accepted' ]
         ];
     }

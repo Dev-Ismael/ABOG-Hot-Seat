@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('plan_id');
-            $table->string('bank_email');
+            $table->string('payment_method');
             $table->string('status' , 1 )->default('1');
             $table->timestamps();
         });
