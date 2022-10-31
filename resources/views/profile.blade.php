@@ -22,26 +22,20 @@
             <div class="row row--30">
                 <div class="col-lg-6">
                     <div class="mission-title sal-animate" data-sal="slide-up" data-sal-duration="800">
-                        <h2 class="title">Unique Mission <br>
-                            <span class="header-caption">
-                                <span class="cd-headline clip is-full-width">
-                                    <span class="cd-words-wrapper" style="width: 129.019px; overflow: hidden;">
-                                        <b class="theme-gradient is-hidden">Finance.</b>
-                                        <b class="theme-gradient is-hidden">Consulting.</b>
-                                        <b class="theme-gradient is-visible">Agency.</b>
-                                    </span>
-                                </span>
-                            </span>
-                        </h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat dolore laboriosam
-                            ea minus dignissimos, laudantium odit officia soluta, et deleniti fugit deserunt saepe,
-                            velit sapiente obcaecati? Vitae, iusto delectus?</p>
-                        <p>Consectetur adipisicing elit. Quia quaerat dolore laboriosam ea minus dignissimos,
-                            laudantium odit officia soluta, et deleniti fugit deserunt saepe, velit sapiente
-                            obcaecati? Vitae, iusto delectus?</p>
-                        {{-- <div class="read-more-btn mt--50"><a class="btn-default btn-icon"
-                                href="index-business-consulting-2.html">Learn More <i
-                                    class="icon feather-arrow-right"></i></a></div> --}}
+                        <h2 class="title">Are you Ready? </h2>
+                        <p>Wherever you are on your ABOG Oral Exam preparation Journey, we are here for you!</p>
+                        <p>If you're starting your preparation and want to tailor your study/prep time to your areas of weakness, AHS experts will help you identify them and tackle each one.
+                            If you have prepared and want to sit in the Hot-Seat to assess and improve your performance, AHS will Simulate the Full exam experience for you.
+                        </p>
+                        <p>
+                            You don't have to dive in dozens of books and endless notes to hammer down things that YOU ALREADY KNOW.
+                            You'd rather use all the time and effort to PERFECT AREAS OF WEAKNESS after each Mock Exam Session!
+                        </p>
+                        <p> We are here to help you Crush Your Oral Boards!</p>
+                        <p>
+                            Sincerely, <br>
+                            AHS Team
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-6 mt_md--30 mt_sm--30">
@@ -51,14 +45,13 @@
                                 <h2 class="accordion-header card-header" id="headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        What is Doob ? How does it work?
+                                        How Do I send AHS My Lists?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        You can run doob easily. First You'll need to have node and npm on your
-                                        machine. So Please open your command prompt then check your node.
+                                        They will confirm your dates and ask you to <br> 1-Select your Mock Exam Session area (GYN, OB or Office). <br> 2- Submit all your lists in the same email conversation for the examiners' reference.
                                     </div>
                                 </div>
                             </div>
@@ -67,14 +60,14 @@
                                 <h2 class="accordion-header card-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How can I get the customer support?
+                                        Can I choose all the Mock Exams in my Package to be in one Area (OB, GYN or Office)?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        After purchasing the product need you any support you can be share with
-                                        us with sending mail to rainbowit10@gmail.com.
+                                        Absolutely, the whole purpose of AHS' efficient Exam preparation method is to focus on YOUR areas of weakness, rather than keep throwing piles of information at you that you probably already know. You are a Physician in Practice fully taking care of patients, not a student or a resident anymore!
+                                        You can elect to have your entire 4,8 or 12 Mock Exams in either OB, GYN or Office.
                                     </div>
                                 </div>
                             </div>
@@ -83,14 +76,13 @@
                                 <h2 class="accordion-header card-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I get update regularly and For how long do I get updates?
+                                        Can I choose to continue All my Mock Exams with a specific Examiner?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        Yes, We will get update the Trydo. And you can get it any time. Next
-                                        time we will comes with more feature.
+                                        Please send us your requests as soon as you determine this. Our scheduling team will do every effort to make this possible. However, given that all our experts have their clinical duties as well as academic responsibilities (All the AHS team are Assistant/Associate Professors of Ob/Gyn), it might not always be feasible for your selected dates/times. It's also best to get accustomed to the Real Exam -- You'll be examined by SIX examiners on your Big Day!
                                     </div>
                                 </div>
                             </div>
@@ -99,15 +91,13 @@
                                 <h2 class="accordion-header card-header" id="headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        How can I run doob html template?
+                                        How can I book Additional Mock Exam sessions rather than another full package?
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        You can run doob easily. First You'll need to have node and npm on your
-                                        machine. So Please open your command prompt then check your node -v and
-                                        npm -v Version.
+                                        We made the Single/Additional Mock Exam Session option based on candidates' requests. Problem solved! Add whatever number of Additional Mock Exam Sessions you want based on availability of dates/times.
                                     </div>
                                 </div>
                             </div>

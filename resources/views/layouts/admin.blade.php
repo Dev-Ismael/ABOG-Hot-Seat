@@ -32,7 +32,7 @@
     <link rel="stylesheet" id="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
     <link rel="stylesheet" id="stylesheet" href="{{ asset('admin/css/custom.css') }}">
     <!-- endinject -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/images/logo/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/images/logo/favicon.jpg') }}">
 </head>
 
 <body class="with-welcome-text">

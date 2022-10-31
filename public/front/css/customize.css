@@ -33,6 +33,19 @@ body.active-light-mode button.btn-default.btn-border {
     color: #fff;
 }
 
+/*==== Model ===*/
+.modal {
+    z-index: 9999999999;
+}
+
+.modal button.close {
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 0px 10px;
+    border: 1px solid #828282;
+}
+
+
 /*==== Footer ===*/
 .footer-style-default .footer-top {
     padding: 30px 0px;
@@ -51,9 +64,11 @@ body.active-light-mode button.btn-default.btn-border {
 .height-350 {
     height: 350px;
 }
-a.btn.btn-link{
+
+a.btn.btn-link {
     font-size: 14px !important;
 }
+
 /*===============================================================
 =========  Home Page
 ================================================================*/
@@ -79,6 +94,7 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
     display: flex;
     align-items: center;
 }
+
 /*======== About us =========*/
 @media only screen and (min-width: 1170px) {
     .cd-headline {
@@ -159,6 +175,7 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 
 .contact-form-1 .form-group {
     text-align: left;
+    position: relative;
 }
 
 .form-check {
@@ -224,6 +241,8 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 /*===============================================================
 =========  Order Page
 ================================================================*/
+
+/* payment Form */
 .payment-form .content {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
     background-color: white;
@@ -322,10 +341,10 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 
 
 .payment-form .date-separator {
-    font-size: 24px;
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-    margin-top: 15px !important;
+    position: absolute;
+    bottom: -10px;
+    font-size: 40px;
+    margin-left: 5px !important;
 }
 
 @media (min-width: 576px) {
@@ -349,4 +368,207 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
         padding: 40px 40px 30px;
     }
 
+}
+
+
+
+/*======== Radio Style =======*/
+
+.plans {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 970px;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.plans .plan input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.plans .plan {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.plans .plan .plan-content {
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #e1e2e7;
+    border-radius: 10px;
+    position: relative;
+}
+
+.plans .plan .plan-content img {
+    margin-right: 30px;
+    height: 72px;
+}
+
+.plans .plan .plan-details span {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    color: #252f42;
+}
+
+.plans .plan .plan-details p {
+    color: #646a79;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.plan-content .form-group input {
+    height: 50px !important;
+    padding: 0px 10px;
+    font-size: 14px !important;
+}
+
+.plan-content .form-group .btn-default {
+    padding: 0px 15px;
+}
+
+.plans .plan .plan-content:hover {
+    -webkit-box-shadow: 0px 3px 5px 0px #e8e8e8;
+    box-shadow: 0px 3px 5px 0px #e8e8e8;
+}
+
+.plans .plan input[type="radio"]:checked+.plan-content:after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: #216fe0;
+    right: 20px;
+    top: 20px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 0px 0px 0px 2px #06f;
+    box-shadow: 0px 0px 0px 2px #06f;
+}
+
+.plans .plan input[type="radio"]:checked+.plan-content {
+    border: 2px solid #216ee0;
+    background: #eaf1fe;
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+}
+
+@media screen and (max-width: 991px) {
+    .plans {
+        margin: 0 20px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 40px;
+    }
+
+    .plans .plan {
+        width: 100%;
+    }
+
+    .plan.complete-plan {
+        margin-top: 20px;
+    }
+
+    .plans .plan .plan-content .plan-details {
+        width: 70%;
+        display: inline-block;
+    }
+
+    .plans .plan input[type="radio"]:checked+.plan-content:after {
+        top: 45%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .plans .plan .plan-content .plan-details {
+        width: 60%;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .plans .plan .plan-content img {
+        margin-bottom: 20px;
+        height: 56px;
+        -webkit-transition: height 0.4s;
+        -o-transition: height 0.4s;
+        transition: height 0.4s;
+    }
+
+    .plans .plan input[type="radio"]:checked+.plan-content:after {
+        top: 20px;
+        right: 10px;
+    }
+
+    .plans .plan .plan-content .plan-details {
+        width: 100%;
+    }
+
+    .plans .plan .plan-content {
+        padding: 20px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+}
+
+/* inspiration */
+.inspiration {
+    font-size: 12px;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 10px;
+    font-weight: 300;
+}
+
+.inspiration a {
+    color: #666;
+}
+
+@media screen and (max-width: 767px) {
+
+    /* inspiration */
+    .inspiration {
+        display: none;
+    }
+}
+/*=========== Zelle btn Style ============*/
+button.btn-default.zelle-btn{
+    background-color: #6d1ed4 !important;
+    border: 1px solid #6d1ed4 !important;
+    color: #fff !important;
+}
+button.btn-default.venmo-btn{
+    background-color: #008cff !important;
+    border: 1px solid #008cff !important;
+    color: #fff !important;
 }

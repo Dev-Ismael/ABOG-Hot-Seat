@@ -24,7 +24,7 @@
             class="single-rn-slider height-100vh slider-bg-image bg-overlay bg_image bg_image--14 height-100vh d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
-                    <div class="order-2 order-lg-1 col-lg-7">
+                    <div class="order-2 order-lg-1 col-lg-8">
                         <div class="inner text-left">
                             <h1 class="title">Live The Experience.</h1>
                             <p class="description"> Almost all of the repeat exam takers say that most of the questions they
@@ -41,13 +41,13 @@
             class="single-rn-slider height-100vh slider-bg-image bg-overlay bg_image bg_image--15 height-100vh d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
-                    <div class="order-2 order-lg-1 col-lg-7">
+                    <div class="order-2 order-lg-1 col-lg-8">
                         <div class="inner text-left">
                             <h1 class="title">Book Your Package Now.</h1>
                             <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again.
                                 Feel ready for the big day!</p>
                             <div class="button-group mt--30">
-                                <a class="btn-default" href="#pricing"><i class="fa-solid fa-money-bill"></i> See Pricing
+                                <a class="btn-default" href="#pricing"> Get Strated!
                                 </a>
                             </div>
                         </div>
@@ -156,8 +156,8 @@
                                     {!! $plan->content !!}
                                 </div>
                                 <div class="pricing-footer">
-                                    <a class="btn-default btn-border" href="{{ route('order.index', $plan->slug) }}"> <i
-                                            class="fa-solid fa-money-bill"></i> Purchase </a>
+                                    <a class="btn-default btn-border" href="{{ route('order.index', $plan->slug) }}">
+                                        <i class="fa-solid fa-dollar-sign"></i> Purchase </a>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +275,7 @@
             </div>
 
             <div class="row mt--40 row--15">
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <form class="contact-form-1 rwt-dynamic-form" id="contact-form" action="{{ route('send-messege') }}"
                         method="POST">
 
@@ -371,5 +371,5 @@
     </div>
     <!---End Contact Area --->
 
-    
+
 @endsection

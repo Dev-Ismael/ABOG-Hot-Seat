@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('FrontContent')
-
-
     <!---- Header ----->
     <div class="slider-perosonal-portfolio height-350 bg-overlay slider-bg-image bg_image--23" data-black-overlay="1">
         <div class="container">
@@ -21,8 +19,13 @@
     <div class="rn-section-gap">
         <div class="container">
             <div class="row row--30">
-                <div class="col-lg-8 col-md-6 col-12">
 
+                <div class="section-title mb--40 text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
+                    data-sal-delay="100">
+                    <h2 class="title w-600">Pay Now To Complete Steps</h2>
+                </div>
+
+                <div class="col-lg-8 col-md-6 col-12">
                     <section class="payment-form dark">
                         <div class="container">
                             <form method="POST" action="{{ route('order.proceed', $plan->slug) }}"
@@ -31,6 +34,7 @@
                                 @csrf
 
 
+                                <!----- Payment ingertarion Form -------->
                                 {{--
                                     <div class="card-details">
                                         <h3 class="title">Credit Card Details</h3>
@@ -73,7 +77,8 @@
                                     </div>
                                 --}}
 
-                                <div class="card-details">
+                                <!----- Zelle Form -------->
+                                {{-- <div class="card-details">
                                     <h3 class="title d-flex align-items-center">
                                         <div>
                                             <img src="{{ asset('front/images/zelle-app.png') }}" alt="zelle-app"
@@ -126,7 +131,7 @@
                                         <div class="form-group col-sm-12">
                                             <button type="submit" id="submit"
                                                 class="btn-default btn-large rn-btn w-100">
-                                                <i class="fa-solid fa-money-bill"></i>
+                                                <i class="fa-solid fa-dollar-sign"></i>
                                                 Proceed
                                             </button>
                                         </div>
@@ -136,6 +141,105 @@
                                                 href="https://www.youtube.com/watch?v=FhL1HKUOStM"> See how to Use Zelle
                                                 App</a>
                                         </p>
+                                    </div>
+                                </div> --}}
+
+
+                                <!---- QR Form ---->
+                                <div class="container">
+                                    <div class="plans row">
+                                        <div class="title">Choose best way for payment </div>
+
+                                        <div class="col-12">
+                                            <label class="plan zelle-payment" for="zelle">
+                                                <input checked type="radio" name="payment_method" id="zelle" />
+                                                <div class="plan-content">
+                                                    <h3 class="title d-flex align-items-center">
+                                                        <div>
+                                                            <img src="{{ asset('front/images/zelle-app.png') }}"
+                                                                alt="zelle-app" class="mr--10" height="50">
+                                                        </div>
+                                                        <div>
+                                                            Pay With Zelle®
+                                                        </div>
+                                                    </h3>
+                                                    <div class="row">
+                                                        <div class="form-group col-5">
+                                                            <label for="our-mail"> Our Zell Phone </label>
+                                                            <input id="our-mail" type="text" class="form-control"
+                                                                placeholder="(346) 552-5363 " aria-label="Card Holder" disabled
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <div class="form-group col-1 align-items-end">
+                                                            <span class="date-separator">/</span>
+                                                        </div>
+                                                        <div class="form-group col-6">
+                                                            <label for="our-mail"> Our QR Code </label>
+                                                            <!-- Zelle modal btn -->
+                                                            <button type="button" class="btn-default btn-border zelle-btn" data-toggle="modal" data-target="#zelleModal">
+                                                                <i class="fa-solid fa-qrcode"></i>
+                                                                Scan QR Code
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="plan venmo-payment" for="venmo">
+                                                <input type="radio" id="venmo" name="payment_method" value="venmo" />
+                                                <div class="plan-content">
+                                                    <h3 class="title d-flex align-items-center">
+                                                        <div>
+                                                            <img src="{{ asset('front/images/venmo-app.png') }}"
+                                                                alt="venmo-app" class="mr--10" style="border-radius: 10px"  height="50">
+                                                        </div>
+                                                        <div>
+                                                            Pay With Venmo
+                                                        </div>
+                                                    </h3>
+                                                    <div class="row">
+                                                        <div class="form-group col-6">
+                                                            <label for="our-mail"> Our Recipient Name </label>
+                                                            <input id="our-mail" type="text" class="form-control"
+                                                                placeholder="ABOG Hot-Seat Simulation(AHS)" aria-label="Card Holder" disabled
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <div class="form-group col-1 align-items-end">
+                                                            <span class="date-separator">/</span>
+                                                        </div>
+                                                        <div class="form-group col-5">
+                                                            <label for="our-mail"> Our QR Code </label>
+                                                            <!-- Zelle modal btn -->
+                                                            <button type="button" class="btn-default btn-border venmo-btn" data-toggle="modal" data-target="#venmoModal">
+                                                                <i class="fa-solid fa-qrcode"></i>
+                                                                Scan QR Code
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-group col-12 text-start mt--10">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="checkbox"
+                                                    id="checkbox" {{ old('checkbox') ? 'checked' : '' }} required/>
+                                                <label class="form-check-label" for="checkbox">
+                                                    Yes, I have Send ${{ $plan->price }} to AHS Hot-Seat Wallet
+                                                </label>
+                                            </div>
+                                            @error('checkbox')
+                                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group col-sm-12 mt--10">
+                                            <button type="submit" id="submit"
+                                                class="btn-default btn-large rn-btn w-100">
+                                                <i class="fa-solid fa-dollar-sign"></i>
+                                                Proceed
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -169,12 +273,53 @@
                             <div class="pricing-body">
                                 {!! $plan->content !!}
                             </div>
-                            <div class="pricing-footer">
-                                <a class="btn-default btn-border" href="{{ route('order.index', $plan->slug) }}"> <i
-                                        class="fa-solid fa-money-bill"></i> Purchase </a>
-                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---- Zelle Model -------->
+    <div class="modal fade" id="zelleModal" tabindex="-1" role="dialog" aria-labelledby="zelleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="zelleModalLabel">Zelle QR Code</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="{{ asset("front/images/zelle-qr-code.jpg") }}" alt="zelle-qr-code">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-default" data-dismiss="modal"> Done </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---- Venmo Model -------->
+    <div class="modal fade" id="venmoModal" tabindex="-1" role="dialog" aria-labelledby="venmoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="venmoModalLabel">Venmo QR Code</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="{{ asset("front/images/venmo-qr-code.jpg") }}" alt="zelle-qr-code">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-default" data-dismiss="modal"> Done </button>
                 </div>
             </div>
         </div>
