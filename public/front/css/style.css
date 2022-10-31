@@ -14546,7 +14546,7 @@ iframe {
 }
 .slider-perosonal-portfolio .inner .title {
   font-size: 80px;
-  color: var(--color-white);
+  color: var(--color-secondary);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-perosonal-portfolio .inner .title {

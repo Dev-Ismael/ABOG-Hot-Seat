@@ -10,7 +10,7 @@
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-9">
                         <div class="inner text-left">
-                            <h1 class="title">Simulate <br> the Experience, Excel on the Big Day. </h1>
+                            <h1 class="title">Simulate the Experience, <br> Excel on the Big Day. </h1>
                             <p class="description">Preparing for a marathon should not be by only studying how to run. You
                                 gotta hit the track over and over again! Receive real-time knowledge and performance
                                 feedback from our top-notch experts and leaders in the field.</p>
@@ -43,11 +43,12 @@
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-7">
                         <div class="inner text-left">
-                            <h1 class="title">Book <br> Your Package Now.</h1>
+                            <h1 class="title">Book Your Package Now.</h1>
                             <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again.
                                 Feel ready for the big day!</p>
                             <div class="button-group mt--30">
-                                <a class="btn-default" href="#pricing"><i class="fa-solid fa-money-bill"></i> See Pricing </a>
+                                <a class="btn-default" href="#pricing"><i class="fa-solid fa-money-bill"></i> See Pricing
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -63,9 +64,9 @@
         <div class="container">
             <div class="row row--30 align-items-center">
                 <div class="col-lg-12 mt_md--40 mt_sm--40">
-                    <div class="content" data-sal="slide-left" data-sal-duration="800">
+                    <div class="content" >
                         <div class="section-title">
-                            <h2 class="title"> About Us <br>
+                            <h2 class="title" data-sal="slide-left" data-sal-duration="800"> About Us <br>
                                 <span class="header-caption">
                                     <span class="cd-headline clip is-full-width">
                                         <span class="cd-words-wrapper">
@@ -76,25 +77,36 @@
                                     </span>
                                 </span>
                             </h2>
-                            <p>
-                                The ABOG Oral Board exam is undeniably the most important exam for a physician's career. It
-                                is the last step of a long journey and many years full of efforts and sacrifices. We are a
-                                group of Clinical Assistant and Associate professors as well as leaders in the field of
-                                OB/GYN who witnessed many excellent physicians struggle with passing the oral boards and
-                                decided to help. After interviewing diplomats who passed their boards as well as repeat exam
-                                takers, it was crystal clear that this exam needs a different strategy for preparation. Most
-                                candidates still followed the same old way of exam preparation similar to any other written
-                                test in the past. Majority of interviewed candidates stated that the most challenging aspect
-                                of this test was NOT that they felt they did not know the answer BUT was articulating things
-                                they already know and do in their practices under immense pressure.
-                            </p>
-                            <p>
-                                From there, we started examining the best strategies to assist candidates pass this test and
-                                came to ABOG Hot-Seat Simulation.
-                                We provide the candidate with simulation of the exam experience as well as recommended
-                                preparation plans tailored based on a candidate's current level of Knowledge and Oral
-                                Performance.
-                            </p>
+                            <div class="about-content" data-sal="slide-right" data-sal-duration="800">
+                                <p>
+                                    The ABOG Oral Board exam is undeniably the most important exam for a physician's career.
+                                    It
+                                    is the last step of a long journey and many years full of efforts and sacrifices. We are
+                                    a
+                                    group of Clinical Assistant and Associate professors as well as leaders in the field of
+                                    OB/GYN who witnessed many excellent physicians struggle with passing the oral boards and
+                                    decided to help. After interviewing diplomats who passed their boards as well as repeat
+                                    exam
+                                    takers, it was crystal clear that this exam needs a different strategy for preparation.
+                                    Most
+                                    candidates still followed the same old way of exam preparation similar to any other
+                                    written
+                                    test in the past. Majority of interviewed candidates stated that the most challenging
+                                    aspect
+                                    of this test was NOT that they felt they did not know the answer BUT was articulating
+                                    things
+                                    they already know and do in their practices under immense pressure.
+                                </p>
+                                <p>
+                                    From there, we started examining the best strategies to assist candidates pass this test
+                                    and
+                                    came to ABOG Hot-Seat Simulation.
+                                    We provide the candidate with simulation of the exam experience as well as recommended
+                                    preparation plans tailored based on a candidate's current level of Knowledge and Oral
+                                    Performance.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -144,8 +156,8 @@
                                     {!! $plan->content !!}
                                 </div>
                                 <div class="pricing-footer">
-                                    <a class="btn-default btn-border"
-                                        href="{{ route('order.index', $plan->slug) }}"> <i class="fa-solid fa-money-bill"></i> Purchase </a>
+                                    <a class="btn-default btn-border" href="{{ route('order.index', $plan->slug) }}"> <i
+                                            class="fa-solid fa-money-bill"></i> Purchase </a>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +249,7 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Reverse your sessions from available dates/times.</p>
+                                        data-sal-delay="300">Reserve your sessions from available dates/times.</p>
                                 </div>
                             </div>
                         </div>
@@ -324,7 +336,7 @@
                 </div>
                 <div class="col-lg-5 mt_md--30 mt_sm--30">
                     <div class="info-wrap w-100 p-4 pt-0">
-                        <h3>We'er Here To Help!</h3>
+                        <h3>We're Here To Help!</h3>
                         <p class="mb-4">We're open for any suggestion or just to have a chat</p>
                         <div class="dbox w-100 d-flex align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center">
@@ -359,5 +371,5 @@
     </div>
     <!---End Contact Area --->
 
-
+    
 @endsection
