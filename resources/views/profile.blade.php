@@ -145,8 +145,8 @@
                     </div>
                     <div class="col-lg-3 col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
                         <div class="call-to-btn text-left mt_sm--20 text-lg-right">
-                            @if ( $order->open === '1' )
-                                <a class="btn-default mt-2" target="_blank" href="https://calendar.app.google/tx46i3biL9xdHrHG9">Book a Session
+                            @if ( $order->status === '1' )
+                                <a class="btn-default mt-2" target="_blank" href="https://calendar.app.google/tx46i3biL9xdHrHG9"> Book a Session
                                     <i class="feather-arrow-right"></i>
                                 </a>
                             @else

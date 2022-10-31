@@ -50,6 +50,7 @@ class OrderController extends Controller
             $order = Order::create([
                 'user_id' => $user->id ,
                 'plan_id' => $plan->id ,
+                'bank_email'   => $request->bank_email
             ]);
 
             // if not save in DB

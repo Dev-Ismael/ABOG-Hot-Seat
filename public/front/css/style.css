@@ -12283,11 +12283,15 @@ Timeline Area
 }
 
 /*==========================
-    Contact Address 
+    Contact Address
 ============================*/
 .contact-form-1 .form-group input {
   height: 70px;
   padding: 0 20px;
+}
+.contact-form-1 .form-group input#checkbox {
+  height: 20px;
+  margin-left: 0px !important;
 }
 .contact-form-1 .form-group textarea {
   padding-top: 20px;
@@ -12301,7 +12305,7 @@ Timeline Area
 }
 
 /*-------------------
-    Address Area  
+    Address Area
 --------------------*/
 .rn-address {
   margin-top: 30px;
@@ -14300,39 +14304,34 @@ iframe {
   font-family: var(--font-primary);
   margin-bottom: 25px;
   display: block;
-  font-size: 35px;
+  font-size: 70px;
   line-height: 1.1;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   color: var(--color-primary);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-style-4 .inner .title {
-    font-size: 35px;
+    font-size: 60px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-style-4 .inner .title {
-    font-size: 35px;
+    font-size: 50px;
   }
 }
 @media only screen and (max-width: 767px) {
   .slider-style-4 .inner .title {
-    font-size: 30px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .slider-style-4 .inner .title {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 .slider-style-4 .inner .description {
-  font-size: 16px;
+  font-size: 20px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   color: #3a3a3a;
 }
 @media only screen and (max-width: 767px) {
   .slider-style-4 .inner .description {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 35px;
   }
 }

@@ -97,10 +97,13 @@
                                                 aria-describedby="basic-addon1">
                                         </div>
                                         <div class="form-group col-sm-8">
-                                            <label for="client-mail">Your Mail</label>
-                                            <input id="client-mail" type="text" class="form-control" autofocus
+                                            <label for="bank_email">Your Mail</label>
+                                            <input id="bank_email" name="bank_email" type="text" class="form-control" autofocus
                                                 placeholder="Enter your Bank Mail..." aria-label="Card Holder"
-                                                aria-describedby="basic-addon1" required />
+                                                aria-describedby="basic-addon1" oninvalid="this.setCustomValidity('Your bank mail is rquired')" required/>
+                                                @error('bank_email')
+                                                    <div class="invalid-feedback d-block">{{ $message }}.</div>
+                                                @enderror
                                         </div>
                                         <div class="form-group col-sm-4">
                                             <label for="amount"> Amount </label>
@@ -110,12 +113,15 @@
                                         </div>
                                         <div class="form-group col-12 text-start">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="remember"
-                                                    id="remember" {{ old('remember') ? 'checked' : '' }} required />
-                                                <label class="form-check-label" for="remember">
+                                                <input class="form-check-input" type="checkbox" name="checkbox"
+                                                    id="checkbox" {{ old('checkbox') ? 'checked' : '' }} required/>
+                                                <label class="form-check-label" for="checkbox">
                                                     Yes, I have Send ${{ $plan->price }} to AHS Hot-Seat Wallet
                                                 </label>
                                             </div>
+                                            @error('checkbox')
+                                                <div class="invalid-feedback d-block">{{ $message }}.</div>
+                                            @enderror
                                         </div>
                                         <div class="form-group col-sm-12">
                                             <button type="submit" id="submit"

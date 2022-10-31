@@ -24,7 +24,8 @@ class StoreOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'bank_email' => [ 'required', 'email', 'max:100' ],
+            'checkbox'   => [ 'accepted' ]
         ];
     }
 }
