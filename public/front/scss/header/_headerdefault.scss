@@ -20,7 +20,7 @@
             line-height: 80px;
             align-items: center;
             img {
-                max-height: 75px;
+                max-height: 70px;
             }
         }
     }
@@ -143,9 +143,10 @@
     left: 0;
     background-color: var(--color-dark) !important;
     width: 100%;
-    height: 80px;
+    height: 100px;
+    padding-top: 10px;
     animation: headerSticky .95s ease forwards;
-    z-index: 999;
+    z-index: 9;
 }
 
 @keyframes headerSticky {

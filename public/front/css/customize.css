@@ -142,8 +142,7 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 }
 
 .rn-pricing .pricing-table-inner .pricing-header .title {
-    margin-bottom: 10px;
-    height: 70px;
+    margin-bottom: 0;
 }
 
 .rn-pricing .pricing-table-inner .pricing-body {

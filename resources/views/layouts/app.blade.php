@@ -40,7 +40,7 @@
 
     <main class="page-wrapper">
 
-        <header class="rn-header header-default header-left-align header-transparent header-sticky">
+        <header class="rn-header header-default header-transparent header-sticky nav-white">
             <div class="container position-relative">
                 <div class="row align-items-center">
                     <div class="col-lg-9 col-md-6 col-4 position-static">
@@ -108,6 +108,76 @@
             </div>
         </header>
 
+        {{-- <header class="rn-header header-default header-not-transparent header-sticky">
+            <div class="container position-relative">
+                <div class="row align-items-center row--0">
+                    <div class="col-lg-3 col-md-6 col-4">
+                        <div class="logo">
+                            <a href="{{ route('home') }}">
+                                <img class="logo-light" src="{{ asset("front/images/logo/ahs-logo.png") }}" alt="AHS-Mocks">
+                                <img class="logo-dark" src="{{ asset("front/images/logo/ahs-logo.png") }}" alt="AHS-Mocks">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-6 col-8 position-static">
+                        <div class="header-right">
+
+                            <nav class="mainmenu-nav d-none d-lg-block">
+                                <ul class="mainmenu">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/#about">About</a></li>
+                                    <li><a href="/#packages">Packages</a></li>
+                                    <li><a href="/#contact">Contact</a></li>
+                                    @if(Auth::guard('web')->check())
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a class="nav-link dropdown-toggle" href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ route('profile') }}"> Profile </a></li>
+                                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    Logout
+                                                </a></li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </ul>
+                                        </li>
+                                    @elseif(Auth::guard('admin')->check())
+                                        <li class="has-droupdown has-menu-child-item menu-item-open"><a class="nav-link dropdown-toggle" href="#"> {{ ucfirst( Auth::guard('admin')->user()->name ) }} </a>
+                                            <ul class="submenu">
+                                                <li><a href="/admin/dashboard"> Dashboard </a></li>
+                                                <li><a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('admin-logout-form').submit();">
+                                                    Logout
+                                                </a></li>
+                                                <form id="admin-logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                                    {{ csrf_field() }}
+                                                </form>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li><a href="/login">Login</a></li>
+                                    @endif
+                                </ul>
+                            </nav>
+
+
+                            <!-- Start Mobile-Menu-Bar -->
+                            <div class="mobile-menu-bar ml--5 d-block d-lg-none">
+                                <div class="hamberger">
+                                    <button class="hamberger-button">
+                                        <i class="feather-menu"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Start Mobile-Menu-Bar -->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> --}}
+
+
+
         <div class="popup-mobile-menu">
             <div class="inner">
                 <div class="header-top">
@@ -126,7 +196,7 @@
                 <ul class="mainmenu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/#about">About</a></li>
-                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#packages">Packages</a></li>
                     <li><a href="/#contact">Contact</a></li>
                     @if(Auth::guard('web')->check())
                         <li class="has-droupdown has-menu-child-item menu-item-open"><a href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
