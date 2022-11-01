@@ -171,7 +171,7 @@
                                                                 aria-describedby="basic-addon1">
                                                         </div>
                                                         <div class="form-group col-1 align-items-end">
-                                                            <span class="date-separator">/</span>
+                                                            <span class="date-separator">OR</span>
                                                         </div>
                                                         <div class="form-group col-6">
                                                             <label for="our-mail"> Our QR Code </label>
@@ -207,7 +207,7 @@
                                                                 aria-describedby="basic-addon1">
                                                         </div>
                                                         <div class="form-group col-1 align-items-end">
-                                                            <span class="date-separator">/</span>
+                                                            <span class="date-separator">OR</span>
                                                         </div>
                                                         <div class="form-group col-5">
                                                             <label for="our-mail"> Our QR Code </label>

@@ -55,8 +55,10 @@
                                                         </label>
                                                     </div>
                                                 </th>
-                                                <th> Name </th>
-                                                <th> Email </th>
+                                                <th> User </th>
+                                                <th> Package </th>
+                                                <th> Payment Method </th>
+                                                <th> Date </th>
                                                 <th> Action </th>
                                             </tr>
                                         </thead>
@@ -71,15 +73,23 @@
                                                         </label>
                                                     </div>
                                                 </td>
-                                                <td> {{ order.name.length > 20 ? order.name.slice(0, 20) + '...' :
-                                                order.name }} </td>
-                                                <td> {{ order.email.length > 50 ? order.email.slice(0, 50) +
-                                                '...' : order.email }} </td>
+                                                <td> {{ order.user.name.length > 20 ? order.user.name.slice(0, 20) + '...' :
+                                                order.user.name }} </td>
+                                                <td> {{ order.plan.title.length > 50 ? order.plan.title.slice(0, 50) +
+                                                '...' : order.plan.title }} </td>
+                                                <td> {{ order.payment_method }} </td>
+                                                <td> {{ order.added_at }} </td>
                                                 <td>
                                                     <button type="button" data-bs-toggle="modal"
                                                         data-bs-target="#showDataModal" @click="showOrder(order)"
                                                         class="btn btn-secondary btn-rounded btn-icon p-2">
                                                         <i class="mdi mdi-eye"></i>
+                                                    </button>
+                                                    &nbsp;
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#formModal" @click="editOrder(order)"
+                                                        class="btn btn-primary btn-rounded btn-icon p-2">
+                                                        <i class="ti-marker-alt"></i>
                                                     </button>
                                                     &nbsp;
                                                     <button type="button" @click="deletePost(order)"
@@ -138,32 +148,26 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="icon-user"></i> Name : </span>
-                                        <span class="h6"> {{ order.name }} </span>
+                                        <span class="h4 fw-bold"> <i class="icon-user"></i> User Email : </span>
+                                        <span class="h6"> {{ order.user.email }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="mdi mdi-cellphone-android"></i> Phone :
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-cellphone-android"></i> Package Title :
                                         </span>
-                                        <span class="h6"> {{ order.phone }} </span>
+                                        <span class="h6"> {{ order.plan.title }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="mdi mdi-email"></i> Email :
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-email"></i> payment Method :
                                         </span>
-                                        <span class="h6"> {{ order.email }} </span>
+                                        <span class="h6"> {{ order.payment_method }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="icon-menu"></i> Subject :
+                                        <span class="h4 fw-bold"> <i class="icon-menu"></i> Created at :
                                         </span>
-                                        <span class="h6"> {{ order.subject }} </span>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="mdi mdi-format-align-left"></i> Order :
-                                        </span>
-                                        <span class="h6"> {{ order.body }} </span>
+                                        <span class="h6"> {{ order.added_at }} </span>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -178,12 +182,69 @@
 
 
 
+
+
+
+
+        <!---- Form Model ---->
+        <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">{{ edit ? "Edit Order" : "Create Order"
+                                    }}</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form @submit.prevent=" edit ? updateOrder() :  storeOrder() "
+                                    enctype="multipart/form-data" method="POST">
+                                    <div class="modal-body">
+
+                                        <!-- Status -->
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label"> <i class="icon-star"></i> Status </label>
+                                                <select name="status" id="status" v-model="order.status" class="form-control" :class=" errors.status ? 'border-danger' : ''  " >
+                                                    <option value="" disabled selected> Change This Order Status </option>
+                                                    <option value="1"> Open </option>
+                                                    <option value="2"> Expired </option>
+                                                    <option value="3"> Payment issues </option>
+                                                </select>
+                                            <small class="text-danger" v-if="errors.status"> {{errors.status[0] }} </small>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button @submit.prevent="storeOrder()" class="btn btn-success">{{ edit ?
+                                        'Edit' : 'Save'}}</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
     </div>
 
 </template>
 <script>
 import axios from 'axios';
 import LaravelVuePagination from 'laravel-vue-pagination';
+import { serialize } from 'object-to-formdata';
 
 export default {
     components: {
@@ -192,12 +253,18 @@ export default {
     data() {
         return {
             orders: {},
-            order: {},
+            order: {
+                user:{},
+                plan:{},
+                status: ''
+            },
             searchVal: '',
             multiAction: {
                 id: [],
                 action: ''
             },
+            errors: {},  // create empty object to insert errors in it to show
+            edit: false, // set this var to know if modal for create or edit
         }
     },
     mounted() {
@@ -287,8 +354,120 @@ export default {
 
 
 
+
+
         /*======================================================
         ====== Update Order
+        ======================================================*/
+        editOrder(order) {
+            this.errors = {}, // empty error var
+            this.edit = true // set var edit equale 'true' to know that this modal for update
+
+            axios.get('/api/admin/order/' + order.id)
+                .then(
+                    response => {
+                        // console.log(response.data);
+                        if (response.data.status == "success") {
+
+                            // save response data in var
+                            this.order = response.data.data
+
+                        } else if (response.data.status == "error") {
+                            /*=== Sweet Alert ===*/
+                            this.$swal({
+                                position: 'top-end',
+                                icon: response.data.status,
+                                text: response.data.msg,
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                )
+
+        },
+        updateOrder() {
+
+
+            // Set Config var to send it with data request
+            const config = {
+                headers: {
+                    'content-type': 'multipart/form-data',
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content,
+                }
+            }
+
+            const formData = serialize(
+                this.order,
+            );
+
+            // Add method put in form field
+            formData.append('_method', 'PUT');
+
+
+
+            // Send request with axios
+            axios.post("/api/admin/order/" + this.order.id, formData, config)
+                .then(
+                    response => {  // if there success request
+
+                        // console.log(response.data);
+
+                        // if response status
+                        if (response.data.status == "success") {
+
+                            // Close Model
+                            $("#formModal").modal('hide');
+
+                            // reload getOrders()
+                            this.getOrders();
+
+                            // empty error var
+                            this.errors = {}
+
+                            // Sweet Alert
+                            this.$swal({
+                                position: 'top-end',
+                                icon: response.data.status,
+                                text: response.data.msg,
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+
+                        }
+                        // if response validation error
+                        else if (response.data.status == "error" && response.data.msg == "validation failed") {
+
+                            this.errors = response.data.errors
+
+                        }
+                        // if order not Found
+                        else if (response.data.status == "error") {
+
+                            // Sweet Alert
+                            this.$swal({
+                                position: 'top-end',
+                                icon: response.data.status,
+                                text: response.data.msg,
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+
+                        }
+
+                    }
+                )
+                .catch(error => console.log(error));
+        },
+
+
+
+
+        /*======================================================
+        ====== Delete Order
         ======================================================*/
         deletePost(order) {
             this.$swal({

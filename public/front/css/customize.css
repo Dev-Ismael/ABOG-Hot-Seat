@@ -342,9 +342,8 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 
 .payment-form .date-separator {
     position: absolute;
-    bottom: -10px;
-    font-size: 40px;
-    margin-left: 5px !important;
+    bottom: 0px;
+    font-size: 20px;
 }
 
 @media (min-width: 576px) {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
@@ -16,7 +17,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::orderBy('id','desc')->paginate(10);
+        $orders = Order::orderBy('id','desc')->with(['user','plan'])->paginate(10);
+        foreach( $orders as $order ){
+            $order -> setAttribute( "added_at" , date( 'm-d-Y H:i', strtotime( $order -> created_at) ) );
+        }
         return response()->json($orders);
     }
 
@@ -37,7 +41,8 @@ class OrderController extends Controller
     {
         try{
             // Find Record In Db Column
-            $order = Order::where('id', $id )->first();
+            $order = Order::where('id', $id )->with(['user','plan'])->first();
+            $order -> setAttribute( "added_at" , date( 'm-d-Y H:i', strtotime( $order -> created_at) ) );
 
             if( !$order ){  // If Not Found
                 return response()->json([
@@ -59,7 +64,56 @@ class OrderController extends Controller
         }
     }
 
+    public function update(Request $request, $id)
+    {
 
+        // Find Record In Db Column
+        $order = Order::where('id', $id )->first();
+
+        if( !$order ){  // If Not Found
+            return response()->json([
+                'status' => 'error',
+                'msg'    => '404 not found'
+            ]);
+        }
+
+        // save all request in one variable
+        $requestData = $request->all();
+
+
+        // return response()->json([
+        //     'requestData' => $requestData,
+        // ]);
+
+        // Store in DB
+        try {
+
+            // store row in table
+            $update = $order-> update( $requestData );
+
+            // if not save in DB
+            if(!$update){
+                return response()->json([
+                    'status' => 'error',
+                    'msg'    => 'Error at update opration'
+                ]);
+            }
+
+            // If Found Success
+            return response()->json([
+                'status' => 'success',
+                "msg"    => "Plan updated successfully",
+            ]);
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'status' => 'error',
+                'msg'    => 'server error'
+            ]);
+        }
+
+
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -117,10 +171,10 @@ class OrderController extends Controller
         try {
 
             // Find Matchs records
-            $orders = Order::where('name', 'like', "%{$request->searchVal}%")->paginate( 10 );
+            $users = User::where('email', 'like', "%{$request->searchVal}%")->paginate( 10 );
 
             // If Not Delete Record
-            if( !$orders ){
+            if( !$users ){
                 return response()->json([
                     'status' => 'error',
                     'msg'    => 'Error at search opration'
@@ -130,7 +184,7 @@ class OrderController extends Controller
             return response()->json([
                 'status'   => 'success',
                 'msg'      => 'Searching opration successfully',
-                'data'     => $orders,
+                'data'     => $users,
             ]);
 
         } catch (\Exception $e) {

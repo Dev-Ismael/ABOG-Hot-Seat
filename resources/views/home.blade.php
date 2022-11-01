@@ -334,7 +334,7 @@
 
                     </form>
                 </div>
-                <div class="col-lg-5 mt_md--30 mt_sm--30">
+                <div class="col-lg-4 mt_md--30 mt_sm--30">
                     <div class="info-wrap w-100 p-4 pt-0">
                         <h3>We're Here To Help!</h3>
                         <p class="mb-4">We're open for any suggestion or just to have a chat</p>
