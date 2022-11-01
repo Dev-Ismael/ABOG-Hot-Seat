@@ -70,7 +70,7 @@
                                 <ul class="mainmenu">
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/#about">About</a></li>
-                                    <li><a href="/#pricing">Pricing</a></li>
+                                    <li><a href="/#packages">Packages</a></li>
                                     <li><a href="/#contact">Contact</a></li>
                                     @if(Auth::guard('web')->check())
                                         <li class="has-droupdown has-menu-child-item menu-item-open"><a class="nav-link dropdown-toggle" href="#"> {{ ucfirst( Auth::guard('web')->user()->name ) }} </a>
@@ -194,7 +194,7 @@
                             <div class="rn-footer-widget">
                                 <h4 class="title">Stay With Us.</h4>
                                 <div class="inner">
-                                    <h6 class="subtitle">2000+ Our clients are subscribe Around the World</h6>
+                                    <h6 class="subtitle"> Our clients are subscribe Around the World</h6>
                                     <ul class="social-icon social-default justify-content-start">
                                         <li><a href="{{ $settings->facebook }}">
                                                 <i class="feather-facebook"></i>

@@ -37,9 +37,9 @@ class MessegeController extends Controller
                 return abort(500, 'Whatever you were looking for, look somewhere else');
             }
 
-            $requestData += [ 'title' => static::MAIL_TITLE ];
-            Mail::to(static::RECIVER_MAIL)->                 // Our Email 'reciever'
-            send( new ContactMail( $requestData ) );
+            // $requestData += [ 'title' => static::MAIL_TITLE ];
+            // Mail::to(static::RECIVER_MAIL)->                 // Our Email 'reciever'
+            // send( new ContactMail( $requestData ) );
 
             return view('submission', [
                 'messege' => 'Thanks, Your submission sent successfully!',

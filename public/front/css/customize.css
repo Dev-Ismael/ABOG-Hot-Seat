@@ -80,6 +80,8 @@ a.btn.btn-link {
 
 body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
     color: #202d62 !important;
+    font-size: 16px;
+    font-weight: 900;
 }
 
 .mainmenu-nav .mainmenu>li>a:hover,

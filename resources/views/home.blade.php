@@ -4,13 +4,13 @@
 
 
     <!-- Start Slider Area  -->
-    <div class="rwt-testimonial-area  slider-style-4  slider-activation slider-dot rn-slick-dot rn-slick-arrow">
+    <div class="rwt-testimonial-area  slider-style-4 slider-activation slider-dot rn-slick-dot rn-slick-arrow">
         <div class="single-rn-slider slider-bg-image bg-overlay bg_image bg_image--6 height-100vh d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-9">
                         <div class="inner text-left">
-                            <h1 class="title">Simulate the Experience, <br> Excel on the Big Day. </h1>
+                            <h1 class="title">Simulate The Experience, <br> Excel On The Big Day. </h1>
                             <p class="description">Preparing for a marathon should not be by only studying how to run. You
                                 gotta hit the track over and over again! Receive real-time knowledge and performance
                                 feedback from our top-notch experts and leaders in the field.</p>
@@ -47,7 +47,7 @@
                             <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again.
                                 Feel ready for the big day!</p>
                             <div class="button-group mt--30">
-                                <a class="btn-default" href="#pricing"> Get Strated!
+                                <a class="btn-default" href="#packages"> Get Strated!
                                 </a>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
     <div id="about" class="rwt-about-area rn-section-gap">
         <div class="container">
             <div class="row row--30 align-items-center">
-                <div class="col-lg-12 mt_md--40 mt_sm--40">
+                <div class="col-lg-12 mt_md--40 mt_sm--40 mt--20">
                     <div class="content" >
                         <div class="section-title">
                             <h2 class="title" data-sal="slide-left" data-sal-duration="800"> About Us <br>
@@ -71,7 +71,7 @@
                                     <span class="cd-headline clip is-full-width">
                                         <span class="cd-words-wrapper">
                                             <b class="is-visible theme-gradient">Live the experience.</b>
-                                            <b class="is-hidden theme-gradient">Receive real time knowledge.</b>
+                                            <b class="is-hidden theme-gradient">Receive real time Feedback.</b>
                                             <b class="is-hidden theme-gradient">Prepare for you OB/GYN Oral Boards.</b>
                                         </span>
                                     </span>
@@ -117,14 +117,13 @@
 
 
     <!-- Start Pricing Area  -->
-    <div id="pricing" class="rwt-pricing-area rn-section-gap">
+    <div id="packages" class="rwt-pricing-area rn-section-gap">
         <div class="container">
-            <div class="row  mb_sm--0">
+            <div class="row  mb_sm--0 mt--20">
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="400"
                         data-sal-delay="150">
-                        <h4 class="subtitle "><span class="theme-gradient">Pricing</span></h4>
-                        <h2 class="title w-600 "> Packages Pricing.</h2>
+                        <h2 class="title w-600 "> Packages</h2>
                     </div>
                 </div>
             </div>
@@ -176,10 +175,7 @@
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        <h4 class="subtitle "><span class="theme-gradient">Timeline</span></h4>
-                        <h2 class="title w-600 ">Step by Step Guide.</h2>
-                        <p class="description b1">We help our clients succeed by creating brand identities, <br>
-                            digital experiences, and print materials.</p>
+                        <h2 class="title w-600">Step by Step Guide.</h2>
                     </div>
                 </div>
             </div>
@@ -217,7 +213,7 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Choose best package for you.</p>
+                                        data-sal-delay="300">Choose the best package for you.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
@@ -233,7 +229,7 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Pay with Zelle to our account to continue setps.</p>
+                                        data-sal-delay="300">Purchase using Venmo or Zelle.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">
@@ -264,12 +260,11 @@
     <!---Strat Contact Area --->
     <div id="contact" class="rwt-contact-area rn-section-gap">
         <div class="container">
-            <div class="row">
+            <div class="row mt--20">
                 <div class="col-lg-12 ">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        <h4 class="subtitle "><span class="theme-gradient">Contact Form</span></h4>
-                        <h2 class="title w-600 ">Contact Us</h2>
+                        <h2 class="title w-600">Contact Us</h2>
                     </div>
                 </div>
             </div>
@@ -337,7 +332,6 @@
                 <div class="col-lg-4 mt_md--30 mt_sm--30">
                     <div class="info-wrap w-100 p-4 pt-0">
                         <h3>We're Here To Help!</h3>
-                        <p class="mb-4">We're open for any suggestion or just to have a chat</p>
                         <div class="dbox w-100 d-flex align-items-center">
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <i class="fa-solid fa-phone"></i>
@@ -352,7 +346,7 @@
                                 <i class="fa-brands fa-whatsapp"></i>
                             </div>
                             <div class="text pl-3">
-                                <p><span>WhatsApp:</span> <a href="tel:+512532351255">5125 3235-1255</a></p>
+                                <p><span>WhatsApp:</span> <a href="tel:{{ $settings->phone_formatted }}"> Click Here </a></p>
                             </div>
                         </div>
                         <div class="dbox w-100 d-flex align-items-center">

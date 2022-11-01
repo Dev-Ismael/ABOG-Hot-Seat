@@ -45,13 +45,16 @@
                                 <h2 class="accordion-header card-header" id="headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        How Do I send AHS My Lists?
+                                        How do I send AHS my lists?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        They will confirm your dates and ask you to <br> 1-Select your Mock Exam Session area (GYN, OB or Office). <br> 2- Submit all your lists in the same email conversation for the examiners' reference.
+                                        When you book and pay for your package, you will receive email communication from our administration team.
+                                        They will confirm your dates and ask you to <br>
+                                        1-Select your Mock Exam Session area (GYN, OB or Office).
+                                        2- Submit all your lists in the same email conversation for the examiners' reference.
                                     </div>
                                 </div>
                             </div>
@@ -60,14 +63,14 @@
                                 <h2 class="accordion-header card-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Can I choose all the Mock Exams in my Package to be in one Area (OB, GYN or Office)?
+                                        Can i choose all the mock exams in my package to be in one area (OB, GYN or office)?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        Absolutely, the whole purpose of AHS' efficient Exam preparation method is to focus on YOUR areas of weakness, rather than keep throwing piles of information at you that you probably already know. You are a Physician in Practice fully taking care of patients, not a student or a resident anymore!
-                                        You can elect to have your entire 4,8 or 12 Mock Exams in either OB, GYN or Office.
+                                        Absolutely, the whole purpose of AHS' efficient exam preparation method is to focus on your areas of weakness, rather than keep throwing piles of information at you that you probably already know. You are a physician in practice fully taking care of patients, not a student or a resident anymore!
+                                        You can elect to have your entire 4,8 or 12 mock exams in either OB, GYN or office.
                                     </div>
                                 </div>
                             </div>
@@ -76,13 +79,13 @@
                                 <h2 class="accordion-header card-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can I choose to continue All my Mock Exams with a specific Examiner?
+                                        Can i choose to continue all my mock exams with a specific examiner?
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        Please send us your requests as soon as you determine this. Our scheduling team will do every effort to make this possible. However, given that all our experts have their clinical duties as well as academic responsibilities (All the AHS team are Assistant/Associate Professors of Ob/Gyn), it might not always be feasible for your selected dates/times. It's also best to get accustomed to the Real Exam -- You'll be examined by SIX examiners on your Big Day!
+                                        Please send us your requests as soon as you determine this. Our scheduling team will do every effort to make this possible. However, given that all our experts have their clinical duties as well as academic responsibilities (All the AHS team are Assistant/Associate Professors of Ob/Gyn), it might not always be feasible for your selected dates/times. It's also best to get accustomed to the real exam -- You'll be examined by six examiners on your big Day!
                                     </div>
                                 </div>
                             </div>

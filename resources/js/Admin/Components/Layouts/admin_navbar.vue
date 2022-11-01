@@ -189,7 +189,7 @@ export default {
             axios.post("/admin/logout" , config )
             .then(
                 response => {
-                    window.location.href = '/';
+                    window.location.href = '../../';
                 }
             )
             .catch(error => console.log(error));
