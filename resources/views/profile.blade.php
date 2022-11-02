@@ -25,7 +25,7 @@
                         <h2 class="title">Are you Ready? </h2>
                         <p>Wherever you are on your ABOG Oral Exam preparation Journey, we are here for you!</p>
                         <p>If you're starting your preparation and want to tailor your study/prep time to your areas of weakness, AHS experts will help you identify them and tackle each one.
-                            If you have prepared and want to sit in the Hot-Seat to assess and improve your performance, AHS will Simulate the Full exam experience for you.
+                            If you have prepared and want to sit in the Hot-Seat to assess and improve your performance, AHS will simulate the Full exam experience for you.
                         </p>
                         <p>
                             You don't have to dive in dozens of books and endless notes to hammer down things that YOU ALREADY KNOW.
@@ -51,10 +51,10 @@
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        When you book and pay for your package, you will receive email communication from our administration team.
+                                        When you book and pay for your package, you will receive email communication from our administration team
                                         They will confirm your dates and ask you to <br>
-                                        1-Select your Mock Exam Session area (GYN, OB or Office).
-                                        2- Submit all your lists in the same email conversation for the examiners' reference.
+                                        1-Select your Mock Exam Session area (GYN, OB or Office)
+                                        2- Submit all your lists in the same email conversation for the examiners' reference
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExamplea" style="">
                                     <div class="accordion-body card-body">
-                                        Absolutely, the whole purpose of AHS' efficient exam preparation method is to focus on your areas of weakness, rather than keep throwing piles of information at you that you probably already know. You are a physician in practice fully taking care of patients, not a student or a resident anymore!
+                                        Absolutely, the whole purpose of AHS' efficient exam preparation method is to focus on your areas of weakness, rather than keep throwing piles of information at you that you probably already know You are a physician in practice fully taking care of patients, not a student or a resident anymore!
                                         You can elect to have your entire 4,8 or 12 mock exams in either OB, GYN or office.
                                     </div>
                                 </div>
@@ -128,7 +128,9 @@
                                 </div>
                                 <p class="subtitle sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
                                     @if ( $order->status === '1' )
-                                        Here your <strong>{{ $order->plan->title }}</strong>  you have purchased, you can book your session for here
+                                        You have purchased the <strong>{{ $order->plan->title }}.</strong>  You can book your session time slots here
+                                    @elseif ( $order->status === '2' )
+                                        You have purchased the <strong>{{ $order->plan->title }}.</strong>  But there's an issue at the payment transfer
                                     @else
                                         Your {{ $order->plan->title }} has reached for limits of sessions
                                     @endif
@@ -139,9 +141,11 @@
                     <div class="col-lg-3 col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
                         <div class="call-to-btn text-left mt_sm--20 text-lg-right">
                             @if ( $order->status === '1' )
-                                <a class="btn-default mt-2" target="_blank" href="https://calendar.app.google/tx46i3biL9xdHrHG9"> Book a Session
+                                <a class="btn-default mt-2" target="_blank" href="https://calendar.app.google/tx46i3biL9xdHrHG9"> Book Your Sessions
                                     <i class="feather-arrow-right"></i>
                                 </a>
+                            @elseif ( $order->status === '2' )
+                                <i class="fa-solid fa-circle-xmark text-danger fa-4x"></i>
                             @else
                                 <i class="fa-solid fa-circle-check text-success fa-4x"></i>
                             @endif

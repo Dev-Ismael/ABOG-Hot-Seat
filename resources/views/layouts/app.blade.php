@@ -264,22 +264,18 @@
                             <div class="rn-footer-widget">
                                 <h4 class="title">Stay With Us.</h4>
                                 <div class="inner">
-                                    <h6 class="subtitle"> Our clients are subscribe Around the World</h6>
+                                    <h6 class="subtitle"> Our clients are subscribe around the world</h6>
                                     <ul class="social-icon social-default justify-content-start">
-                                        <li><a href="{{ $settings->facebook }}">
+                                        <li><a href="{{ $settings->facebook }}" target="_blank">
                                                 <i class="feather-facebook"></i>
                                             </a>
                                         </li>
-                                        <li><a href="{{ $settings->twitter }}">
-                                                <i class="feather-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li><a href="{{ $settings->instagram }}">
+                                        <li><a href="{{ $settings->instagram }}" target="_blank">
                                                 <i class="feather-instagram"></i>
                                             </a>
                                         </li>
-                                        <li><a href="{{ $settings->youtube }}">
-                                                <i class="feather-youtube"></i>
+                                        <li><a href="{{ $settings->linkedin }}" target="_blank">
+                                                <i class="feather-linkedin"></i>
                                             </a>
                                         </li>
                                     </ul>
@@ -297,8 +293,10 @@
                         <div class="col-lg-6 col-md-6  offset-md-6 col-sm-12 col-12">
                             <div class="copyright-right text-center text-lg-end">
                                 Powered by
-                                    <img src="https://cpapai.com/doob_template_assets/images/BluSky-logo.png" alt="BluSky-logo" width="35">
-                                    <a href="http://bluskyint.com">BluSkyInt.Com</a>
+                                    <a href="http://bluskyint.com" class="color-primary text-underline">
+                                        <img src="https://cpapai.com/doob_template_assets/images/BluSky-logo.png" alt="BluSky-logo" width="35">
+                                        bluskyint.com
+                                    </a>
                             </div>
                         </div>
                     </div>

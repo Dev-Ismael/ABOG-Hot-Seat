@@ -33,7 +33,7 @@
                                 <div class="col-sm-12 col-md-3 offset-md-6 ml-auto">
                                     <div id="order-listing_filter" class="dataTables_filter">
                                         <label class="w-100">
-                                            <input type="text" class="form-control w-100" placeholder="Search By Title..."
+                                            <input type="text" class="form-control w-100" placeholder="Search By Subject..."
                                                 name="searchVal" v-model="searchVal" @keyup="searchMessege()"
                                                 maxlength="55" aria-controls="order-listing" autocomplete="nope" />
                                         </label>
@@ -55,7 +55,7 @@
                                                         </label>
                                                     </div>
                                                 </th>
-                                                <th> Name </th>
+                                                <th> Subject </th>
                                                 <th> Email </th>
                                                 <th> Action </th>
                                             </tr>
@@ -71,8 +71,8 @@
                                                         </label>
                                                     </div>
                                                 </td>
-                                                <td> {{ messege.name.length > 20 ? messege.name.slice(0, 20) + '...' :
-                                                messege.name }} </td>
+                                                <td> {{ messege.subject.length > 20 ? messege.subject.slice(0, 20) + '...' :
+                                                messege.subject }} </td>
                                                 <td> {{ messege.email.length > 50 ? messege.email.slice(0, 50) +
                                                 '...' : messege.email }} </td>
                                                 <td>
@@ -128,7 +128,7 @@
                 <div class="card-body">
                     <div class="modal fade" id="showDataModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog " role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="ModalLabel">Show Messege Data</h5>

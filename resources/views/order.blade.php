@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('FrontContent')
+
+
     <!---- Header ----->
     <div class="slider-perosonal-portfolio height-350 bg-overlay slider-bg-image bg_image--23" data-black-overlay="1">
         <div class="container">
@@ -22,10 +24,10 @@
 
                 <div class="section-title mb--40 text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                     data-sal-delay="100">
-                    <h2 class="title w-600">Pay Now To Complete Steps</h2>
+                    <h2 class="title w-600">Complete your purchase</h2>
                 </div>
 
-                <div class="col-lg-8 col-md-6 col-12">
+                <div class="col-lg-8 col-md-12">
                     <section class="payment-form dark">
                         <div class="container">
                             <form method="POST" action="{{ route('order.proceed', $plan->slug) }}"
@@ -148,7 +150,7 @@
                                 <!---- QR Form ---->
                                 <div class="container">
                                     <div class="plans row">
-                                        <div class="title">Choose best way for payment </div>
+                                        <div class="title">Payment Options </div>
 
                                         <div class="col-12">
                                             <label class="plan zelle-payment" for="zelle">
@@ -164,16 +166,16 @@
                                                         </div>
                                                     </h3>
                                                     <div class="row">
-                                                        <div class="form-group col-5">
-                                                            <label for="our-mail"> Our Zell Phone </label>
+                                                        <div class="form-group col-md-5">
+                                                            <label for="our-mail"> Zelle Recipient Number </label>
                                                             <input id="our-mail" type="text" class="form-control"
                                                                 placeholder="(346) 552-5363 " aria-label="Card Holder" disabled
                                                                 aria-describedby="basic-addon1">
                                                         </div>
-                                                        <div class="form-group col-1 align-items-end">
+                                                        <div class="form-group col-md-1 align-items-end d-none d-md-block">
                                                             <span class="date-separator">OR</span>
                                                         </div>
-                                                        <div class="form-group col-6">
+                                                        <div class="form-group col-md-6">
                                                             <label for="our-mail"> Our QR Code </label>
                                                             <!-- Zelle modal btn -->
                                                             <button type="button" class="btn-default btn-border zelle-btn" data-toggle="modal" data-target="#zelleModal">
@@ -181,6 +183,7 @@
                                                                 Scan QR Code
                                                             </button>
                                                         </div>
+                                                        <div class="invalid-feedback d-block" style="margin-top: -10px" >Note: Account name Empower for Her LLC.</div>
                                                     </div>
                                                 </div>
                                             </label>
@@ -200,16 +203,16 @@
                                                         </div>
                                                     </h3>
                                                     <div class="row">
-                                                        <div class="form-group col-6">
+                                                        <div class="form-group col-md-6">
                                                             <label for="our-mail"> Our Recipient Name </label>
                                                             <input id="our-mail" type="text" class="form-control"
                                                                 placeholder="ABOG Hot-Seat Simulation(AHS)" aria-label="Card Holder" disabled
                                                                 aria-describedby="basic-addon1">
                                                         </div>
-                                                        <div class="form-group col-1 align-items-end">
+                                                        <div class="form-group col-md-1 align-items-end  d-none d-md-block">
                                                             <span class="date-separator">OR</span>
                                                         </div>
-                                                        <div class="form-group col-5">
+                                                        <div class="form-group col-md-5">
                                                             <label for="our-mail"> Our QR Code </label>
                                                             <!-- Zelle modal btn -->
                                                             <button type="button" class="btn-default btn-border venmo-btn" data-toggle="modal" data-target="#venmoModal">
@@ -227,7 +230,7 @@
                                                 <input class="form-check-input" type="checkbox" name="checkbox"
                                                     id="checkbox" {{ old('checkbox') ? 'checked' : '' }} required/>
                                                 <label class="form-check-label" for="checkbox">
-                                                    Yes, I have Send ${{ $plan->price }} to AHS Hot-Seat Wallet
+                                                    Yes, I have send ${{ $plan->price }} to AHS Hot-Seat Wallet
                                                 </label>
                                             </div>
                                             @error('checkbox')
@@ -249,7 +252,9 @@
                     </section>
 
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+
+
+                <div class="col-lg-4 col-md-12">
                     <div class="rn-pricing @if ($plan->recommended === '1') active @endif ">
 
                         @if ($plan->recommended === '1')

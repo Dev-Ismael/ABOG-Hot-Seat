@@ -5,11 +5,19 @@ secondry ==> Yellow Color: #ebb010
 
 Tasks:
 ==============
-- add profile page
-- add image if not data in table
-- make preloader by vue.js
-- fix owl-carsoul-vue with API
+- Fix search bar in orders page
+- Add mail at compelte order (for user , admin)
+- Add SSL Certificate
 - 
+-
+-
+-
+-
+-
+
+
+
+
 
 Haitham taskis :
 ===================

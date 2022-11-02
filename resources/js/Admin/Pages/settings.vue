@@ -89,10 +89,10 @@
                                     </small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="youtube">Youtube</label>
-                                    <input type="text" v-model="settings.youtube" class="form-control" name="youtube"
-                                        id="youtube" placeholder="Type Youtube Channel Link...." :class=" errors.youtube ? 'border-danger' : ''  " >
-                                    <small class="text-danger" v-if="errors.youtube"> {{errors.youtube[0] }}
+                                    <label for="linkedin">Linkedin</label>
+                                    <input type="text" v-model="settings.linkedin" class="form-control" name="linkedin"
+                                        id="linkedin" placeholder="Type Linkedin Channel Link...." :class=" errors.linkedin ? 'border-danger' : ''  " >
+                                    <small class="text-danger" v-if="errors.linkedin"> {{errors.linkedin[0] }}
                                     </small>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@ export default {
                 instagram: '',
                 facebook: '',
                 twitter: '',
-                youtube: '',
+                linkedin: '',
             },
             errors: {},     // create empty object to insert errors in it to show
         }
@@ -181,7 +181,7 @@ export default {
 
 
             // Array of inputs
-            const inputs = ['address', 'location', 'footer_content', 'email', 'phone', 'phone_formatted', 'instagram', 'facebook', 'twitter', 'youtube'];
+            const inputs = ['address', 'location', 'footer_content', 'email', 'phone', 'phone_formatted', 'instagram', 'facebook', 'twitter', 'linkedin'];
 
 
             // For Loop To append every item in inputs array

@@ -59,7 +59,7 @@ class OrderController extends Controller
             }
 
             return view('submission', [
-                'messege' => 'Purchase completed, Go to your profile and book sessions Now!',
+                'messege' => 'Purchase Complete. Go to your profile to book your sessions now.',
                 'link' => 'profile'
             ]);
 

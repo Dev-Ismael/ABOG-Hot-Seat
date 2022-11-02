@@ -31,13 +31,13 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-3 offset-md-6 ml-auto">
-                                    <div id="order-listing_filter" class="dataTables_filter">
+                                    <!-- <div id="order-listing_filter" class="dataTables_filter">
                                         <label class="w-100">
-                                            <input type="text" class="form-control w-100" placeholder="Search By Title..."
+                                            <input type="text" class="form-control w-100" placeholder="Search By Username..."
                                                 name="searchVal" v-model="searchVal" @keyup="searchOrder()"
                                                 maxlength="55" aria-controls="order-listing" autocomplete="nope" />
                                         </label>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="row">
@@ -138,7 +138,7 @@
                 <div class="card-body">
                     <div class="modal fade" id="showDataModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
                         aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="ModalLabel">Show Order Data</h5>
@@ -148,24 +148,35 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="icon-user"></i> User Email : </span>
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-account"></i> Username : </span>
+                                        <span class="h6"> {{ order.user.name }} </span>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-email"></i> User Email : </span>
                                         <span class="h6"> {{ order.user.email }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="mdi mdi-cellphone-android"></i> Package Title :
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-file-document"></i> Package Title :
                                         </span>
                                         <span class="h6"> {{ order.plan.title }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="mdi mdi-email"></i> payment Method :
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-cash-multiple"></i> Package Price :
                                         </span>
-                                        <span class="h6"> {{ order.payment_method }} </span>
+                                        <span class="h6"> ${{ order.plan.price }} </span>
                                     </div>
                                     <hr>
                                     <div class="form-group">
-                                        <span class="h4 fw-bold"> <i class="icon-menu"></i> Created at :
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-cellphone-android"></i> payment Method :
+                                        </span>
+                                        <span class="h6"> {{ order.payment_method}} </span>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <span class="h4 fw-bold"> <i class="mdi mdi-timer"></i> Created at :
                                         </span>
                                         <span class="h6"> {{ order.added_at }} </span>
                                     </div>
@@ -487,8 +498,11 @@ export default {
                                 if (response.data.status == "success") {
 
                                     this.getOrders(); // reload getOrders()
-                                    this.order = {}      // empty order var
-
+                                    this.order =  {
+                                        user:{},
+                                        plan:{},
+                                        status: ''
+                                    },
                                     /*======== Sweet Alert ============*/
                                     this.$swal({
                                         position: 'top-end',
@@ -645,8 +659,11 @@ export default {
                                     mainChecker.checked = false;
 
                                     this.getOrders(); // reload getOrders()
-                                    this.order = {}      // empty order var
-
+                                    this.order =  {
+                                        user:{},
+                                        plan:{},
+                                        status: ''
+                                    },
                                     /*======== Sweet Alert ============*/
                                     this.$swal({
                                         position: 'top-end',

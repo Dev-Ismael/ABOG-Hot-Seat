@@ -117,7 +117,7 @@ class MessegeController extends Controller
         try {
 
             // Find Matchs records
-            $messeges = Messege::where('name', 'like', "%{$request->searchVal}%")->paginate( 10 );
+            $messeges = Messege::where('subject', 'like', "%{$request->searchVal}%")->paginate( 10 );
 
             // If Not Delete Record
             if( !$messeges ){

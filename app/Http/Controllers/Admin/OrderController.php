@@ -168,23 +168,27 @@ class OrderController extends Controller
     public function search(Request $request)
     {
 
+
+
         try {
 
-            // Find Matchs records
-            $users = User::where('email', 'like', "%{$request->searchVal}%")->paginate( 10 );
+
+            $userIds = User::where('name', 'like', "%{$request->search}%")->pluck('id')->toArray();
+            // return $userId;
+            $orders = Order::whereIn('user_id', $userIds)->paginate(10);
 
             // If Not Delete Record
-            if( !$users ){
+            if( !$orders ){
                 return response()->json([
                     'status' => 'error',
                     'msg'    => 'Error at search opration'
                 ]);
             }
 
-            return response()->json([
-                'status'   => 'success',
-                'msg'      => 'Searching opration successfully',
-                'data'     => $users,
+            return response()->json([ // If Found Success
+                'status' => 'success',
+                "msg"    => "order get successfully",
+                'data'   => $orders
             ]);
 
         } catch (\Exception $e) {
@@ -204,11 +208,6 @@ class OrderController extends Controller
 
     public function multiAction(Request $request)
     {
-
-
-        // return response()->json([
-        //     "requestData" => $request->all(),
-        // ]);
 
 
         // If Action is Delete
