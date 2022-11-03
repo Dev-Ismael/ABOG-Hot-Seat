@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Stevebauman\Location\Facades\Location;
 use App\Traits\SEOTrait;
 use App\Models\Order;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -29,8 +30,9 @@ class ProfileController extends Controller
      */
     public function profile()
     {
+        $settings = Setting::where('id', 1 )->first();
         $orders = Order::where('user_id', Auth::user()->id )->get();
-        return view('profile' , compact("orders"));
+        return view('profile' , compact("orders","settings"));
     }
 
 

@@ -7,19 +7,14 @@
 <div class="main-content">
 
     <div class="rwt-contact-area rn-section-gap">
-        <div class="container">
+        <div class="container mt--80">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                        <h4 class="subtitle "><span class="theme-gradient">Login Form</span></h4>
+                        <h2 class="title w-600">Welcome Back</h2>
+                        <div class="underline-title-center"></div>
 
-                        @if(Session::has('purchase_session'))
-                            <div class="alert alert-danger">
-                                Before purchase you must login first.
-                            </div>
-                        @endif
-
-                        {{-- <h4 class="subtitle "><span class="theme-gradient">Login Form</span></h4> --}}
-                        <h2 class="title w-600 mb--20">Welcome Back</h2>
                     </div>
                 </div>
             </div>

@@ -176,14 +176,14 @@
                                                             <span class="date-separator">OR</span>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label for="our-mail"> Our QR Code </label>
+                                                            <label for="our-mail"> QR Code </label>
                                                             <!-- Zelle modal btn -->
                                                             <button type="button" class="btn-default btn-border zelle-btn" data-toggle="modal" data-target="#zelleModal">
                                                                 <i class="fa-solid fa-qrcode"></i>
                                                                 Scan QR Code
                                                             </button>
                                                         </div>
-                                                        <div class="invalid-feedback d-block" style="margin-top: -10px" >Note: Account name Empower for Her LLC.</div>
+                                                        <div class="invalid-feedback d-block" style="margin-top: -10px" >Note: Account name Empower for Her LLC</div>
                                                     </div>
                                                 </div>
                                             </label>
@@ -204,7 +204,7 @@
                                                     </h3>
                                                     <div class="row">
                                                         <div class="form-group col-md-6">
-                                                            <label for="our-mail"> Our Recipient Name </label>
+                                                            <label for="our-mail"> Venmo Recipient Name </label>
                                                             <input id="our-mail" type="text" class="form-control"
                                                                 placeholder="ABOG Hot-Seat Simulation(AHS)" aria-label="Card Holder" disabled
                                                                 aria-describedby="basic-addon1">
@@ -213,7 +213,7 @@
                                                             <span class="date-separator">OR</span>
                                                         </div>
                                                         <div class="form-group col-md-5">
-                                                            <label for="our-mail"> Our QR Code </label>
+                                                            <label for="our-mail"> QR Code </label>
                                                             <!-- Zelle modal btn -->
                                                             <button type="button" class="btn-default btn-border venmo-btn" data-toggle="modal" data-target="#venmoModal">
                                                                 <i class="fa-solid fa-qrcode"></i>
@@ -230,7 +230,7 @@
                                                 <input class="form-check-input" type="checkbox" name="checkbox"
                                                     id="checkbox" {{ old('checkbox') ? 'checked' : '' }} required/>
                                                 <label class="form-check-label" for="checkbox">
-                                                    Yes, I have send ${{ $plan->price }} to AHS Hot-Seat Wallet
+                                                    Yes, I have sent ${{ $plan->price }} to AHS Hot-Seat Wallet
                                                 </label>
                                             </div>
                                             @error('checkbox')
@@ -240,7 +240,6 @@
                                         <div class="form-group col-sm-12 mt--10">
                                             <button type="submit" id="submit"
                                                 class="btn-default btn-large rn-btn w-100">
-                                                <i class="fa-solid fa-dollar-sign"></i>
                                                 Proceed
                                             </button>
                                         </div>

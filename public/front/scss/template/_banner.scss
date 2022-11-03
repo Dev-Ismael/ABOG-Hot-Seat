@@ -570,10 +570,11 @@
             font-size: 18px;
             // line-height: 43px;
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-            color: #3a3a3a;
+            // color: #3a3a3a;
+            font-weight: 800;
             @media #{$sm-layout} {
                 font-size: 16px;
-                line-height: 35px;
+                // line-height: 35px;
             }
             br {
                 @media #{$sm-layout} {

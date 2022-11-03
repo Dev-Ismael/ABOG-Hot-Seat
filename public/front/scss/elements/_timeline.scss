@@ -1,5 +1,5 @@
 /* -----------------------
-Timeline Area  
+Timeline Area
 --------------------------*/
 .timeline-line {
     position: absolute;
@@ -86,7 +86,7 @@ Timeline Area
 
 
 /*------------------------------
-    Single Timeline Styles  
+    Single Timeline Styles
 -------------------------------*/
 .single-timeline {
     position: relative;
@@ -94,7 +94,7 @@ Timeline Area
     @media #{$lg-layout} {
         padding-left: 54px;
     }
-    
+
     @media #{$md-layout} {
         padding-left: 50px;
     }
@@ -140,7 +140,9 @@ Timeline Area
                     }
                 }
                 .description {
-                    margin-top: 30px;
+                    margin-top: 10px;
+                    font-size: 18px;
+                    font-weight: 600;
                     @media #{$md-layout} {
                         margin-top: 20px;
                     }
@@ -187,7 +189,7 @@ Timeline Area
 }
 
 /*----------------------------
-    Timeline Style Two  
+    Timeline Style Two
 ----------------------------*/
 .timeline-style-two {
     position: relative;
@@ -208,7 +210,7 @@ Timeline Area
             box-shadow: none;
             margin: 20px 0;
             width: 100%;
-           
+
 
             .line-inner {
                 flex-direction: column;

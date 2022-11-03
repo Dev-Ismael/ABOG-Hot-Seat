@@ -57,6 +57,22 @@ body.active-light-mode button.btn-default.btn-border {
 }
 
 /*=========Global =====*/
+.underline-title-center{
+    position: relative;
+    width: 50px;
+    height: 4px;
+    background-color: #202d62;
+    margin: -10px auto;
+    border-radius: 5px;
+}
+.underline-title-left{
+    position: relative;
+    width: 50px;
+    height: 4px;
+    background-color: #202d62;
+    margin: -10px 0px;
+    border-radius: 5px;
+}
 .rn-section-gap {
     padding: 60px 0 !important;
 }
@@ -83,14 +99,17 @@ label{
     min-width: 175px !important;
 }
 
-body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
+.mainmenu>li>a {
     color: #202d62 !important;
-    font-size: 18px;
+    font-size: 18px !important;
+    cursor: pointer;
+    text-transform: capitalize;
+    /* font-weight: 600 !important; */
 }
 
 .mainmenu-nav .mainmenu>li>a:hover,
 .mainmenu-nav .mainmenu>li>a.active {
-    color: #f15e55 !important;
+    color: #131b3b !important;
 }
 
 /*===== Slider =====*/
@@ -150,12 +169,12 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 }
 
 .rn-pricing .pricing-table-inner .pricing-body {
-    min-height: 220px;
+    min-height: 310px;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .rn-pricing .pricing-table-inner .pricing-body {
-        min-height: 350px;
+        min-height: 420px;
     }
 }
 
@@ -202,6 +221,13 @@ body.active-light-mode .header-transparent .mainmenu-nav .mainmenu>li>a {
 /*======== Header ========*/
 .height-550 {
     height: 550px;
+}
+
+
+@media (max-width: 767.98px) {
+    .height-550 {
+        height: 350px;
+    }
 }
 
 .slider-perosonal-portfolio .inner {

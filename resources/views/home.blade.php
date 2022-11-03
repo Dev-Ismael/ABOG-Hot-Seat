@@ -4,16 +4,16 @@
 
 
     <!-- Start Slider Area  -->
-    <div class="rwt-testimonial-area  slider-style-4 slider-activation slider-dot rn-slick-dot rn-slick-arrow">
+    <div id="home" class="rwt-testimonial-area  slider-style-4 slider-activation slider-dot rn-slick-dot rn-slick-arrow">
         <div class="single-rn-slider slider-bg-image bg-overlay bg_image bg_image--6 height-100vh d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-9">
                         <div class="inner text-left">
                             <h1 class="title">Simulate The Experience, <br> Excel On The Big Day </h1>
-                            <p class="description">Preparing for a marathon should not be by only studying how to run You
+                            <p class="description">Preparing for a marathon should not be by only studying how to run. You
                                 gotta hit the track over and over again! Receive real-time knowledge and performance
-                                feedback from our top-notch experts and leaders in the field</p>
+                                feedback from our top-notch experts and leaders in the field.</p>
                         </div>
                     </div>
                 </div>
@@ -28,9 +28,9 @@
                         <div class="inner text-left">
                             <h1 class="title">Live The Experience</h1>
                             <p class="description"> Almost all of the repeat exam takers say that most of the questions they
-                                missed were things they have read and studied during their exam prep The Majority of
+                                missed were things they have read and studied during their exam prep. The Majority of
                                 candidates who have passed say that the most challenging aspect was articulating things they
-                                already know and do in their practices under immense pressure</p>
+                                already know and do in their practices under immense pressure.</p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <div class="order-2 order-lg-1 col-lg-8">
                         <div class="inner text-left">
                             <h1 class="title">Book Your Package Now</h1>
-                            <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again
+                            <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again.
                                 Feel ready for the big day!</p>
                             <div class="button-group mt--30">
                                 <a class="btn-default" href="#packages"> Get Strated!
@@ -79,31 +79,31 @@
                             </h2>
                             <div class="about-content" data-sal="slide-right" data-sal-duration="800">
                                 <p>
-                                    The ABOG oral board exam is undeniably the most important exam for a physician's career
-                                    it
-                                    is the last step of a long journey and many years full of efforts and sacrifices we are
+                                    The ABOG Oral Board exam is undeniably the most important exam for a physician's career.
+                                    It
+                                    is the last step of a long journey and many years full of efforts and sacrifices. We are
                                     a
-                                    group of clinical assistant and associate professors as well as leaders in the field of
+                                    group of Clinical Assistant and Associate professors as well as leaders in the field of
                                     OB/GYN who witnessed many excellent physicians struggle with passing the oral boards and
-                                    decided to help after interviewing diplomats who passed their boards as well as repeat
+                                    decided to help. After interviewing diplomats who passed their boards as well as repeat
                                     exam
-                                    takers, it was crystal clear that this exam needs a different strategy for preparation
+                                    takers, it was crystal clear that this exam needs a different strategy for preparation.
                                     Most
                                     candidates still followed the same old way of exam preparation similar to any other
                                     written
-                                    test in the past Majority of interviewed candidates stated that the most challenging
+                                    test in the past. Majority of interviewed candidates stated that the most challenging
                                     aspect
                                     of this test was NOT that they felt they did not know the answer BUT was articulating
                                     things
-                                    they already know and do in their practices under immense pressure
+                                    they already know and do in their practices under immense pressure.
                                 </p>
                                 <p>
                                     From there, we started examining the best strategies to assist candidates pass this test
                                     and
-                                    came to ABOG Hot-Seat Simulation
-                                    we provide the candidate with simulation of the exam experience as well as recommended
-                                    preparation plans tailored based on a candidate's current level of knowledge and oral
-                                    performance
+                                    came to ABOG Hot-Seat Simulation.
+                                    We provide the candidate with simulation of the exam experience as well as recommended
+                                    preparation plans tailored based on a candidate's current level of Knowledge and Oral
+                                    Performance.
                                 </p>
                             </div>
 
@@ -123,7 +123,10 @@
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="400"
                         data-sal-delay="150">
-                        <h2 class="title w-600 "> Packages</h2>
+                        <div class="mb--30">
+                            <h2 class="title w-600 "> Packages</h2>
+                            <div class="underline-title-center"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -175,7 +178,10 @@
                 <div class="col-lg-12">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        <h2 class="title w-600">Step by Step Guide</h2>
+                        <div class="mb--30">
+                            <h2 class="title w-600">Step by Step Guide</h2>
+                            <div class="underline-title-center"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,7 +270,10 @@
                 <div class="col-lg-12 ">
                     <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        <h2 class="title w-600">Contact Us</h2>
+                        <div class="mb--30">
+                            <h2 class="title w-600">Contact Us</h2>
+                            <div class="underline-title-center"></div>
+                        </div>
                     </div>
                 </div>
             </div>

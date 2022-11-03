@@ -340,9 +340,27 @@
         },
 
 
-
     }
     doobJs.i();
+
+        /*================================================================
+        ========== Smothly Movement
+        =================================================================*/
+        $(".mainmenu>li>a").on('click', function() {
+            var link_content = $(this).text();
+
+            // Smothly Scroll
+            $('html, body').animate({
+                scrollTop: $( "#" + link_content ).offset().top
+            }, 500);
+
+            // Close nav-mob
+            $('.popup-mobile-menu').removeClass('active');
+            $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').siblings('.submenu, .rn-megamenu').removeClass('active').slideUp('400');
+            $('.popup-mobile-menu .mainmenu .has-droupdown > a, .popup-mobile-menu .mainmenu .with-megamenu > a').removeClass('open')
+
+        });
+
 
 })(window, document, jQuery)
 

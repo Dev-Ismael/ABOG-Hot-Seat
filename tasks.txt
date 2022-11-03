@@ -3,12 +3,24 @@ secondry ==> Yellow Color: #ebb010
 
 
 
+Mohamed Makram:
+=====================
+- Fix Appoiintment Schedual Google arabic
+- add animation to profile page
+-
+-
+- 
+
+
+
+
+
 Tasks:
 ==============
 - Fix search bar in orders page
 - Add mail at compelte order (for user , admin)
 - Add SSL Certificate
-- 
+-
 -
 -
 -
