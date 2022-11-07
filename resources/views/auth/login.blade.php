@@ -58,6 +58,16 @@
                                         </a>
                                     @endif --}}
                                 </div>
+                                <div class="col-12 text-center mt--10">
+                                    <div id="info-btn">
+                                        <div class="info">
+                                            <i class="fa-solid fa-circle-info color-primary"></i>
+                                            <span class="extra-info">
+                                                Have any issues with login? mail us at <a href="mailto:info@ahsmocks.com" class="text-underline color-primary"> info@ahsmocks.com </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <button name="submit" type="submit" id="submit" class="btn-default btn-large rn-btn">

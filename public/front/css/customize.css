@@ -57,7 +57,7 @@ body.active-light-mode button.btn-default.btn-border {
 }
 
 /*=========Global =====*/
-.underline-title-center{
+.underline-title-center {
     position: relative;
     width: 50px;
     height: 4px;
@@ -65,7 +65,8 @@ body.active-light-mode button.btn-default.btn-border {
     margin: -10px auto;
     border-radius: 5px;
 }
-.underline-title-left{
+
+.underline-title-left {
     position: relative;
     width: 50px;
     height: 4px;
@@ -73,6 +74,7 @@ body.active-light-mode button.btn-default.btn-border {
     margin: -10px 0px;
     border-radius: 5px;
 }
+
 .rn-section-gap {
     padding: 60px 0 !important;
 }
@@ -84,12 +86,15 @@ body.active-light-mode button.btn-default.btn-border {
 a.btn.btn-link {
     font-size: 14px !important;
 }
-.text-underline{
-    text-decoration: underline;
+
+.text-underline {
+    text-decoration: underline !important;
 }
-label{
+
+label {
     display: block;
 }
+
 /*===============================================================
 =========  Home Page
 ================================================================*/
@@ -213,6 +218,7 @@ label{
 }
 
 
+
 /*===============================================================
 =========  Profile Page
 ================================================================*/
@@ -222,7 +228,6 @@ label{
 .height-550 {
     height: 550px;
 }
-
 
 @media (max-width: 767.98px) {
     .height-550 {
@@ -591,13 +596,15 @@ label{
         display: none;
     }
 }
+
 /*=========== Zelle btn Style ============*/
-button.btn-default.zelle-btn{
+button.btn-default.zelle-btn {
     background-color: #6d1ed4 !important;
     border: 1px solid #6d1ed4 !important;
     color: #fff !important;
 }
-button.btn-default.venmo-btn{
+
+button.btn-default.venmo-btn {
     background-color: #008cff !important;
     border: 1px solid #008cff !important;
     color: #fff !important;

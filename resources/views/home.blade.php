@@ -38,7 +38,7 @@
         </div>
 
         <div
-            class="single-rn-slider height-100vh slider-bg-image bg-overlay bg_image bg_image--15 height-100vh d-flex align-items-center">
+            class="single-rn-slider height-100vh slider-bg-image bg-overlay bg_image bg_image--25 height-100vh d-flex align-items-center">
             <div class="container">
                 <div class="row row--30 align-items-center">
                     <div class="order-2 order-lg-1 col-lg-8">
@@ -72,18 +72,18 @@
                                         <span class="cd-words-wrapper">
                                             <b class="is-visible theme-gradient">Live the experience</b>
                                             <b class="is-hidden theme-gradient">Receive real time Feedback</b>
-                                            <b class="is-hidden theme-gradient">Prepare for you OB/GYN Oral Boards</b>
+                                            <b class="is-hidden theme-gradient">Prepare For Your Oral OB/GYN Oral Boards</b>
                                         </span>
                                     </span>
                                 </span>
                             </h2>
                             <div class="about-content" data-sal="slide-right" data-sal-duration="800">
                                 <p>
-                                    The ABOG Oral Board exam is undeniably the most important exam for a physician's career.
+                                    The ABOG oral board exam is undeniably the most important exam for a physician's career.
                                     It
                                     is the last step of a long journey and many years full of efforts and sacrifices. We are
                                     a
-                                    group of Clinical Assistant and Associate professors as well as leaders in the field of
+                                    group of clinical assistant and associate professors as well as leaders in the field of
                                     OB/GYN who witnessed many excellent physicians struggle with passing the oral boards and
                                     decided to help. After interviewing diplomats who passed their boards as well as repeat
                                     exam
@@ -93,7 +93,7 @@
                                     written
                                     test in the past. Majority of interviewed candidates stated that the most challenging
                                     aspect
-                                    of this test was NOT that they felt they did not know the answer BUT was articulating
+                                    of this test was not that they felt they did not know the answer but was articulating
                                     things
                                     they already know and do in their practices under immense pressure.
                                 </p>
@@ -102,8 +102,8 @@
                                     and
                                     came to ABOG Hot-Seat Simulation.
                                     We provide the candidate with simulation of the exam experience as well as recommended
-                                    preparation plans tailored based on a candidate's current level of Knowledge and Oral
-                                    Performance.
+                                    preparation plans tailored based on a candidate's current level of knowledge and oral
+                                    performance.
                                 </p>
                             </div>
 
@@ -203,7 +203,7 @@
                                         </div>
                                     </div>
                                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
-                                        data-sal-delay="300">Create your personal account at ABOG Hot-Seat</p>
+                                        data-sal-delay="300">Create your personal account on AHS</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-3 rn-timeline-single dark-line">

@@ -167,7 +167,7 @@
                                                             data-sal-duration="700" data-sal-delay="200">
                                                             @if ($order->status === '1')
                                                                 <i class="fa-solid fa-circle-check text-success mr--5"></i>
-                                                                Purchase proceed successfully, You can now book your sessions dates/times here
+                                                                Purchase compelete, you can now book your sessions dates/times here
                                                             @elseif ($order->status === '2')
                                                                 <i
                                                                     class="fa-solid fa-circle-exclamation text-warning mr--5"></i>
