@@ -47,7 +47,7 @@
                             <p class="description">ABOG Hot-Seat Simulation - Live the full experience over and over again.
                                 Feel ready for the big day!</p>
                             <div class="button-group mt--30">
-                                <a class="btn-default" href="#packages"> Get Strated!
+                                <a class="btn-default" href="#packages"> Get Strated
                                 </a>
                             </div>
                         </div>

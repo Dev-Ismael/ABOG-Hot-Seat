@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Messege;
-use App\Models\user;
+use App\Models\User;
 use App\Models\Order;
 use App\Models\Plan;
 use App\Models\Admin;
@@ -30,7 +30,7 @@ class AdminController extends Controller
         $users       = User::count();
         $messeges    = Messege::count();
         $plans       = Plan::count();
-        $orders       = Order::count();
+        $orders      = Order::count();
 
         return response()->json([
             "users"       => $users ,
