@@ -51,13 +51,13 @@
                                     </div>
                                 </div>
                                 <div class="col-6 text-end">
-                                    {{-- @if (Route::has('password.request'))
+                                    @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
-                                    @endif --}}
+                                    @endif
                                 </div>
-                                <div class="col-12 text-center mt--10">
+                                {{-- <div class="col-12 text-center mt--10">
                                     <div id="info-btn">
                                         <div class="info">
                                             <i class="fa-solid fa-circle-info color-primary"></i>
@@ -66,7 +66,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <button name="submit" type="submit" id="submit" class="btn-default btn-large rn-btn">
