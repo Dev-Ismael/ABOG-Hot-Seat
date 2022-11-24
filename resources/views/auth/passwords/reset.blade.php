@@ -23,7 +23,7 @@
 
                             <input type="hidden" name="token" value="{{ $token }}">
 
-                            <div class="row">
+                            <div class="row d-none">
                                 <div class="form-group">
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email"

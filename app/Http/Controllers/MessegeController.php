@@ -11,10 +11,8 @@ use Illuminate\Support\Facades\Mail;
 class MessegeController extends Controller
 {
 
-
-    CONST RECIVER_MAIL   = 'sales@bluskyint.com' ;
-    CONST MAIL_TITLE   = 'A new contact submition at ahsmocks.com' ;
-
+    CONST RECIVER_MAIL   = 'info@ahsboardprep.com' ;
+    CONST MAIL_TITLE   = 'A new contact submition at AhsBoardPrep.com' ;
 
     /**
      * Store a newly created resource in storage.

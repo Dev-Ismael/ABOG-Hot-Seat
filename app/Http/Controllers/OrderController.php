@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
+use App\Mail\Order\OrderAdminMail;
+use App\Mail\Order\OrderUserMail;
 use App\Models\Plan;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -57,6 +60,25 @@ class OrderController extends Controller
             if(!$order){
                 return abort(500, 'Whatever you were looking for, look somewhere else');
             }
+
+            // Order Mail
+            $mailData = [
+                'title' => '#New order confirmed at AhsBoardPrep.com',
+                'user' => $user,
+                'plan' => $plan,
+                'payment_method' => $request->payment_method,
+            ];
+
+            // Send To Admin
+            Mail::to('info@ahsboardprep.com')->     // Our Email 'reciever'
+            send( new OrderAdminMail( $mailData ) );
+
+            // Send To User
+            Mail::to($user->email)->     // Our Email 'reciever'
+            send( new OrderUserMail( $mailData ) );
+
+
+
 
             return view('submission', [
                 'messege' => 'Purchase Complete. Go to your profile to book your sessions now.',
