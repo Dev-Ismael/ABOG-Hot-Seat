@@ -16,16 +16,12 @@
 
     <br>
     <br>
-    Thank you for trusting us, Order is submitted Successfully.
+    Thank you for registration at AHS Hot-Seat.
     <br>
-    You have Purchased <strong>{{ $mailData['plan']['title'] }}</strong> and with price
-    <strong>${{ $mailData['plan']['price'] }}</strong>.
+    Now you can go to your <a href="{{ url("profile") }}">profile page</a> to manage your purchased packages
 
     <br>
-    Don't forget submit your case lists to <strong> <a href="mailto:info@ahsboardprep.com">info@ahsboardprep.com</a></strong>
-
-    <br>
-    Now you can book your sessions <a href="https://calendar.app.google/EPoyKEdqsfKFZMfo6">From Here</a>.
+    You can get our packages offers <a href="{{ url("/#packages") }}">From Here</a>.
 
     <br>
     <br>

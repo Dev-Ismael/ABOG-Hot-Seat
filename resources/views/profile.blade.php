@@ -181,15 +181,6 @@
                                                         </p>
                                                         @if ($order->status === '1')
                                                             <div class="row row--30">
-                                                                {{-- <div class="col-lg-6 col-md-6 col-12">
-                                                                    <div class="working-list">
-                                                                        <h5 class="working-title sal-animate mb--5" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Gain
-                                                                            your works</h5>
-                                                                        <p data-sal="slide-up" data-sal-duration="700" data-sal-delay="400" class="sal-animate">Lorem ipsum dolor sit amet at
-                                                                            consectetur
-                                                                            adipisicing</p>
-                                                                    </div>
-                                                                </div> --}}
                                                                 <div class="col-lg-6 col-md-6 col-12">
                                                                     <div class="working-list">
                                                                         <h5 class="working-title sal-animate mb--5"
@@ -209,7 +200,7 @@
                                                             <div class="read-morebtn sal-animate" data-sal="slide-up"
                                                                 data-sal-duration="700" data-sal-delay="300">
                                                                 <a class="btn-default mt-2" target="_blank"
-                                                                    href="https://calendar.app.google/fxXSDWqByfJZB7px9">
+                                                                    href="https://calendar.app.google/EPoyKEdqsfKFZMfo6">
                                                                     Book Your Sessions </a>
                                                             </div>
                                                         @endif
@@ -226,52 +217,6 @@
             </div>
         </div>
     @endif
-
-
-    {{--
-        <div class="rn-callto-action clltoaction-style-default style-7">
-            <div class="container">
-                @foreach ($orders as $order)
-                    <div class="row row--0 align-items-center content-wrapper">
-                        <div class="col-lg-9 col-md-9">
-                            <di v class="inner">
-                                <div class="content text-left">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <img class="logo-light" src="{{ asset('front/images/logo/ahs-logo.png') }}" width="80" alt="ABOG-Hot-Seat">
-                                            <img class="logo-dark" src="{{ asset('front/images/logo/ahs-logo.png') }}" width="80" alt="ABOG-Hot-Seat">
-                                        </a>
-                                    </div>
-                                    <p class="subtitle sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
-                                        @if ($order->status === '1')
-                                            You have purchased the <strong>{{ $order->plan->title }}</strong>  You can book your session time slots here
-                                        @elseif ( $order->status === '2' )
-                                            Your <strong>{{ $order->plan->title }}</strong> has expired
-                                        @elseif ( $order->status === '3' )
-                                            You have purchased the <strong>{{ $order->plan->title }}</strong>  but there's a payment issue
-                                        @endif
-                                    </p>
-                                </div>
-                            </di>
-                        </div>
-                        <div class="col-lg-3 col-md-3 sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
-                            <div class="call-to-btn text-left mt_sm--20 text-lg-right">
-                                @if ($order->status === '1')
-                                    <a class="btn-default mt-2" target="_blank" href="https://calendar.app.google/tx46i3biL9xdHrHG9"> Book Your Sessions
-                                        <i class="feather-arrow-right"></i>
-                                    </a>
-                                @elseif ( $order->status === '2' )
-                                    <i class="fa-solid fa-circle-check text-success fa-4x"></i>
-                                @elseif ( $order->status === '3' )
-                                    <i class="fa-solid fa-circle-xmark text-danger fa-4x"></i>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    --}}
 
 
 @endsection

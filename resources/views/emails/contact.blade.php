@@ -1,7 +1,7 @@
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.gstatic.com/s/googlesans/v29/4UairENHsxJlGDuGo1OIlL3L2JB80eWHxVA9_Iou-BqGpjmscm43kO8Q5nYksL4vu-A.woff2" rel="stylesheet">
 <style>
     body,*{
-        font-family: 'Open Sans', sans-serif !important;
+        font-family: 'Google Sans', sans-serif !important;
     }
     h2 , strong{
         color: rgb(26, 26, 26)

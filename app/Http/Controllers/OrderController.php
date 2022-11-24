@@ -70,15 +70,12 @@ class OrderController extends Controller
             ];
 
             // Send To Admin
-            Mail::to('info@ahsboardprep.com')->     // Our Email 'reciever'
+            Mail::to('info@ahsboardprep.com')->     //  Email 'reciever'
             send( new OrderAdminMail( $mailData ) );
 
             // Send To User
-            Mail::to($user->email)->     // Our Email 'reciever'
+            Mail::to($user->email)->     //  Email 'reciever'
             send( new OrderUserMail( $mailData ) );
-
-
-
 
             return view('submission', [
                 'messege' => 'Purchase Complete. Go to your profile to book your sessions now.',

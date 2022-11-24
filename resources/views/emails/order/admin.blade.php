@@ -21,7 +21,7 @@
     <strong>{{ ucfirst($mailData['user']['name']) }}</strong> has sent money at your <strong>{{ ucfirst($mailData['payment_method']) }}</strong> wallet, so don't forget check this transfer
 
     <br>
-    Please check your lasted orders <a href="{{ url("admin/order") }}">From Here</a>.
+    Please check your latest orders <a href="{{ url("admin/order") }}">From Here</a>.
 
     <br>
     <br>
