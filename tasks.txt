@@ -9,7 +9,7 @@ Mohamed Makram:
 - add animation to profile page
 -
 -
-- 
+-
 
 
 
@@ -26,8 +26,6 @@ Tasks:
 -
 -
 -
-
-
 
 
 
@@ -50,5 +48,22 @@ Advanced feature in blueskyint project:
 6- use package formData
 7- Add multi actions
 8-
+
+
+Mailing
+==========
+- Forget Password
+- Contact Us
+
+- Mail user at create order
+- Mail admin at create order
+
+- Mail user at new registration
+- Mail admin at new registration
+
+- Mail at change order status to payment issue
+- Mail at change order status to expired
+
+
 
 

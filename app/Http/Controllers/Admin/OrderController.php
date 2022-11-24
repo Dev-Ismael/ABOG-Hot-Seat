@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\Order\Update\OrderUserMail;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -68,7 +69,7 @@ class OrderController extends Controller
     {
 
         // Find Record In Db Column
-        $order = Order::where('id', $id )->first();
+        $order = Order::where('id', $id )->with(['user','plan'])->first();
 
         if( !$order ){  // If Not Found
             return response()->json([
@@ -77,13 +78,9 @@ class OrderController extends Controller
             ]);
         }
 
-        // save all request in one variable
+        // save all request in on   e variable
         $requestData = $request->all();
 
-
-        // return response()->json([
-        //     'requestData' => $requestData,
-        // ]);
 
         // Store in DB
         try {
@@ -98,6 +95,28 @@ class OrderController extends Controller
                     'msg'    => 'Error at update opration'
                 ]);
             }
+
+
+            $mail_title = '';
+
+            if( $request->status == '2' ){    // If Order Has Expired
+                $mail_title = 'Your ' . $order->plan->title . " Has Expired";
+            }else if( $request->status == '3' ){    // If there Payment Issue
+                $mail_title = 'Payment Issue At Your Order';
+            }
+
+            if( $request->status != "1" ){  // If status not open
+                // Order Mail
+                $mailData = [
+                    'title' => $mail_title,
+                    'user'  => $order->user,
+                    'order' => $order,
+                ];
+                // Send To User
+                Mail::to($order->user->email)->     //  reciever Mail
+                send( new OrderUserMail( $mailData ) );
+            }
+
 
             // If Found Success
             return response()->json([

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail\Order;
+namespace App\Mail\Order\Update;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -29,7 +29,7 @@ class OrderUserMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.order.user')                               // Mail blade
+        return $this->markdown('emails.order.update.user')                               // Mail blade
         ->Subject($this->mailData['title'])                                 // Subject mail
         ->from( "info@ahsboardprep.com" , "ABOG Hot-Seat" )     // From 2 prame ( mail sender , name sender )
         ->with('mailData' , $this->mailData);

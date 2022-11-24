@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
-use App\Mail\Order\OrderAdminMail;
-use App\Mail\Order\OrderUserMail;
+use App\Mail\Order\Create\OrderAdminMail;
+use App\Mail\Order\Create\OrderUserMail;
 use App\Models\Plan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;

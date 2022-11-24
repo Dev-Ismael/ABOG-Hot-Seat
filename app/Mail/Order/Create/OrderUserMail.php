@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Mail\Order;
+namespace App\Mail\Order\Create;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class OrderAdminMail extends Mailable
+class OrderUserMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,7 +29,7 @@ class OrderAdminMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.order.admin')                               // Mail blade
+        return $this->markdown('emails.order.create.user')                               // Mail blade
         ->Subject($this->mailData['title'])                                 // Subject mail
         ->from( "info@ahsboardprep.com" , "ABOG Hot-Seat" )     // From 2 prame ( mail sender , name sender )
         ->with('mailData' , $this->mailData);
